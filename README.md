@@ -184,6 +184,9 @@ git merge squash
 git log2
 git rebase backend
 
+git pull origin master
+git fetch origin master
+
 ```
 
 
