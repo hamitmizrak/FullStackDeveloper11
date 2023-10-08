@@ -5,12 +5,45 @@
 [Full Stack 11](https://github.com/hamitmizrak/FullStackDeveloper11.git)
 
 ---
+## RoadMap
+- Java
+- React
+- Database
+
+---
 
 ## Technology
 - *Java*  **Core**
 - *Java* `Spring Boot`
+- React JS
+---
 
-## RolMap
+## Git initial
+> git init <br/>
+> git add . <br/>
+> git commit -m "initial data" <br/>
+> ssh-keygen -t rsa -b 4096 -C "hamitmizrak@gmail.com" <br/>
+> cat ~/.ssh/id_rsa.pub <br/>
+> git remote add gitlab URL <br/>
+> git remote add github  https://github.com/hamitmizrak/FullStackDeveloper11.git <br/>
+
+## Git Branch Codes
+- Dikkat: branch yapmadan önce git add (staged tarafında olmalıdır)
+- Dikkat: branch yapmadan önce git add sonra git commit yapmalıyız.
+> git branch <br/>
+> git branch frontend<br/>
+> git checkout frontend<br/>
+> git switch frontend<br/>
+> 
+> git checkout -b frontend<br/>
+> git checkout -b backend<br/>
+> git checkout master
+> git merge backend
+> git merge --no-ff backend
+> git merge squash
+> git merge rebase
+
+---
 
 ### Bean
 ```sh
@@ -18,7 +51,7 @@ ModelMapper
 PasswordEncoder
 OpenApiConfiguration
 ```
-
+---
 ### Exception
 ```sh
 HamitMizrakException
@@ -27,7 +60,7 @@ ResourceNotFoundException
 ResourceCreatedException
 ResourceBadRequestException
 ```
-
+---
 ### 
 ```sh
 RegisterDto
@@ -35,7 +68,6 @@ BaseEntity
 RegisterEntity
 IRegisterRepository
 ```
-
 
 ---
 #  Java Full Stack Developer -7 (1 Nisan  2023)
@@ -139,3 +171,4 @@ npm install bootstrap --save
 npm install node-sass --save
 
 
+---
