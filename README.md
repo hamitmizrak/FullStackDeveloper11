@@ -138,4 +138,52 @@ npm install axios
 npm install bootstrap --save
 npm install node-sass --save
 
+---
+## Git Codes
+```sh 
+git config --global -l
+git config --global user.name
+git config --global user.email
+git config --global core.editor notepad++
+git config --global -e
+
+git init
+git add .
+git commit -m "initial data"
+ssh-keygen -t rsa -b 4096 -C "hamitmizrak@gmail.com"
+cat ~/.ssh/id_rsa.pub
+git remote add github url
+git remote add gitlab url
+
+git branch 
+git branch -l (Local)
+git branch -a (Local+Remote branch)
+git branch -r (remote branch)
+
+git add .
+git commit -m "branch önceis hazırlık"
+git push -u origin master
+
+git branch backend
+git checkout backend
+VEYA
+git checkout -b backend
+
+git add .
+git commit -m "backend"
+git push backend
+
+git switch master
+git config --global alias.log2 "log --decorate --oneline --graph --all"
+git log2
+git merge backend
+git log2
+git merge --no-ff backend
+git log2
+git merge squash
+git log2
+git rebase backend
+
+```
+
 
