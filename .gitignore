@@ -2,7 +2,7 @@
 /blog/node_modules
 /dockerize/
 # /log
-# /memory_persist
+/memory_persist
 # /src/main/resources/application.properties
 # /target/*
 
