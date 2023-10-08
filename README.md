@@ -36,7 +36,6 @@ RegisterEntity
 IRegisterRepository
 ```
 
-
 ---
 #  Java Full Stack Developer -7 (1 Nisan  2023)
 * [GitHub](https://github.com/hamitmizrak/Turgut_Ozal_University_JavaTutorialsCommonData)
