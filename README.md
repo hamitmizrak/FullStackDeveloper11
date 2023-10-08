@@ -18,6 +18,8 @@
 - React JS
 ---
 
+![see the big picture](./picture/seethebigpicture.png)
+
 ## Git initial
 > git init <br/>
 > git add . <br/>
