@@ -46,4 +46,4 @@ public class RegisterEntity extends BaseEntity implements Serializable {
 
     @Column(name = "active")
     private Boolean registerIsPassive=false;
-}
+} //end class

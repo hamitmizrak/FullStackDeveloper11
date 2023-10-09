@@ -14,4 +14,4 @@ public interface IRegisterRepository extends CrudRepository<RegisterEntity,Long>
 
     // Delivered Query
     Optional<RegisterEntity> findByRegisterEmail(String email);
-}
+} //end interface

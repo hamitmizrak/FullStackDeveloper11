@@ -1,5 +1,6 @@
 package com.hamitmizrak.FullStackDeveloper11.business.dto;
 
+import com.hamitmizrak.FullStackDeveloper11.annotation.AnnotationUniqueEmailAddress;
 import com.hamitmizrak.FullStackDeveloper11.audit.AuditingAwareBaseDto;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Builder;
@@ -22,12 +23,15 @@ public class RegisterDto extends AuditingAwareBaseDto implements Serializable {
     // Dikkat: message sonunda boşluk olmasın
     @NotEmpty(message = "{register.username.validation.constraints.NotNull.message}")
     private String registerUsername;
+
     @NotEmpty(message = "{register.name.validation.constraints.NotNull.message}")
     private String registerName;
 
     @NotEmpty(message = "{register.surname.validation.constraints.NotNull.message}")
     private String registerSurname;
 
+    // Kendi annotation'ımı yazdı
+    @AnnotationUniqueEmailAddress
     @NotEmpty(message = "{register.email.validation.constraints.NotNull.message}")
     private String registerEmail;
 
