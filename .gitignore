@@ -3,7 +3,7 @@
 /log/
 /memory_persist
 # /src/main/resources/application.properties
-# /target/*
+/target/*
 # /dockerize/
 
 HELP.md
