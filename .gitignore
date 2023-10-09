@@ -1,10 +1,10 @@
 # it have to for git files or director untracked special data
 /blog/node_modules
-/dockerize/
 /log
 /memory_persist
+#/dockerize/
 # /src/main/resources/application.properties
-/target/*
+#/target/*
 
 HELP.md
 target/
