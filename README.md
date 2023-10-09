@@ -187,6 +187,9 @@ git rebase backend
 git pull origin master
 git fetch origin master
 
+git add . (staged area taşıdım)
+git commit -a -m "add yapmadan commit"
+
 ```
 
 
