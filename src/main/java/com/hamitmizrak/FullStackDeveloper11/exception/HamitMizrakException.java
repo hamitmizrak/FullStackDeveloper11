@@ -6,7 +6,7 @@ package com.hamitmizrak.FullStackDeveloper11.exception;
 // 402 : Ödeme ( Payment Required)
 // 403 : Yasak Giriş ( Forbidden)
 // 404 : Bulunamadı (not found)
-// 502 :            (Bad Gateway)
+// 502 : Kötü Ağ Geçidi  (Bad Gateway)
 
 // My Special Exception
 public class HamitMizrakException extends RuntimeException{

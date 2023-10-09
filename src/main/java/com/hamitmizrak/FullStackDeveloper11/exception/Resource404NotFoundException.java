@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 //404: Bulunamadı (Not Found)
 @ResponseStatus(value = HttpStatus.NOT_FOUND)
-public class Resource403NotFoundException extends RuntimeException{
+public class Resource404NotFoundException extends RuntimeException{
 
     // Override
-    public Resource403NotFoundException(String message) {
+    public Resource404NotFoundException(String message) {
         super(message);
     }
 }
