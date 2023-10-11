@@ -1,15 +1,26 @@
 package com.hamitmizrak.FullStackDeveloper11.bean;
 
+
+import com.hamitmizrak.FullStackDeveloper11.business.services.IRegisterServices;
+import com.hamitmizrak.FullStackDeveloper11.data.entity.RegisterEntity;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+// LOMBOK
+@RequiredArgsConstructor
+
 @Configuration
 @Log4j2
 public class BlogCommandLineRunner {
 
-    //FIRST
+    // INJECTION
+    // 1.YOL
+    // private final IRegisterServices iRegisterServices;
+
+    // FIRST
     public void blogCommandLineRunnerAfterBeanMethod(){
         log.info("blog CommandLineRunner After Bean Method başladı");
         System.out.println("blog CommandLineRunner After Bean Method başladı");
@@ -18,11 +29,12 @@ public class BlogCommandLineRunner {
 
     // Injection
     @Bean
-    public CommandLineRunner blogCommandLineRunnerMethod() {
+    public CommandLineRunner blogCommandLineRunnerMethod(IRegisterServices iRegisterServices) {
         // Lambda Expression
         return args -> {
             System.out.println("CommandLineRunner Çalıştı");
             log.info("CommandLineRunner Çalıştı");
+            iRegisterServices.registerServiceSpeedData(5L);
         };
     }
 
@@ -33,4 +45,4 @@ public class BlogCommandLineRunner {
         System.out.println("blog Command Line Runner Befdre Bean Method bitti");
     }
 
-}
+} //end class

@@ -1,8 +1,9 @@
-package com.hamitmizrak.FullStackDeveloper11.business.dto.services.impl;
+package com.hamitmizrak.FullStackDeveloper11.business.services.impl;
 
 import com.hamitmizrak.FullStackDeveloper11.bean.ModelMapperBeanClass;
+import com.hamitmizrak.FullStackDeveloper11.bean.PasswordEncoderBeanClass;
 import com.hamitmizrak.FullStackDeveloper11.business.dto.RegisterDto;
-import com.hamitmizrak.FullStackDeveloper11.business.dto.services.IRegisterServices;
+import com.hamitmizrak.FullStackDeveloper11.business.services.IRegisterServices;
 import com.hamitmizrak.FullStackDeveloper11.data.entity.RegisterEntity;
 import com.hamitmizrak.FullStackDeveloper11.data.repository.IRegisterRepository;
 import com.hamitmizrak.FullStackDeveloper11.exception.HamitMizrakException;
@@ -27,6 +28,8 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
     private final IRegisterRepository iRegisterRepository;
     private final ModelMapperBeanClass modelMapperBeanClass;
 
+    private final PasswordEncoderBeanClass passwordEncoderBeanClass;
+
     // Model Mapper
     @Override
     public RegisterDto entityToDto(RegisterEntity registerEntity) {
@@ -45,6 +48,8 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
     public RegisterDto registerServiceCreate(RegisterDto registerDto) {
         if (registerDto != null) {
             RegisterEntity registerEntity = dtoToEntity(registerDto);
+            // Password Encoder Bean
+            passwordEncoderBeanClass.passwordEncoderMethod().encode(registerDto.getRegisterPassword());
             iRegisterRepository.save(registerEntity);
             // Dto Set(id ve date)
             registerDto.setId(registerEntity.getId());
@@ -127,6 +132,7 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
     }
 
     /////////////////////////////////////////////////////////////////
+    // SPEED DATA
     @Override
     public List<RegisterDto> registerServiceSpeedData(Long key) {
         List<RegisterDto> registerDtoList=new ArrayList<>();
@@ -137,8 +143,8 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
                         .registerNickName("nick name "+i)
                         .registerName("name "+i)
                         .registerSurname("surname "+i)
-                        .registerPassword(UUID.randomUUID().toString())
-                        .registerEmail("hamitmizrak"+i+"@gmail.com")
+                        .registerPassword(passwordEncoderBeanClass.passwordEncoderMethod().encode(UUID.randomUUID().toString()))
+                        .registerEmail("hamitmizrak"+UUID.randomUUID().toString()+"@gmail.com")
                         .registerIsPassive(false)
                         .build();
                 RegisterEntity registerEntity = dtoToEntity(registerDto);
@@ -154,6 +160,7 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
         return registerDtoList;
     }
 
+    // DELETE ALL
     @Override
     public String registerServiceDeleteAll() {
         iRegisterRepository.deleteAll();

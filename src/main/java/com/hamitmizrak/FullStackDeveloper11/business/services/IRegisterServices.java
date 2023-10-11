@@ -1,4 +1,4 @@
-package com.hamitmizrak.FullStackDeveloper11.business.dto.services;
+package com.hamitmizrak.FullStackDeveloper11.business.services;
 
 import org.springframework.http.ResponseEntity;
 
