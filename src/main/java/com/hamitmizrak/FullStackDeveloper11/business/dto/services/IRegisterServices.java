@@ -1,5 +1,7 @@
 package com.hamitmizrak.FullStackDeveloper11.business.dto.services;
 
+import org.springframework.http.ResponseEntity;
+
 import java.util.List;
 
 // D: Dto
@@ -20,12 +22,19 @@ public interface IRegisterServices <D,E>{
     public List<D> registerServiceList();
 
     // FIND
-    public D registerServiceFindById(D d);
+    public D registerServiceFindById(Long id);
 
     // UPDATE
     public D registerServiceUpdate(Long id, D d);
 
     // DELETE
     public D registerServiceDeleteById(Long id);
+
+    ////////////////////////////////////////////////////////////
+    // SPEED DATA
+    public List<D> registerServiceSpeedData(Long key);
+
+    // ALL DELETE
+    public String registerServiceDeleteAll();
 
 } //end interface
