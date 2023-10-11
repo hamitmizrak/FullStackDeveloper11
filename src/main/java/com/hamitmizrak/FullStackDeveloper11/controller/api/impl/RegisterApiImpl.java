@@ -1,7 +1,7 @@
 package com.hamitmizrak.FullStackDeveloper11.controller.api.impl;
 
 import com.hamitmizrak.FullStackDeveloper11.business.dto.RegisterDto;
-import com.hamitmizrak.FullStackDeveloper11.business.dto.services.IRegisterServices;
+import com.hamitmizrak.FullStackDeveloper11.business.services.IRegisterServices;
 import com.hamitmizrak.FullStackDeveloper11.controller.api.IRegisterApi;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
