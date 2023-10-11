@@ -3310,3 +3310,220 @@ insert into registers (register_email,active,register_name,register_nick_name,re
 2023-10-11T21:13:57.226+05:30  INFO 20620 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-10-11T21:13:57.227+05:30  INFO 20620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
 2023-10-11T21:13:57.243+05:30  INFO 20620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2023-10-11T21:14:35.455+05:30  INFO 20620 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : Starting FullStackDeveloper11Application using Java 17.0.5 with PID 20620 (D:\spring\FullStackDeveloper11\target\classes started by 90553 in D:\spring\FullStackDeveloper11)
+2023-10-11T21:14:35.456+05:30  INFO 20620 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : The following 1 profile is active: "frontend"
+2023-10-11T21:14:35.866+05:30  INFO 20620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-11T21:14:35.883+05:30  INFO 20620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interfaces.
+2023-10-11T21:14:36.092+05:30  INFO 20620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 4444 (http)
+2023-10-11T21:14:36.093+05:30  INFO 20620 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-11T21:14:36.093+05:30  INFO 20620 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-11T21:14:36.122+05:30  INFO 20620 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-10-11T21:14:36.122+05:30  INFO 20620 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 664 ms
+2023-10-11T21:14:36.187+05:30  INFO 20620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2023-10-11T21:14:36.194+05:30  INFO 20620 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn52: url=jdbc:h2:file:./memory_persist/blog user=SA
+2023-10-11T21:14:36.194+05:30  INFO 20620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2023-10-11T21:14:36.194+05:30  INFO 20620 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./memory_persist/blog'
+2023-10-11T21:14:36.226+05:30 DEBUG 20620 --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-10-11T21:14:36.226+05:30 DEBUG 20620 --- [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2023-10-11T21:14:36.265+05:30  INFO 20620 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-11T21:14:36.309+05:30  INFO 20620 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-11T21:14:36.317+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.AuditorAwareBeanClass         : auditor Aware bean Before başladı
+2023-10-11T21:14:36.317+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.BlogCommandLineRunner         : blog CommandLineRunner After Bean Method başladı
+2023-10-11T21:14:36.318+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.Locale18NBeanClass            : swagger Open Api Before Bean başladı
+2023-10-11T21:14:36.319+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.ModelMapperBeanClass          : Model mapper bean Before başladı
+2023-10-11T21:14:36.320+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder Before Bean başladı
+2023-10-11T21:14:36.320+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api Before Bean başladı
+2023-10-11T21:14:36.322+05:30  WARN 20620 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'registerApiImpl' defined in file [D:\spring\FullStackDeveloper11\target\classes\com\hamitmizrak\FullStackDeveloper11\controller\api\impl\RegisterApiImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.hamitmizrak.FullStackDeveloper11.business.services.IRegisterServices<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-10-11T21:14:36.323+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api After Bean bitti
+2023-10-11T21:14:36.323+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder After Bean bitti
+2023-10-11T21:14:36.323+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.ModelMapperBeanClass          : Model mapper After bean bitti
+2023-10-11T21:14:36.323+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.Locale18NBeanClass            : locale 18N After Bean Method bitti
+2023-10-11T21:14:36.323+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.BlogCommandLineRunner         : blog CommandLineRunner Before Bean Method bitti
+2023-10-11T21:14:36.323+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.AuditorAwareBeanClass         : auditor Aware After bean bitti
+2023-10-11T21:14:36.323+05:30  INFO 20620 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-11T21:14:36.323+05:30  INFO 20620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2023-10-11T21:14:36.337+05:30  INFO 20620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2023-10-11T21:14:36.338+05:30  INFO 20620 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-10-11T21:14:36.355+05:30  INFO 20620 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-11T21:14:36.362+05:30 ERROR 20620 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl required a bean of type 'com.hamitmizrak.FullStackDeveloper11.business.services.IRegisterServices' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.hamitmizrak.FullStackDeveloper11.business.services.IRegisterServices' in your configuration.
+
+2023-10-11T21:15:19.642+05:30  INFO 20620 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : Starting FullStackDeveloper11Application using Java 17.0.5 with PID 20620 (D:\spring\FullStackDeveloper11\target\classes started by 90553 in D:\spring\FullStackDeveloper11)
+2023-10-11T21:15:19.642+05:30  INFO 20620 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : The following 1 profile is active: "frontend"
+2023-10-11T21:15:19.937+05:30  INFO 20620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-11T21:15:19.944+05:30  INFO 20620 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interfaces.
+2023-10-11T21:15:20.037+05:30  INFO 20620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 4444 (http)
+2023-10-11T21:15:20.037+05:30  INFO 20620 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-11T21:15:20.037+05:30  INFO 20620 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-11T21:15:20.055+05:30  INFO 20620 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-10-11T21:15:20.055+05:30  INFO 20620 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 411 ms
+2023-10-11T21:15:20.082+05:30  INFO 20620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2023-10-11T21:15:20.087+05:30  INFO 20620 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection conn55: url=jdbc:h2:file:./memory_persist/blog user=SA
+2023-10-11T21:15:20.088+05:30  INFO 20620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2023-10-11T21:15:20.088+05:30  INFO 20620 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./memory_persist/blog'
+2023-10-11T21:15:20.108+05:30 DEBUG 20620 --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-10-11T21:15:20.108+05:30 DEBUG 20620 --- [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2023-10-11T21:15:20.126+05:30  INFO 20620 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-11T21:15:20.155+05:30  INFO 20620 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-11T21:15:20.160+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.AuditorAwareBeanClass         : auditor Aware bean Before başladı
+2023-10-11T21:15:20.160+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.BlogCommandLineRunner         : blog CommandLineRunner After Bean Method başladı
+2023-10-11T21:15:20.161+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.Locale18NBeanClass            : swagger Open Api Before Bean başladı
+2023-10-11T21:15:20.161+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.ModelMapperBeanClass          : Model mapper bean Before başladı
+2023-10-11T21:15:20.161+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder Before Bean başladı
+2023-10-11T21:15:20.161+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api Before Bean başladı
+2023-10-11T21:15:20.236+05:30  WARN 20620 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-11T21:15:20.274+05:30 DEBUG 20620 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-10-11T21:15:20.279+05:30  INFO 20620 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-11T21:15:20.289+05:30 DEBUG 20620 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2023-10-11T21:15:20.544+05:30 DEBUG 20620 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2023-10-11T21:15:20.553+05:30 DEBUG 20620 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-10-11T21:15:20.715+05:30  INFO 20620 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-10-11T21:15:20.718+05:30  INFO 20620 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-10-11T21:15:20.749+05:30  INFO 20620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 4444 (http) with context path ''
+2023-10-11T21:15:20.758+05:30  INFO 20620 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : Started FullStackDeveloper11Application in 1.141 seconds (process running for 246.459)
+2023-10-11T21:15:20.760+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.BlogCommandLineRunner         : CommandLineRunner Çalıştı
+2023-10-11T21:15:20.852+05:30 ERROR 20620 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.UK_57HWP3XRPLNG3NN1JWR308Y8Y_INDEX_A ON PUBLIC.REGISTERS(REGISTER_NICK_NAME NULLS FIRST) VALUES ( /* 1 */ 'nick name 1' )"; SQL statement:
+insert into registers (register_email,active,register_name,register_nick_name,register_password,register_surname,system_date,id) values (?,?,?,?,?,?,?,default) [23505-214]
+2023-10-11T21:15:20.855+05:30  INFO 20620 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-10-11T21:15:20.858+05:30 ERROR 20620 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:777) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:758) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309) ~[spring-boot-3.1.4.jar:3.1.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298) ~[spring-boot-3.1.4.jar:3.1.4]
+	at com.hamitmizrak.FullStackDeveloper11.FullStackDeveloper11Application.main(FullStackDeveloper11Application.java:52) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.4.jar:3.1.4]
+Caused by: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Unique index or primary key violation: "PUBLIC.UK_57HWP3XRPLNG3NN1JWR308Y8Y_INDEX_A ON PUBLIC.REGISTERS(REGISTER_NICK_NAME NULLS FIRST) VALUES ( /* 1 */ 'nick name 1' )"; SQL statement:
+insert into registers (register_email,active,register_name,register_nick_name,register_password,register_surname,system_date,id) values (?,?,?,?,?,?,?,default) [23505-214]] [insert into registers (register_email,active,register_name,register_nick_name,register_password,register_surname,system_date,id) values (?,?,?,?,?,?,?,default)]; SQL [insert into registers (register_email,active,register_name,register_nick_name,register_password,register_surname,system_date,id) values (?,?,?,?,?,?,?,default)]; constraint ["PUBLIC.UK_57HWP3XRPLNG3NN1JWR308Y8Y_INDEX_A ON PUBLIC.REGISTERS(REGISTER_NICK_NAME NULLS FIRST) VALUES ( /* 1 */ 'nick name 1' )"; SQL statement:
+insert into registers (register_email,active,register_name,register_nick_name,register_password,register_surname,system_date,id) values (?,?,?,?,?,?,?,default) [23505-214]]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:269) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:229) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550) ~[spring-orm-6.0.12.jar:6.0.12]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-6.0.12.jar:6.0.12]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:243) ~[spring-tx-6.0.12.jar:6.0.12]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-6.0.12.jar:6.0.12]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.12.jar:6.0.12]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.12.jar:6.0.12]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.12.jar:6.0.12]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.12.jar:6.0.12]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:244) ~[spring-aop-6.0.12.jar:6.0.12]
+	at jdk.proxy12/jdk.proxy12.$Proxy199.save(Unknown Source) ~[na:na]
+	at com.hamitmizrak.FullStackDeveloper11.business.services.impl.RegisterImpl.registerServiceSpeedData(RegisterImpl.java:151) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.12.jar:6.0.12]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:699) ~[spring-aop-6.0.12.jar:6.0.12]
+	at com.hamitmizrak.FullStackDeveloper11.business.services.impl.RegisterImpl$$SpringCGLIB$$0.registerServiceSpeedData(<generated>) ~[classes/:na]
+	at com.hamitmizrak.FullStackDeveloper11.bean.BlogCommandLineRunner.lambda$blogCommandLineRunnerMethod$0(BlogCommandLineRunner.java:37) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:774) ~[spring-boot-3.1.4.jar:3.1.4]
+	... 10 common frames omitted
+Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement [Unique index or primary key violation: "PUBLIC.UK_57HWP3XRPLNG3NN1JWR308Y8Y_INDEX_A ON PUBLIC.REGISTERS(REGISTER_NICK_NAME NULLS FIRST) VALUES ( /* 1 */ 'nick name 1' )"; SQL statement:
+insert into registers (register_email,active,register_name,register_nick_name,register_password,register_surname,system_date,id) values (?,?,?,?,?,?,?,default) [23505-214]] [insert into registers (register_email,active,register_name,register_nick_name,register_password,register_surname,system_date,id) values (?,?,?,?,?,?,?,default)]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:60) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:278) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performInsert(GetGeneratedKeysDelegate.java:107) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.execute(MutationExecutorPostInsertSingleTable.java:100) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:169) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:111) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2779) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:676) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:363) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:277) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:180) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:140) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:755) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:739) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311) ~[spring-orm-6.0.12.jar:6.0.12]
+	at jdk.proxy12/jdk.proxy12.$Proxy197.persist(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:618) ~[spring-data-jpa-3.1.4.jar:3.1.4]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.12.jar:6.0.12]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.1.4.jar:3.1.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.12.jar:6.0.12]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.12.jar:6.0.12]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.12.jar:6.0.12]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.12.jar:6.0.12]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.12.jar:6.0.12]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.12.jar:6.0.12]
+	... 27 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: "PUBLIC.UK_57HWP3XRPLNG3NN1JWR308Y8Y_INDEX_A ON PUBLIC.REGISTERS(REGISTER_NICK_NAME NULLS FIRST) VALUES ( /* 1 */ 'nick name 1' )"; SQL statement:
+insert into registers (register_email,active,register_name,register_nick_name,register_password,register_surname,system_date,id) values (?,?,?,?,?,?,?,default) [23505-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:508) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.index.Index.getDuplicateKeyException(Index.java:525) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:223) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:184) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:519) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.dml.Insert.insertRows(Insert.java:174) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.dml.Insert.update(Insert.java:135) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.CommandContainer.executeUpdateWithGeneratedKeys(CommandContainer.java:242) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.CommandContainer.update(CommandContainer.java:163) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.command.Command.executeUpdate(Command.java:252) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:209) ~[h2-2.1.214.jar:2.1.214]
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:169) ~[h2-2.1.214.jar:2.1.214]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:275) ~[hibernate-core-6.2.9.Final.jar:6.2.9.Final]
+	... 74 common frames omitted
+
+2023-10-11T21:15:20.892+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api After Bean bitti
+2023-10-11T21:15:20.892+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder After Bean bitti
+2023-10-11T21:15:20.893+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.ModelMapperBeanClass          : Model mapper After bean bitti
+2023-10-11T21:15:20.893+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.Locale18NBeanClass            : locale 18N After Bean Method bitti
+2023-10-11T21:15:20.893+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.BlogCommandLineRunner         : blog CommandLineRunner Before Bean Method bitti
+2023-10-11T21:15:20.893+05:30  INFO 20620 --- [restartedMain] c.h.F.bean.AuditorAwareBeanClass         : auditor Aware After bean bitti
+2023-10-11T21:15:20.893+05:30  INFO 20620 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-11T21:15:20.894+05:30  INFO 20620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2023-10-11T21:15:20.899+05:30  INFO 20620 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
