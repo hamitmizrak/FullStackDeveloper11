@@ -4945,3 +4945,24 @@ insert into registers (register_email,active,register_name,register_nick_name,re
 2023-10-11T19:22:41.057+03:00 DEBUG 21364 --- [http-nio-4444-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
 2023-10-11T19:22:41.058+03:00 DEBUG 21364 --- [http-nio-4444-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing ["{"openapi":"3.0.1","info":{"title":"title bilgisi","description":"description bilgisi","termsOfServi (truncated)..."]
 2023-10-11T19:22:41.059+03:00 DEBUG 21364 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-11T19:23:44.558+03:00 DEBUG 21364 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-10-11T19:23:44.559+03:00 DEBUG 21364 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-10-11T19:23:44.695+03:00  INFO 21364 --- [http-nio-4444-exec-9] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:5
+2023-10-11T19:23:44.697+03:00 DEBUG 21364 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-10-11T19:23:44.698+03:00 DEBUG 21364 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
+2023-10-11T19:23:44.704+03:00 DEBUG 21364 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-11T19:25:11.260+03:00 DEBUG 21364 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-10-11T19:25:11.261+03:00 DEBUG 21364 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-10-11T19:25:11.272+03:00  INFO 21364 --- [http-nio-4444-exec-5] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:5
+2023-10-11T19:25:11.273+03:00 DEBUG 21364 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2023-10-11T19:25:11.274+03:00 DEBUG 21364 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
+2023-10-11T19:25:11.277+03:00 DEBUG 21364 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-11T19:26:00.892+03:00  INFO 21364 --- [SpringApplicationShutdownHook] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api After Bean bitti
+2023-10-11T19:26:00.894+03:00  INFO 21364 --- [SpringApplicationShutdownHook] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder After Bean bitti
+2023-10-11T19:26:00.894+03:00  INFO 21364 --- [SpringApplicationShutdownHook] c.h.F.bean.ModelMapperBeanClass          : Model mapper After bean bitti
+2023-10-11T19:26:00.894+03:00  INFO 21364 --- [SpringApplicationShutdownHook] c.h.F.bean.Locale18NBeanClass            : locale 18N After Bean Method bitti
+2023-10-11T19:26:00.894+03:00  INFO 21364 --- [SpringApplicationShutdownHook] c.h.F.bean.BlogCommandLineRunner         : blog CommandLineRunner Before Bean Method bitti
+2023-10-11T19:26:00.894+03:00  INFO 21364 --- [SpringApplicationShutdownHook] c.h.F.bean.AuditorAwareBeanClass         : auditor Aware After bean bitti
+2023-10-11T19:26:00.894+03:00  INFO 21364 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-11T19:26:01.098+03:00  INFO 21364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-11T19:26:01.107+03:00  INFO 21364 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
