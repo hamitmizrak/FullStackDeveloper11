@@ -52,4 +52,4 @@ public class FullStackDeveloper11Application {
 		SpringApplication.run(FullStackDeveloper11Application.class, args);
 	}
 
-}
+} //end class
