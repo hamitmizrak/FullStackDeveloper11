@@ -29,8 +29,8 @@ public class RegisterEntity extends BaseEntity implements Serializable {
 
     // Global Variable (6)
     // Dikkat: message sonunda boşluk olmasın
-    @Column(name = "register_user",nullable = true,unique = true, updatable = false,insertable = true,length = 100)
-    private String registerUsername;
+    @Column(name = "register_nick_name",nullable = true,unique = true, updatable = false,insertable = true,length = 100)
+    private String registerNickName;
 
     @Column(name = "register_name",columnDefinition = "varchar(255) default 'adınızı girmediniz'")
     private String registerName;

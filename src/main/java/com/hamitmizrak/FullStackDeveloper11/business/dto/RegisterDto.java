@@ -21,8 +21,8 @@ public class RegisterDto extends AuditingAwareBaseDto implements Serializable {
 
     // Global Variable (6)
     // Dikkat: message sonunda boşluk olmasın
-    @NotEmpty(message = "{register.username.validation.constraints.NotNull.message}")
-    private String registerUsername;
+    @NotEmpty(message = "{register.nickname.validation.constraints.NotNull.message}")
+    private String registerNickName;
 
     @NotEmpty(message = "{register.name.validation.constraints.NotNull.message}")
     private String registerName;
@@ -46,8 +46,8 @@ public class RegisterDto extends AuditingAwareBaseDto implements Serializable {
     }
 
     //parametreli constructor
-    public RegisterDto(String registerUsername, String registerName, String registerSurname, String registerEmail, String registerPassword, Boolean registerIsPassive) {
-        this.registerUsername = registerUsername;
+    public RegisterDto(String registerNickName, String registerName, String registerSurname, String registerEmail, String registerPassword, Boolean registerIsPassive) {
+        this.registerNickName = registerNickName;
         this.registerName = registerName;
         this.registerSurname = registerSurname;
         this.registerEmail = registerEmail;
@@ -59,7 +59,7 @@ public class RegisterDto extends AuditingAwareBaseDto implements Serializable {
     @Override
     public String toString() {
         return "RegisterDto{" +
-                "registerUsername='" + registerUsername + '\'' +
+                "registerNickName='" + registerNickName + '\'' +
                 ", registerName='" + registerName + '\'' +
                 ", registerSurname='" + registerSurname + '\'' +
                 ", registerEmail='" + registerEmail + '\'' +
