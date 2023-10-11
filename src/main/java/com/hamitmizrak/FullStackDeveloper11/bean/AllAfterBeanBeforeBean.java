@@ -41,4 +41,11 @@ public class AllAfterBeanBeforeBean {
         return new Locale18NBeanClass();
     }
 
+
+    // Auditor Aware Bean
+    @Bean(initMethod = "auditorAwareBeforeBeanMethod",destroyMethod ="auditorAwareAfterBeanMethod")
+    public AuditorAwareBeanClass auditorAwareBeanClass(){
+        return new AuditorAwareBeanClass();
+    }
+
 } //end class
