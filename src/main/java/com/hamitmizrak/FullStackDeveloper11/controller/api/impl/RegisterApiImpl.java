@@ -17,6 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Log4j2
 
+// API
 @RestController
 //v1.0.0 1: major version 0: minor 0: patch
 @RequestMapping("/register/api/v1.0.0")
@@ -28,6 +29,25 @@ public class RegisterApiImpl implements IRegisterApi<RegisterDto> {
     // INJECTION
     private final IRegisterServices iRegisterServices;
 
+
+    ///////////////////////////////////////////////////////////////////////////
+    // SPEED DATA
+    // http://localhost:4444/register/api/v1.0.0/speed/data/10
+    @Override
+    @GetMapping("/speed/data/{id}")
+    public ResponseEntity<List<RegisterDto>> registerApiSpeedData( @PathVariable(name="id")  Long key) {
+        return ResponseEntity.ok(iRegisterServices.registerServiceSpeedData(key));
+    }
+
+    // DELETE ALL
+    // http://localhost:4444/register/api/v1.0.0/delete/all
+    @Override
+    @GetMapping("/delete/all")
+    public ResponseEntity<?> registerApiDeleteAll() {
+        return ResponseEntity.ok(iRegisterServices.registerServiceDeleteAll());
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
     // CREATE
     // http://localhost:4444/register/api/v1.0.0/create
     @Override
@@ -68,21 +88,5 @@ public class RegisterApiImpl implements IRegisterApi<RegisterDto> {
         return new ResponseEntity<>((HttpStatusCode) iRegisterServices.registerServiceDeleteById(id));
     }
 
-    ///////////////////////////////////////////////////////////////////////////
-    // SPEED DATA
-    // http://localhost:4444/register/api/v1.0.0/speed/data/10
-    @Override
-    @GetMapping("/speed/data/{id}")
-    public ResponseEntity<List<RegisterDto>> registerApiSpeedData( @PathVariable(name="id")  Long key) {
-        return ResponseEntity.ok(iRegisterServices.registerServiceSpeedData(key));
-    }
-
-    // DELETE ALL
-    // http://localhost:4444/register/api/v1.0.0/delete/all
-    @Override
-    @GetMapping("/delete/all")
-    public ResponseEntity<?> registerApiDeleteAll() {
-          return ResponseEntity.ok(iRegisterServices.registerServiceDeleteAll());
-    }
 
 } //end class

@@ -32,4 +32,19 @@ public class PasswordEncoderBeanClass {
         log.info("password Encoder After Bean bitti");
         System.out.println("password Encoder After Bean bitti");
     }
+
+    public static void main(String[] args) {
+        // Şifre oluştur
+        String rawPassword="abc123";
+
+        // BCryptPasswordEncoder
+        BCryptPasswordEncoder passwordEncoder=new BCryptPasswordEncoder();
+
+        String encodedPassword=passwordEncoder.encode(rawPassword);
+        System.out.println("ŞİFRE: "+rawPassword+ " ENCODE: "+  encodedPassword);
+
+        // Kullanıcının girdiği şifre ile sistemdeki eklenmiş şifrenin doğrulanması
+        Boolean isPasswordMatch=passwordEncoder.matches(rawPassword,encodedPassword);
+        System.out.println("Sistemdeki şifre ile kullanıcının girdiği şifre aynı mı ? "+isPasswordMatch);
+    }
 }

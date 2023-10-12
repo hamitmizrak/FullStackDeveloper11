@@ -1,7 +1,5 @@
 package com.hamitmizrak.FullStackDeveloper11.business.services;
 
-import org.springframework.http.ResponseEntity;
-
 import java.util.List;
 
 // D: Dto
@@ -14,6 +12,14 @@ public interface IRegisterServices <D,E>{
     public D entityToDto(E e);
     public E dtoToEntity(D d);
 
+    ////////////////////////////////////////////////////////////
+    // SPEED DATA
+    public List<D> registerServiceSpeedData(Long key);
+
+    // ALL DELETE
+    public String registerServiceDeleteAll();
+
+    ////////////////////////////////////////////////////////////
     // C R U D
     // CREATE
     public D registerServiceCreate(D d);
@@ -30,11 +36,5 @@ public interface IRegisterServices <D,E>{
     // DELETE
     public D registerServiceDeleteById(Long id);
 
-    ////////////////////////////////////////////////////////////
-    // SPEED DATA
-    public List<D> registerServiceSpeedData(Long key);
-
-    // ALL DELETE
-    public String registerServiceDeleteAll();
 
 } //end interface

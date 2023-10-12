@@ -1,13 +1,20 @@
 package com.hamitmizrak.FullStackDeveloper11.controller.api;
 
 import org.springframework.http.ResponseEntity;
-
 import java.util.List;
 
 // D: Dto
 public interface IRegisterApi<D> {
 
     // INJECTION
+
+    // SPEED DATA
+    public ResponseEntity<List<D>> registerApiSpeedData(Long key);
+
+    // ALL DELETE
+    public ResponseEntity<?> registerApiDeleteAll();
+
+    ////////////////////////////////////////////////////////////
 
     // C R U D
     // CREATE
@@ -24,13 +31,6 @@ public interface IRegisterApi<D> {
 
     // DELETE
     public ResponseEntity<?> registerApiDeleteById(Long id);
-
-    ////////////////////////////////////////////////////////////
-    // SPEED DATA
-    public ResponseEntity<List<D>> registerApiSpeedData(Long key);
-
-    // ALL DELETE
-    public ResponseEntity<?> registerApiDeleteAll();
 
 } //end interface
 

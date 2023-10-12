@@ -6,12 +6,15 @@ import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 // LOMBOK
 @Log4j2 // for log
 
 // @Configuration: Classın Bean nesnesi olması için kullanıyoruz.
 @Configuration
+// Auditing Aktif etmek
+@EnableJpaAuditing(auditorAwareRef = "auditorAwareBeanMethod")
 public class AuditorAwareBeanClass {
 
     //FIRST

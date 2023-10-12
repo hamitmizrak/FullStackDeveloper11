@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 // @Component: FrontendProfile nesnesi Spring nesnesi olması için
 @Component
+// application.properties => spring.profiles.active=frontend
 @Profile("frontend")
 public class FrontendProfile implements IChooiseProfile{
     @Override

@@ -20,6 +20,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @Log4j2
 
+// SERVICE
 // Asıl is Yükünü yapan yer
 @Service
 public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEntity> {
@@ -41,6 +42,45 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
         return modelMapperBeanClass.modelMapperMethod().map(registerDto, RegisterEntity.class);
     }
 
+    /////////////////////////////////////////////////////////////////
+    // SPEED DATA
+    @Override
+    public List<RegisterDto> registerServiceSpeedData(Long key) {
+        List<RegisterDto> registerDtoList=new ArrayList<>();
+        if (key != null) {
+            for (int i = 1; i <=key ; i++) {
+                RegisterDto registerDto=RegisterDto
+                        .builder()
+                        .registerNickName("nick name "+i)
+                        .registerName("name "+i)
+                        .registerSurname("surname "+i)
+                        .registerPassword(passwordEncoderBeanClass.passwordEncoderMethod().encode(UUID.randomUUID().toString()))
+                        .registerEmail("hamitmizrak"+UUID.randomUUID().toString()+"@gmail.com")
+                        .registerIsPassive(false)
+                        .build();
+                RegisterEntity registerEntity = dtoToEntity(registerDto);
+                iRegisterRepository.save(registerEntity);
+                registerDto.setId(registerEntity.getId());
+                registerDto.setSystemDate(registerEntity.getSystemDate());
+                registerDtoList.add(registerDto);
+            }
+        }
+        registerDtoList.stream().forEach((temp)->
+                System.out.println(temp)
+        );
+        return registerDtoList;
+    }
+
+    // DELETE ALL
+    @Override
+    public String registerServiceDeleteAll() {
+        iRegisterRepository.deleteAll();
+        System.out.println(iRegisterRepository.findAll().toString());
+        return iRegisterRepository.findAll().toString();
+    }
+
+    /////////////////////////////////////////////////////////////////
+    // C R U D
     // CREATE
     // org.springframework.transaction.annotation.Transactional
     @Override
@@ -129,43 +169,6 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
             iRegisterRepository.deleteById(id);
         }
         return registerFindDto;
-    }
-
-    /////////////////////////////////////////////////////////////////
-    // SPEED DATA
-    @Override
-    public List<RegisterDto> registerServiceSpeedData(Long key) {
-        List<RegisterDto> registerDtoList=new ArrayList<>();
-        if (key != null) {
-            for (int i = 1; i <=key ; i++) {
-                RegisterDto registerDto=RegisterDto
-                        .builder()
-                        .registerNickName("nick name "+i)
-                        .registerName("name "+i)
-                        .registerSurname("surname "+i)
-                        .registerPassword(passwordEncoderBeanClass.passwordEncoderMethod().encode(UUID.randomUUID().toString()))
-                        .registerEmail("hamitmizrak"+UUID.randomUUID().toString()+"@gmail.com")
-                        .registerIsPassive(false)
-                        .build();
-                RegisterEntity registerEntity = dtoToEntity(registerDto);
-                iRegisterRepository.save(registerEntity);
-                registerDto.setId(registerEntity.getId());
-                registerDto.setSystemDate(registerEntity.getSystemDate());
-                registerDtoList.add(registerDto);
-            }
-        }
-        registerDtoList.stream().forEach((temp)->
-            System.out.println(temp)
-        );
-        return registerDtoList;
-    }
-
-    // DELETE ALL
-    @Override
-    public String registerServiceDeleteAll() {
-        iRegisterRepository.deleteAll();
-        System.out.println(iRegisterRepository.findAll().toString());
-        return iRegisterRepository.findAll().toString();
     }
 
 } //end class

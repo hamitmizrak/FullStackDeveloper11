@@ -5,11 +5,11 @@ import org.springframework.stereotype.Component;
 
 // @Component: BackendProfile nesnesi Spring nesnesi olması için
 @Component
-// application.properties => spring.profiles.active=backend
-@Profile("backend")
-public class BackendProfile implements IChooiseProfile{
+// application.properties => spring.profiles.active=fullstack
+@Profile("fullstack")
+public class FullStackProfile implements IChooiseProfile{
     @Override
     public String message(String name) {
-        return BackendProfile.class+" Profile: "+name;
+        return FullStackProfile.class+" Profile: "+name;
     }
 }
