@@ -15,11 +15,37 @@
 # restart: always (konteynar her zaman otomatik başlatsın)
 # restart: on-failure  (konteynar çökmesi durumunda otomatik olarak başlat)
 
+version: '3.1'
+
 services:
-  backend_web:
-    container_name: container_spring_react
-    image: image_spring_react
-    restart: on-failure
+  dailyapp:
+    container_name: blog_react
+    image: blog_react
+    restart: always
     build: ./
     ports:
-      - "4444:4444"
+      - "5555:4444"
+    networks:
+      - blog_default
+    depends_on:
+      - "PostgreSQL"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://PostgreSQL:5432/blog
+      SPRING_DATASOURCE_USERNAME: "postgres"
+      SPRING_DATASOURCE_PASSWORD: "postgres"
+      SPRING_JPA_HIBERNATE_DDL_AUTO: create
+
+  PostgreSQL:
+    container_name: postgres_db
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=blog
+
+networks:
+  blog_default:
+    name: blog_default
+    driver: bridge
