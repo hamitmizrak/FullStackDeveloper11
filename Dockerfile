@@ -1,6 +1,15 @@
 # docker image build -t imageAdi .
 # docker container run -d -p 4444:4444 --rm --name my_imageName
 
+# DockerHub push
+#1.adım: Dockerfile ile image oluştur
+#2.adım: Dockerhub üzerinden repository oluştur
+#3.adım:  docker ps
+#image name: image_spring_react
+
+#4.adım: docker image tag image_spring_react javahamitmizrak/fullstack11
+#5.adım: docker push javahamitmizrak/fullstack11
+
 # JDK Sürümü
 FROM openjdk:17
 

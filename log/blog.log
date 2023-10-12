@@ -1802,3 +1802,49 @@ Consider defining a bean of type 'com.hamitmizrak.FullStackDeveloper11.business.
 2023-10-12T14:20:27.650+05:30  INFO 22260 --- [restartedMain] c.h.F.bean.BlogCommandLineRunner2        : CommandLineRunner Ã‡alÄ±ÅŸtÄ± Sade
 2023-10-12T14:20:27.650+05:30  INFO 22260 --- [restartedMain] c.h.F.bean.BlogCommandLineRunner         : CommandLineRunner Ã‡alÄ±ÅŸtÄ±
 2023-10-12T14:20:28.060+05:30  INFO 22260 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-10-12T15:09:14.202+05:30  INFO 22260 --- [SpringApplicationShutdownHook] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api After Bean bitti
+2023-10-12T15:09:14.203+05:30  INFO 22260 --- [SpringApplicationShutdownHook] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder After Bean bitti
+2023-10-12T15:09:14.203+05:30  INFO 22260 --- [SpringApplicationShutdownHook] c.h.F.bean.ModelMapperBeanClass          : Model mapper After bean bitti
+2023-10-12T15:09:14.203+05:30  INFO 22260 --- [SpringApplicationShutdownHook] c.h.F.bean.Locale18NBeanClass            : locale 18N After Bean Method bitti
+2023-10-12T15:09:14.203+05:30  INFO 22260 --- [SpringApplicationShutdownHook] c.h.F.bean.BlogCommandLineRunner         : blog CommandLineRunner Before Bean Method bitti
+2023-10-12T15:09:14.203+05:30  INFO 22260 --- [SpringApplicationShutdownHook] c.h.F.bean.AuditorAwareBeanClass         : auditor Aware After bean bitti
+2023-10-12T15:09:14.203+05:30  INFO 22260 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12T15:09:14.377+05:30  INFO 22260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown initiated...
+2023-10-12T15:09:14.394+05:30  INFO 22260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown completed.
+2023-10-12T12:40:15.175+03:00  INFO 12488 --- [main] h.F.FullStackDeveloper11ApplicationTests : Starting FullStackDeveloper11ApplicationTests using Java 17.0.5 with PID 12488 (started by 90553 in D:\spring\FullStackDeveloper11)
+2023-10-12T12:40:15.181+03:00  INFO 12488 --- [main] h.F.FullStackDeveloper11ApplicationTests : The following 1 profile is active: "frontend"
+2023-10-12T12:40:15.230+03:00 DEBUG 12488 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5cad8b7d
+2023-10-12T12:40:16.662+03:00  INFO 12488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-12T12:40:16.722+03:00  INFO 12488 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 1 JPA repository interfaces.
+2023-10-12T12:40:18.011+03:00  INFO 12488 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-12T12:40:18.035+03:00  INFO 12488 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-12T12:40:18.298+03:00  INFO 12488 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./memory_persist/blog user=SA
+2023-10-12T12:40:18.300+03:00  INFO 12488 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-12T12:40:19.326+03:00  INFO 12488 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12T12:40:19.338+03:00  INFO 12488 --- [main] c.h.F.bean.AuditorAwareBeanClass         : auditor Aware bean Before baþladý
+2023-10-12T12:40:19.340+03:00  INFO 12488 --- [main] c.h.F.bean.BlogCommandLineRunner         : blog CommandLineRunner After Bean Method baþladý
+2023-10-12T12:40:19.342+03:00  INFO 12488 --- [main] c.h.F.bean.Locale18NBeanClass            : swagger Open Api Before Bean baþladý
+2023-10-12T12:40:19.343+03:00  INFO 12488 --- [main] c.h.F.bean.ModelMapperBeanClass          : Model mapper bean Before baþladý
+2023-10-12T12:40:19.344+03:00  INFO 12488 --- [main] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder Before Bean baþladý
+2023-10-12T12:40:19.345+03:00  INFO 12488 --- [main] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api Before Bean baþladý
+2023-10-12T12:40:20.062+03:00  WARN 12488 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-12T12:40:20.234+03:00 DEBUG 12488 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-10-12T12:40:20.270+03:00  INFO 12488 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-12T12:40:20.353+03:00 DEBUG 12488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
+2023-10-12T12:40:21.201+03:00 DEBUG 12488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2023-10-12T12:40:21.213+03:00 DEBUG 12488 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-10-12T12:40:21.804+03:00  INFO 12488 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./memory_persist/blog'
+2023-10-12T12:40:21.837+03:00  INFO 12488 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-10-12T12:40:21.924+03:00  INFO 12488 --- [main] h.F.FullStackDeveloper11ApplicationTests : Started FullStackDeveloper11ApplicationTests in 7.163 seconds (process running for 8.446)
+2023-10-12T12:40:21.990+03:00  INFO 12488 --- [main] c.h.F.bean.BlogCommandLineRunner2        : CommandLineRunner Çalýþtý Sade
+2023-10-12T12:40:21.991+03:00  INFO 12488 --- [main] c.h.F.bean.BlogCommandLineRunner         : CommandLineRunner Çalýþtý
+2023-10-12T12:40:23.276+03:00 DEBUG 12488 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5cad8b7d, started on Thu Oct 12 15:10:15 IST 2023
+2023-10-12T12:40:23.281+03:00  INFO 12488 --- [SpringApplicationShutdownHook] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api After Bean bitti
+2023-10-12T12:40:23.282+03:00  INFO 12488 --- [SpringApplicationShutdownHook] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder After Bean bitti
+2023-10-12T12:40:23.283+03:00  INFO 12488 --- [SpringApplicationShutdownHook] c.h.F.bean.ModelMapperBeanClass          : Model mapper After bean bitti
+2023-10-12T12:40:23.283+03:00  INFO 12488 --- [SpringApplicationShutdownHook] c.h.F.bean.Locale18NBeanClass            : locale 18N After Bean Method bitti
+2023-10-12T12:40:23.283+03:00  INFO 12488 --- [SpringApplicationShutdownHook] c.h.F.bean.BlogCommandLineRunner         : blog CommandLineRunner Before Bean Method bitti
+2023-10-12T12:40:23.284+03:00  INFO 12488 --- [SpringApplicationShutdownHook] c.h.F.bean.AuditorAwareBeanClass         : auditor Aware After bean bitti
+2023-10-12T12:40:23.284+03:00  INFO 12488 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-12T12:40:23.512+03:00  INFO 12488 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-12T12:40:23.519+03:00  INFO 12488 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
