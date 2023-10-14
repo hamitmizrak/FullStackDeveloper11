@@ -89,7 +89,7 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
         if (registerDto != null) {
             RegisterEntity registerEntity = dtoToEntity(registerDto);
             // Password Encoder Bean
-            passwordEncoderBeanClass.passwordEncoderMethod().encode(registerDto.getRegisterPassword());
+            //passwordEncoderBeanClass.passwordEncoderMethod().encode(registerDto.getRegisterPassword());
             iRegisterRepository.save(registerEntity);
             // Dto Set(id ve date)
             registerDto.setId(registerEntity.getId());
@@ -148,6 +148,7 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
         RegisterEntity registerEntity = null;
         if(registerFindDto!=null){
             registerEntity=dtoToEntity(registerDto);
+            registerEntity.setId(registerDto.getId());
             registerEntity.setRegisterNickName(registerDto.getRegisterNickName());
             registerEntity.setRegisterName(registerDto.getRegisterName());
             registerEntity.setRegisterSurname(registerDto.getRegisterSurname());

@@ -69,7 +69,8 @@ public class RegisterApiImpl implements IRegisterApi<RegisterDto> {
     @Override
     @GetMapping("/find/{id}")
     public ResponseEntity<?> registerApiFindById(@PathVariable(name = "id") Long id) {
-        return ResponseEntity.status(200).body(iRegisterServices.registerServiceFindById(id));
+        //return ResponseEntity.status(200).body(iRegisterServices.registerServiceFindById(id));
+        return ResponseEntity.ok(iRegisterServices.registerServiceFindById(id));
     }
 
     // UPDATE
@@ -85,7 +86,8 @@ public class RegisterApiImpl implements IRegisterApi<RegisterDto> {
     @Override
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> registerApiDeleteById(@PathVariable(name="id")  Long id) {
-        return new ResponseEntity<>((HttpStatusCode) iRegisterServices.registerServiceDeleteById(id));
+        //return new ResponseEntity<>((HttpStatusCode) iRegisterServices.registerServiceDeleteById(id));
+        return ResponseEntity.ok(iRegisterServices.registerServiceDeleteById(id));
     }
 
 

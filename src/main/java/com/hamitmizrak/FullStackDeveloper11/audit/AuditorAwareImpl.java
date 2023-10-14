@@ -26,10 +26,11 @@ public class AuditorAwareImpl implements AuditorAware<String> {
             System.out.println("Name: "+authentication.getName());
             System.out.println("Principal: "+authentication.getPrincipal());
             return Optional.of(authentication.getName());
-        }else if(authentication==null && !authentication.isAuthenticated()){
+        }
+       /* else if(authentication==null && !authentication.isAuthenticated()){
             log.error("Sistemde Kullanı yoktur");
             return Optional.empty();
-        }
+        }*/
         // Eğer sistemde bir kullanıcı giriş  yapmamışsa default olarak HamitM. dönder
         //return Optional.ofNullable(authentication!=null? authentication.getName() : null)
         return Optional.of("HamitM.");

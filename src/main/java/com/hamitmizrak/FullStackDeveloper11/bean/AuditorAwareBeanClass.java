@@ -14,7 +14,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 // @Configuration: Classın Bean nesnesi olması için kullanıyoruz.
 @Configuration
 // Auditing Aktif etmek
-@EnableJpaAuditing(auditorAwareRef = "auditorAwareBeanMethod")
+//@EnableJpaAuditing(auditorAwareRef = "auditorAwareBeanMethod")
 public class AuditorAwareBeanClass {
 
     //FIRST
