@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import OtherLanguageReusability from '../internationalization/OtherLanguageReusability';
 import { withTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import LoginPage from './login/LoginPage';
-
 
 class Header extends Component {
 
@@ -37,9 +35,8 @@ class Header extends Component {
             <React.Fragment>
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                     <div className="container">
-                        <a className="navbar-brand" href="#">
-                            <i className={this.props.logo}></i>
-                        </a>
+                        <Link className="navbar-brand" to="/"><i className={this.props.logo}></i> </Link>
+
                         <button
                             className="navbar-toggler d-lg-none"
                             type="button"
@@ -54,39 +51,9 @@ class Header extends Component {
                         <div className="collapse navbar-collapse" id="collapsibleNavId">
                             <ul className="navbar-nav me-auto mt-2 mt-lg-0">
                                 <li className="nav-item">
-                                    <a className="nav-link active" href="#" aria-current="page">
-                                        {t("home")} <span className="visually-hidden">(current)</span>
-                                    </a>
+                                <Link className="nav-link active" to="/"><i className="fa-solid fa-house-chimney"></i> {t('home')} </Link>
                                 </li>
-                                {/* <li className="nav-item">
-                                    <a className="nav-link" href="#">
-                                        Link
-                                    </a>
-                                </li> */}
-                                {/* <li className="nav-item dropdown">
-                                    <a
-                                        className="nav-link dropdown-toggle"
-                                        href="#"
-                                        id="dropdownId"
-                                        data-bs-toggle="dropdown"
-                                        aria-haspopup="true"
-                                        aria-expanded="false"
-                                    >
-                                        Dropdown
-                                    </a>
-                                    <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                        <a className="dropdown-item" href="#">
-                                            Action 1
-                                        </a>
-                                        <a className="dropdown-item" href="#">
-                                            Action 2
-                                        </a>
-                                    </div>
-                                </li> */}
                             </ul>
-
-
-
 
                             {/* Register / Login */}
                             <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
@@ -115,13 +82,28 @@ class Header extends Component {
                                     >
                                         {t('login')}
                                     </a>
+                                    
                                     <div className="dropdown-menu" aria-labelledby="dropdownId">
+                                        <Link className="dropdown-item" to="/login" >{t('login')} </Link>
+                                        <Link className="dropdown-item" to="/register/create" >{t('register')} </Link>
+                                    </div>
+                                </li>
 
-                                        <Link className="dropdown-item" to="/LoginPage" >{t('login')} </Link>
-
-                                        <a className="dropdown-item" href="#">
-                                            {t('register')}
-                                        </a>
+                                <li className="nav-item dropdown">
+                                    <a
+                                        className="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="dropdownId"
+                                        data-bs-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
+                                    >
+                                        {t('registers')}
+                                    </a>
+                                    
+                                    <div className="dropdown-menu" aria-labelledby="dropdownId">
+                                        <Link className="dropdown-item" to="/register/list" >{t('register_list')} </Link>
+                                        <Link className="dropdown-item" to="/register/create" >{t('register_create')} </Link>
                                     </div>
                                 </li>
                             </ul>

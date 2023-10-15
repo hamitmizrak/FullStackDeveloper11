@@ -5,6 +5,7 @@ import './main.css'
 
 // IMAGE
 import sunRise from '../image/sunrise.jpg'
+import { Link } from 'react-router-dom';
 
 class Main extends Component {
 
@@ -41,6 +42,10 @@ class Main extends Component {
                     Nihil culpa quibusdam, accusamus illo soluta ipsam eius cupiditate, nulla quia saepe ratione amet fugiat necessitatibus ut voluptatibus labore et repellat quidem? Neque voluptatibus qui numquam voluptas nihil sint cumque.
                 usamus dicta ab voluptatem libero, tempora adipisci! Nam explicabo excepturi voluptas at sapiente! Voluptate porro explicabo magnam odio cum expedita voluptatum impedit vel ab.
             </p>
+            <br />
+            <Link to="/register/list" className='btn btn-primary'>Register List</Link>
+           <br /><br /><br /><br /><br />
+           
             </React.Fragment>
         );
     }

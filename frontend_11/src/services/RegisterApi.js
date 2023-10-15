@@ -3,7 +3,7 @@
 import axios from "axios";
 
 // Persist Data Url
-const PERSIST_URL="register/api/v1.0.0";
+const PERSIST_URL="/register/api/v1.0.0";
 
 class RegisterApi {
 
@@ -26,7 +26,7 @@ class RegisterApi {
     // http://localhost:4444/register/api/v1.0.0/create
     // @PostMapping("/create")
      registerApiCreate(registerDto) {
-        return axios.post(`${PERSIST_URL}/create/${id}`,  registerDto)
+        return axios.post(`${PERSIST_URL}/create`,  registerDto)
     }
 
     // LIST

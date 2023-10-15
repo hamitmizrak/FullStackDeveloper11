@@ -1,5 +1,6 @@
 // rcc
 import React, { Component } from 'react';
+import { withTranslation } from 'react-i18next';
 
 class Footer extends Component {
 
@@ -28,11 +29,13 @@ class Footer extends Component {
         }
 
     render() {
+        // Object destructing
+        const {t}=this.props;
         return (
             <React.Fragment>
                 <footer className='bg-dark text-center text-white fixed-bottom'>
                     <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-                        ©2021- {this.newDate()} - <a className='text-white' href=''>{this.props.copy}</a>
+                        ©2021- {this.newDate()} - <a className='text-white' href=''>{t('all_rights_reserved')}</a>
                     </div>
                 </footer>
             </React.Fragment>
@@ -40,4 +43,4 @@ class Footer extends Component {
     }
 }
 
-export default Footer;
+export default withTranslation()(Footer) ;

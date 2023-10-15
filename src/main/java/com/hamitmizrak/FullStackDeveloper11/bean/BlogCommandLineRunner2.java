@@ -4,13 +4,6 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-
-
-public class BlogCommandLineRunner2{
-
-}
-
-/*
 @Log4j2
 @Component
 public class BlogCommandLineRunner2 implements CommandLineRunner{
@@ -23,4 +16,4 @@ public class BlogCommandLineRunner2 implements CommandLineRunner{
     }
 
 } //end class
-*/
+

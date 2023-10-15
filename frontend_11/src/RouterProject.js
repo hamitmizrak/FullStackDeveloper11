@@ -7,6 +7,9 @@ import RegisterList from './components/register/RegisterList';
 import RegisterCreate from './components/register/RegisterCreate';
 import RegisterView from './components/register/RegisterView';
 import RegisterUpdate from './components/register/RegisterUpdate';
+import { withTranslation } from 'react-i18next';
+
+
 
 class RouterProject extends Component {
 
@@ -19,7 +22,6 @@ class RouterProject extends Component {
 
         // STATE
         this.state = {
-
         }
 
         // BIND
@@ -33,27 +35,34 @@ class RouterProject extends Component {
     }
 
     render() {
+        // object destructing
+        const { t } = this.props;
         return (
             <React.Fragment>
 
                 {/* HEADER */}
                 <Header logo="fa-solid fa-cloud"></Header>
+                    {/* ROUTING */}
+                    
+                    <div className='container'>
+                    <Routes>
+                        {/* ROOT */}
+                        {/* <Route exact={true} path="/" /> */}
+                        <Route path="/" element={<Main/>} />
 
-                {/* MAIN */}
-                <Main></Main>
 
-                {/* ROUTING */}
-                <Routes>
-                    {/* REGISTER */}
-                    <Route exact={true} path="/" />
-          
-                    <Route path={"/register/list"} element={<RegisterList name="register List" />}/>
-                    <Route path={"/register/create"} element={<RegisterCreate name="register create" />}/>
-                    <Route path={"/register/view/:id"} element={<RegisterView name="register view" />}/>
-                    <Route path={"/register/update/:id"} element={<RegisterUpdate name="register update" />}/>
+                        {/* LOGIN */}
+                        <Route path={"/login"} element={<loginPage />} />
 
-                    <Route path={"*"} element={<Navigate to={"/"} />} />
-                </Routes>
+                        {/* REGISTER */}
+                        <Route path={"/register/list"} element={<RegisterList name="register List" />} />
+                        <Route path={"/register/create"} element={<RegisterCreate name="register create" />} />
+                        <Route path={"/register/view/:id"} element={<RegisterView name="register view" />} />
+                        <Route path={"/register/update/:id"} element={<RegisterUpdate name="register update" />} />
+
+                        <Route path={"*"} element={<Navigate to={"/"} />} />
+                    </Routes>
+                    </div>
 
                 {/* FOOTER */}
                 <Footer copy="&copy; Bütün haklar saklıdır"></Footer>
@@ -65,4 +74,4 @@ class RouterProject extends Component {
 
 // Export
 // Wrapper Higher ORder Component (i18n)
-export default RouterProject;
+export default withTranslation()(RouterProject);
