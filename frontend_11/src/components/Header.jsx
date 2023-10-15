@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import OtherLanguageReusability from '../internationalization/OtherLanguageReusability';
+import { withTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import LoginPage from './login/LoginPage';
+
 
 class Header extends Component {
 
@@ -21,14 +26,19 @@ class Header extends Component {
 
     //FUNCTION
 
-
+    // RENDER
     render() {
+
+        // object destructing
+        const { t } = this.props;
+
+        // RETURN
         return (
             <React.Fragment>
-                <nav className="navbar navbar-expand-md navbar-dark bg-dark">
+                <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                     <div className="container">
                         <a className="navbar-brand" href="#">
-                            LOGO
+                            <i className={this.props.logo}></i>
                         </a>
                         <button
                             className="navbar-toggler d-lg-none"
@@ -45,15 +55,15 @@ class Header extends Component {
                             <ul className="navbar-nav me-auto mt-2 mt-lg-0">
                                 <li className="nav-item">
                                     <a className="nav-link active" href="#" aria-current="page">
-                                        Home <span className="visually-hidden">(current)</span>
+                                        {t("home")} <span className="visually-hidden">(current)</span>
                                     </a>
                                 </li>
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <a className="nav-link" href="#">
                                         Link
                                     </a>
-                                </li>
-                                <li className="nav-item dropdown">
+                                </li> */}
+                                {/* <li className="nav-item dropdown">
                                     <a
                                         className="nav-link dropdown-toggle"
                                         href="#"
@@ -72,18 +82,49 @@ class Header extends Component {
                                             Action 2
                                         </a>
                                     </div>
+                                </li> */}
+                            </ul>
+
+
+
+
+                            {/* Register / Login */}
+                            <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
+                                {/* i18n Language */}
+                                <OtherLanguageReusability />
+
+                                <form className="d-flex my-2 my-lg-0 ">
+                                    <input
+                                        className="form-control me-sm-2"
+                                        type="text"
+                                        placeholder={t('search')}
+                                    />
+                                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                        {t('search')}
+                                    </button>
+                                </form>
+
+                                <li className="nav-item dropdown">
+                                    <a
+                                        className="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="dropdownId"
+                                        data-bs-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
+                                    >
+                                        {t('login')}
+                                    </a>
+                                    <div className="dropdown-menu" aria-labelledby="dropdownId">
+
+                                        <Link className="dropdown-item" to="/LoginPage" >{t('login')} </Link>
+
+                                        <a className="dropdown-item" href="#">
+                                            {t('register')}
+                                        </a>
+                                    </div>
                                 </li>
                             </ul>
-                            <form className="d-flex my-2 my-lg-0">
-                                <input
-                                    className="form-control me-sm-2"
-                                    type="text"
-                                    placeholder="Search"
-                                />
-                                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-                                    Search
-                                </button>
-                            </form>
                         </div>
                     </div>
                 </nav>
@@ -93,4 +134,5 @@ class Header extends Component {
     }
 }
 
-export default Header;
+// Wrapper High Order (i18n)
+export default withTranslation()(Header);

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import './main.css'
 
 // IMAGE
-import sunRise from '../img/sunrise.jpg'
+import sunRise from '../image/sunrise.jpg'
 
 class Main extends Component {
 
@@ -34,7 +34,7 @@ class Main extends Component {
             <React.Fragment>
 
 
-                <img src={sunRise} alt="" />
+                <img src={sunRise} alt="" width="100%" />
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quo obcaecati commodi iusto quibusdam distinctio id voluptates cumque corrupti culpa eius repellendus nihil, reprehenderit dolores, iure odio ex facilis vel.
                     Iure quis harum molestias magni, exercitationem facilis deserunt praesentium error officia nemo consectetur corporis beatae dolore aliquam, ipsam cumque iste nam, quia dolores voluptatum sit. Voluptatum commodi praesentium harum quasi.

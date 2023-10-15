@@ -5,6 +5,9 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 import RouterProject from './RouterProject';
 
+// Dil Secenegi
+import './internationalization/i18nlanguage';
+
 // ROUTER
 // BrowserRouter  http://localhost:3000/
 // HashRouter     http://localhost:3000/#/

@@ -37,7 +37,7 @@ class RouterProject extends Component {
             <React.Fragment>
 
                 {/* HEADER */}
-                <Header logo=""></Header>
+                <Header logo="fa-solid fa-cloud"></Header>
 
                 {/* MAIN */}
                 <Main></Main>
