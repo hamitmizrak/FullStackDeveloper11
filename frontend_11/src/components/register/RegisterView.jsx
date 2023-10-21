@@ -1,7 +1,12 @@
 import React from 'react'
 
+// REGISTER VIEW FUNCTION
 export default function RegisterView() {
+
+  // RETURN
   return (
-    <div>RegisterView</div>
-  )
-}
+    <React.Fragment>
+      RegisterView
+      </React.Fragment>
+  )// end return
+} //end RegisterView

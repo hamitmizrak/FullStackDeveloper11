@@ -115,8 +115,8 @@ function RegisterList({ t, i18n, props }) {
         .then((response) => {
           if (response.status === 200) {
             listManipulationAfter();
-            //navigate('/register/list')
-            window.location = "/register/list"
+            navigate('/register/list')
+            //window.location = "/register/list"
           }
         })
         .catch((err) => {
@@ -126,8 +126,8 @@ function RegisterList({ t, i18n, props }) {
         });
     } else {
       alert(id + " nolu data silinmedi !!!");
-      navigate('/register/list')
-      //window.location = "/register/list"
+      //navigate('/register/list')
+      window.location = "/register/list"
     }
 
     // 2.YOL (delete axios yazarak)
@@ -173,17 +173,17 @@ function RegisterList({ t, i18n, props }) {
                 <td>{data.registerIsPassive}</td>
                 <td>{data.systemDate}</td>
                 <td>
-                  <Link to={`/update/${data.id}`}>
+                  <Link to={`/register/update/${data.id}`}>
                     <i onClick={() => setUpdateRegister(data)} className="fa-solid fa-pen-nib text-primary"></i>
                   </Link>
                 </td>
                 <td>
-                  <Link to={`/view/${data.id}`}>
+                  <Link to={`/register/view/${data.id}`}>
                     <i onClick={() => setViewRegister(data.id)} className="fa-solid fa-eye text-secondary"></i>
                   </Link>
                 </td>
                 <td>
-                  <Link to={`/delete/${data.id}`}>
+                  <Link>
                     <i onClick={() => setDeleteRegister(data.id)} className="fa-solid fa-trash text-danger"></i>
                   </Link>
                 </td>
