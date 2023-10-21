@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import RegisterApi from '../../services/RegisterApi';
 import { withTranslation } from 'react-i18next';
+import axios from 'axios';
 
 
 // FUNCTION
@@ -83,6 +84,58 @@ function RegisterList({ t, i18n, props }) {
     }
   }
 
+  ////////////////////////////
+  // CRUD
+  // REGISTER UPDATE
+  const setUpdateRegister = (data) => {
+    // 1.YOL (id)
+    // 2.YOL (localStorage)
+    let { id, registerNickName, registerName, registerSurname, registerEmail, registerPassword, registerIsPassive } = data
+    localStorage.setItem("register_update_id", id)
+    localStorage.setItem("register_update_nick_name", registerNickName)
+    localStorage.setItem("register_update_name", registerName)
+    localStorage.setItem("register_update_surname", registerSurname)
+    localStorage.setItem("register_update_email", registerEmail)
+    localStorage.setItem("register_update_password", registerPassword)
+    localStorage.setItem("register_update_is_passive", registerIsPassive)
+  }
+
+  // REGISTER VIEW
+  const setViewRegister = (id) => {
+    // 1.YOL
+    // 2.YOL
+    localStorage.setItem("register_view_id", id)
+  }
+
+  //REGISTER DELETE
+  const setDeleteRegister = (id) => {
+    if (window.confirm(id + " silmek istiyor musunuz ?")) {
+      // 1.YOL
+      RegisterApi.registerApiDeleteById(id)
+        .then((response) => {
+          if (response.status === 200) {
+            listManipulationAfter();
+            //navigate('/register/list')
+            window.location = "/register/list"
+          }
+        })
+        .catch((err) => {
+          console.error(err);
+          navigate('/register/list')
+          //window.location = "/register/list"
+        });
+    } else {
+      alert(id + " nolu data silinmedi !!!");
+      navigate('/register/list')
+      //window.location = "/register/list"
+    }
+
+    // 2.YOL (delete axios yazarak)
+    // axios.delete(" http://localhost:4444/register/api/v1.0.0/delete/"+id).then().catch();
+  }
+
+
+  // RETURN
   return (
     <React.Fragment>
       <br /><br /><br /><br />
@@ -142,8 +195,8 @@ function RegisterList({ t, i18n, props }) {
 
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </React.Fragment>
-  )
-}
+  ) //end return
+} //end class
 
 // i18n
 export default withTranslation()(RegisterList) 
