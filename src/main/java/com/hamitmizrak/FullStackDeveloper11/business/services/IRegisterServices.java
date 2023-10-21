@@ -18,9 +18,13 @@ public interface IRegisterServices <D,E>{
 
     // ALL DELETE
     public String registerServiceDeleteAll();
+    /////////////////////////////////////////////////////////////
+    // LOGIN
+    // FIND SURNAME
+    public D loginServiceFindBySurname(String surname);
 
     ////////////////////////////////////////////////////////////
-    // C R U D
+    //  REGISTER C R U D
     // CREATE
     public D registerServiceCreate(D d);
 

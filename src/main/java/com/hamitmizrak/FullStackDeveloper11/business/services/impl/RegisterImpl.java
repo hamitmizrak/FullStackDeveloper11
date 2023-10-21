@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 // LOMBOK
@@ -77,6 +78,19 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
         iRegisterRepository.deleteAll();
         System.out.println(iRegisterRepository.findAll().toString());
         return iRegisterRepository.findAll().toString();
+    }
+
+    /////////////////////////////////////////////////////////////////
+    // LOGIN
+    @Override
+    public RegisterDto loginServiceFindBySurname(String surname) {
+        Optional<RegisterEntity> loginFindBySurname=iRegisterRepository.findByRegisterSurname(surname);
+        RegisterDto registerDto=entityToDto(loginFindBySurname.get());
+        if(loginFindBySurname.isPresent()){
+            return registerDto;
+        }
+        // Eğer kullanıcı yoksa null döndersin
+        return null;
     }
 
     /////////////////////////////////////////////////////////////////

@@ -14,6 +14,12 @@ public interface IRegisterApi<D> {
     // ALL DELETE
     public ResponseEntity<?> registerApiDeleteAll();
 
+
+    /////////////////////////////////////////////////////////////
+    // LOGIN
+    // FIND SURNAME
+    public ResponseEntity<?> loginApiFindBySurname(String surname);
+
     ////////////////////////////////////////////////////////////
 
     // C R U D

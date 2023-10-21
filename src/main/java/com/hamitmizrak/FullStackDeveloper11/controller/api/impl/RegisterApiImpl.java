@@ -47,6 +47,16 @@ public class RegisterApiImpl implements IRegisterApi<RegisterDto> {
         return ResponseEntity.ok(iRegisterServices.registerServiceDeleteAll());
     }
 
+    /////////////////////////////////////////////////////////////////
+    // SEARCH
+    // LOGIN
+    // http://localhost:4444/register/api/v1.0.0/search?surname=mizrak
+    @Override
+    @GetMapping("/search")
+    public ResponseEntity<?> loginApiFindBySurname(@RequestParam String surname) {
+        return ResponseEntity.ok(iRegisterServices.loginServiceFindBySurname(surname));
+    }
+
     ///////////////////////////////////////////////////////////////////////////
     // CREATE
     // http://localhost:4444/register/api/v1.0.0/create

@@ -20,6 +20,15 @@ class RegisterApi {
      registerApiDeleteAll() {
         return axios.get(PERSIST_URL+"/delete/all")
     }
+    ///////////////////////////////////////////////////////////////////////////
+
+    // SEARCH
+    // LOGIN
+    // http://localhost:4444/register/api/v1.0.0/search?surname=mizrak
+    //@GetMapping("/search")
+    loginApiFindBySurname( surname) {
+        return axios.get((`${PERSIST_URL}/search?${surname}`));
+    }
 
     ///////////////////////////////////////////////////////////////////////////
     // CREATE
