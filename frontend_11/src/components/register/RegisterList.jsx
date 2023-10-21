@@ -88,7 +88,7 @@ function RegisterList({ t, i18n, props }) {
   // CRUD
   // REGISTER UPDATE
   const setUpdateRegister = (data) => {
-    // 1.YOL (id)
+    // 1.YOL (id useParams)
     // 2.YOL (localStorage)
     let { id, registerNickName, registerName, registerSurname, registerEmail, registerPassword, registerIsPassive } = data
     localStorage.setItem("register_update_id", id)
@@ -102,8 +102,8 @@ function RegisterList({ t, i18n, props }) {
 
   // REGISTER VIEW
   const setViewRegister = (id) => {
-    // 1.YOL
-    // 2.YOL
+    // 1.YOL (id useParams)
+    // 2.YOL (localStorage)
     localStorage.setItem("register_view_id", id)
   }
 

@@ -30,7 +30,7 @@ i18n.use(initReactI18next).init({
                     'user_surname':"User Surname",
                     'user_password':"User Password",
                     'user_email':"User Email",
-                    'user_is_passive':"User Passive",
+                    'user_is_passive':"User Passive"
                 }
             },
         tr:
