@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import OtherLanguageReusability from '../internationalization/OtherLanguageReusability';
 import { withTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import WebPageUrl from './root/WebPageUrl';
 
 class Header extends Component {
 
@@ -35,7 +36,8 @@ class Header extends Component {
             <React.Fragment>
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                     <div className="container">
-                        <Link className="navbar-brand" to="/"><i className={this.props.logo}></i> </Link>
+                        {/* Absolute Path */}
+                        <a className="navbar-brand" href={this.props.url}><i className={this.props.logo}></i></a>
 
                         <button
                             className="navbar-toggler d-lg-none"
@@ -51,7 +53,8 @@ class Header extends Component {
                         <div className="collapse navbar-collapse" id="collapsibleNavId">
                             <ul className="navbar-nav me-auto mt-2 mt-lg-0">
                                 <li className="nav-item">
-                                <Link className="nav-link active" to="/"><i className="fa-solid fa-house-chimney"></i> {t('home')} </Link>
+                                    {/* Root: relative Path */}
+                                    <Link className="nav-link active" to="/"><i className="fa-solid fa-house-chimney"></i> {t('home')} </Link>
                                 </li>
                             </ul>
 
@@ -82,7 +85,7 @@ class Header extends Component {
                                     >
                                         {t('login')}
                                     </a>
-                                    
+
                                     <div className="dropdown-menu" aria-labelledby="dropdownId">
                                         <Link className="dropdown-item" to="/login" >{t('login')} </Link>
                                         <Link className="dropdown-item" to="/register/create" >{t('register')} </Link>
@@ -100,7 +103,7 @@ class Header extends Component {
                                     >
                                         {t('registers')}
                                     </a>
-                                    
+
                                     <div className="dropdown-menu" aria-labelledby="dropdownId">
                                         <Link className="dropdown-item" to="/register/list" >{t('register_list')} </Link>
                                         <Link className="dropdown-item" to="/register/create" >{t('register_create')} </Link>
@@ -112,8 +115,15 @@ class Header extends Component {
                 </nav>
 
             </React.Fragment>
-        );
-    }
+        ); //end return
+    } //end render
+} //end class
+
+// DEfault Değerler
+Header.defaultProps = {
+    url: WebPageUrl.mySpecialUrl.toString()
+    //url: String(WebPageUrl.mySpecialUrl)
+    //url: "http://localhost:3000"
 }
 
 // Wrapper High Order (i18n)
