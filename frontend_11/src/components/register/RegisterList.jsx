@@ -170,7 +170,7 @@ function RegisterList({ t, i18n, props }) {
                 <td>{data.registerSurname}</td>
                 <td>{data.registerEmail}</td>
                 <td>{data.registerPassword}</td>
-                <td>{data.registerIsPassive}</td>
+                <td>{data.registerIsPassive ?"Kullanıcı Aktif":"Kullanıcı Pasif"}</td>
                 <td>{data.systemDate}</td>
                 <td>
                   <Link to={`/register/update/${data.id}`}>

@@ -65,7 +65,7 @@ function RegisterView({ props, t, i18n }) {
           <p className="card-text">{registerViewState.registerSurname}</p>
           <p className="card-text">{registerViewState.registerEmail}</p>
           <p className="card-text">{registerViewState.registerPassword}</p>
-          <p className="card-text">{registerViewState.registerIsPassive}</p>
+          <p className="card-text">{registerViewState.registerIsPassive?"Kullanıcı Aktif":"Kullanıcı Pasif"}</p>
           <br /><br /><br /><br /><br /><br />
         </div>
       </div>
