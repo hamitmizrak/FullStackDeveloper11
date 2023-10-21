@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
+
+// Resuability
 import OtherLanguageReusability from '../internationalization/OtherLanguageReusability';
+
+// i18
 import { withTranslation } from 'react-i18next';
+
+// Link
 import { Link } from 'react-router-dom';
+
+// Web Page Url
 import WebPageUrl from './root/WebPageUrl';
+
+// Validation Prop
+import PropTypes from 'prop-types'
 
 class Header extends Component {
 
@@ -37,7 +48,12 @@ class Header extends Component {
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                     <div className="container">
                         {/* Absolute Path */}
-                        <a className="navbar-brand" href={this.props.url}><i className={this.props.logo}></i></a>
+                        <a 
+                        className="navbar-brand" 
+                        style={{color: `#${this.props.colorObject}`}}
+                        // style={{color:"#"+this.props.colorObject}} 
+                        href={this.props.url}>
+                            <i className={this.props.logo}></i></a>
 
                         <button
                             className="navbar-toggler d-lg-none"
@@ -119,11 +135,18 @@ class Header extends Component {
     } //end render
 } //end class
 
-// DEfault Değerler
+// Default Değerler
 Header.defaultProps = {
-    url: WebPageUrl.mySpecialUrl.toString()
-    //url: String(WebPageUrl.mySpecialUrl)
-    //url: "http://localhost:3000"
+    url: WebPageUrl.mySpecialUrl.toString(),
+    //url: String(WebPageUrl.mySpecialUrl),
+    //url: "http://localhost:3000",
+    colorObject:"abcf41"
+}
+
+// Default Validation
+Header.propTypes={
+    url:PropTypes.string.isRequired,
+    colorObject:PropTypes.number.isRequired
 }
 
 // Wrapper High Order (i18n)
