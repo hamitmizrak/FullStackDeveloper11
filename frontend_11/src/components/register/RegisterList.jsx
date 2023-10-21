@@ -19,64 +19,66 @@ function RegisterList({ t, i18n, props }) {
     RegisterApi.registerApiList()
       .then(
         (response) => {
-           console.log(response);
-           console.log(response.data);
-           console.log(response.status);
-           console.log(response.headers);
-           if(response.status===200){
+          console.log(response);
+          console.log(response.data);
+          console.log(response.status);
+          console.log(response.headers);
+          if (response.status === 200) {
             setRegisterApiListData(response.data)
-           }
-           }
-        )
-      .catch((err) => { 
-        console.log(err); });
-  },[]) //end useEffect
+          }
+        }
+      )
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []) //end useEffect
 
   // FUNCTION
 
-  const listManipulationAfter=()=>{
+  // LIST AFTER LOADING
+  const listManipulationAfter = () => {
     RegisterApi.registerApiList()
-    .then(
-      (response) => {
-         console.log(response);
-         console.log(response.data);
-         console.log(response.status);
-         console.log(response.headers);
-         if(response.status===200){
-          setRegisterApiListData(response.data)
-         }
-         }
+      .then(
+        (response) => {
+          console.log(response);
+          console.log(response.data);
+          console.log(response.status);
+          console.log(response.headers);
+          if (response.status === 200) {
+            setRegisterApiListData(response.data)
+          }
+        }
       )
-    .catch((err) => { 
-      console.log(err); });
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
-    // speed Data
-    const speedData= async ()=>{
-      const userData=prompt("Kaç tane veri eklemek istiyor sunuz ?")
-      let response= await RegisterApi.registerApiSpeedData(userData);
-      if(response.status===200){
-        console.log("Speed Data");
-        listManipulationAfter();
-        navigate('/register/list')
-         //window.location="/register/list"
-      }
+  // SPEED DATA
+  const speedData = async () => {
+    const userData = prompt("Kaç tane veri eklemek istiyor sunuz ?")
+    let response = await RegisterApi.registerApiSpeedData(userData);
+    if (response.status === 200) {
+      console.log("Speed Data");
+      listManipulationAfter();
+      navigate('/register/list')
+      //window.location="/register/list"
     }
-  
-  // DELETE ALL
-  const deleteAll=()=>{
+  }
 
-    if(window.confirm("Bütün verileri silmek istiyor musunuz ?")){
+  // DELETE ALL
+  const deleteAll = () => {
+    if (window.confirm("Bütün verileri silmek istiyor musunuz ?")) {
       RegisterApi.registerApiDeleteAll()
-      .then((response)=>{
-        if(response.status===200){
-          listManipulationAfter();
-          //navigate('/register/list')
-          window.location="/register/list"
-        }
-      })
-      .catch((err)=>{console.log(err);})
-    }else{
+        .then((response) => {
+          if (response.status === 200) {
+            listManipulationAfter();
+            //navigate('/register/list')
+            window.location = "/register/list"
+          }
+        })
+        .catch((err) => { console.log(err); })
+    } else {
       alert("Silinmedi")
     }
   }
@@ -99,7 +101,7 @@ function RegisterList({ t, i18n, props }) {
             <th>{t('user_password')}</th>
             <th>{t('user_is_passive')}</th>
             <th>{t('system_date')}</th>
-           
+
             <th>{t('update')}</th>
             <th>{t('show')}</th>
             <th>{t('delete')}</th>
@@ -107,20 +109,32 @@ function RegisterList({ t, i18n, props }) {
         </thead>
         <tbody>
           {
-            registerApiListData.map((data)=>
-            <tr key={data.id}>
-            <td>{data.id}</td>
-            <td>{data.registerNickName}</td>
-            <td>{data.registerName}</td>
-            <td>{data.registerSurname}</td>
-            <td>{data.registerEmail}</td>
-            <td>{data.registerPassword}</td>
-            <td>{data.registerIsPassive}</td>
-            <td>{data.systemDate}</td>
-            <td><i className="fa-solid fa-pen-nib text-primary"></i></td>
-            <td><i className="fa-solid fa-eye text-secondary"></i></td>
-            <td><i className="fa-solid fa-trash text-danger"></i></td>
-          </tr> 
+            registerApiListData.map((data) =>
+              <tr key={data.id}>
+                <td>{data.id}</td>
+                <td>{data.registerNickName}</td>
+                <td>{data.registerName}</td>
+                <td>{data.registerSurname}</td>
+                <td>{data.registerEmail}</td>
+                <td>{data.registerPassword}</td>
+                <td>{data.registerIsPassive}</td>
+                <td>{data.systemDate}</td>
+                <td>
+                  <Link to={`/update/${data.id}`}>
+                    <i onClick={() => setUpdateRegister(data)} className="fa-solid fa-pen-nib text-primary"></i>
+                  </Link>
+                </td>
+                <td>
+                  <Link to={`/view/${data.id}`}>
+                    <i onClick={() => setViewRegister(data.id)} className="fa-solid fa-eye text-secondary"></i>
+                  </Link>
+                </td>
+                <td>
+                  <Link to={`/delete/${data.id}`}>
+                    <i onClick={() => setDeleteRegister(data.id)} className="fa-solid fa-trash text-danger"></i>
+                  </Link>
+                </td>
+              </tr>
             )
           }
         </tbody>

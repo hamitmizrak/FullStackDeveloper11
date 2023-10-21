@@ -1,6 +1,5 @@
 package com.hamitmizrak.FullStackDeveloper11.error;
 
-
 import com.hamitmizrak.FullStackDeveloper11.utils.FrontendPortUrl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
