@@ -1,16 +1,22 @@
+// React
 import React, { Component } from 'react';
+
+// Header, Main, Footer
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+
+// Router
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { withTranslation } from 'react-i18next';
+
+// Register
 import RegisterList from './components/register/RegisterList';
 import RegisterCreate from './components/register/RegisterCreate';
 import RegisterView from './components/register/RegisterView';
 import RegisterUpdate from './components/register/RegisterUpdate';
-import { withTranslation } from 'react-i18next';
 
-
-
+// Router Class
 class RouterProject extends Component {
 
     // Display Name
@@ -30,9 +36,7 @@ class RouterProject extends Component {
     // CDM
 
     //FUNCTION
-    newDate() {
-        return new Date().toLocaleString();
-    }
+   
 
     render() {
         // object destructing

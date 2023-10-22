@@ -2,10 +2,11 @@
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
 
+// Footer Class
 class Footer extends Component {
 
     // Display Name
-    static displayName = "FooterProject";
+    static displayName = "Footer_Project";
 
     // CONSTRUCTOR
     constructor(props) {

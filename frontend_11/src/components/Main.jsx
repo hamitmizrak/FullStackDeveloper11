@@ -7,11 +7,12 @@ import './main.css'
 import sunRise from '../image/sunrise.jpg'
 import { Link } from 'react-router-dom';
 
+// Main Class
 class Main extends Component {
 
 
     // Display Name
-    static displayName = "MainProject";
+    static displayName = "Main_Project";
 
     // CONSTRUCTOR
     constructor(props) {
