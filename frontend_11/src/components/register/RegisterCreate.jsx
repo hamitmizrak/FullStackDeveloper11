@@ -19,7 +19,6 @@ function RegisterCreate() {
   const [error, setError] = useState(undefined);
   const [multipleRequest, setMultipleRequest] = useState(false);
   const [isRead, setIsRead] = useState(false);
-  const [isReadNone, setIsReadNone] = useState(false);
 
   // USE EFFECT
   useEffect(() => {
@@ -37,9 +36,8 @@ function RegisterCreate() {
   const onChangeIsRead = (event) => {
     console.log(event.target.checked);
     setIsRead(event.target.checked);
-    localStorage.setItem("is_read",true)
-    console.log(localStorage.getItem("is_read"));
-    setIsReadNone( localStorage.getItem("is_read"))
+    // 1 kere okudutan sonra daha görünmesin
+    localStorage.setItem("is_read", "true")
   }
 
   // input List Clear
@@ -160,15 +158,17 @@ function RegisterCreate() {
         </div>
 
         {/* READ */}
-        {!isReadNone ?  <span  style={{display:"inline"}}>
-        <input
-          type="checkbox"
-          className="form-check-input"
-          onChange={onChangeIsRead}
-          name="isRead"
-          id="isRead" /> <abbr title="Register Olurken Kayıt işlemleri">Okudunuz mu ?</abbr> <br />
-        </span> : ""} 
-      
+        {(localStorage.getItem("is_read") == "true") ? "" :
+          <span style={{ display: "inline" }}>
+            <input
+              type="checkbox"
+              className="form-check-input"
+              onChange={onChangeIsRead}
+              name="isRead"
+              id="isRead" /> <abbr title="Register Olurken Kayıt işlemleri">Okudunuz mu ?</abbr> <br />
+          </span>
+        }
+
         {/* RESET */}
         <button
           type='reset'
