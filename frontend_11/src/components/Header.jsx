@@ -17,6 +17,7 @@ import WebPageUrl from './root/WebPageUrl';
 import PropTypes from 'prop-types'
 import axios from 'axios';
 import RegisterApi from '../services/RegisterApi';
+import DarkMode from './reusability/DarkMode';
 
 // Header Class
 class Header extends Component {
@@ -218,6 +219,7 @@ class Header extends Component {
                                     </div>
                                 </li>
                             </ul>
+                            <DarkMode />
                         </div>
                     </div>
                 </nav>
