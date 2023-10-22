@@ -1,239 +1,31 @@
-2023-10-21T09:22:04.453+03:00  INFO 14648 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : Starting FullStackDeveloper11Application using Java 17.0.5 with PID 14648 (D:\spring\FullStackDeveloper11\target\classes started by 90553 in D:\spring\FullStackDeveloper11)
-2023-10-21T09:22:04.461+03:00  INFO 14648 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : The following 1 profile is active: "frontend"
-2023-10-21T09:22:04.518+03:00  INFO 14648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-10-21T09:22:04.518+03:00  INFO 14648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-10-21T09:22:05.543+03:00  INFO 14648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-21T09:22:05.594+03:00  INFO 14648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interfaces.
-2023-10-21T09:22:06.157+03:00  INFO 14648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 4444 (http)
-2023-10-21T09:22:06.166+03:00  INFO 14648 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-21T09:22:06.166+03:00  INFO 14648 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-21T09:22:06.215+03:00  INFO 14648 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-21T09:22:06.215+03:00  INFO 14648 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1696 ms
-2023-10-21T09:22:06.300+03:00  INFO 14648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-21T09:22:06.524+03:00  INFO 14648 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./memory_persist/blog user=SA
-2023-10-21T09:22:06.527+03:00  INFO 14648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-21T09:22:06.536+03:00  INFO 14648 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./memory_persist/blog'
-2023-10-21T09:22:06.593+03:00 DEBUG 14648 --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2023-10-21T09:22:06.593+03:00 DEBUG 14648 --- [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
-2023-10-21T09:22:06.969+03:00  INFO 14648 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-21T09:22:07.792+03:00  INFO 14648 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-21T09:22:07.802+03:00  INFO 14648 --- [restartedMain] c.h.F.bean.AuditorAwareBeanClass         : auditor Aware bean Before başladı
-2023-10-21T09:22:07.803+03:00  INFO 14648 --- [restartedMain] c.h.F.bean.BlogCommandLineRunner         : blog CommandLineRunner After Bean Method başladı
-2023-10-21T09:22:07.804+03:00  INFO 14648 --- [restartedMain] c.h.F.bean.Locale18NBeanClass            : swagger Open Api Before Bean başladı
-2023-10-21T09:22:07.804+03:00  INFO 14648 --- [restartedMain] c.h.F.bean.ModelMapperBeanClass          : Model mapper bean Before başladı
-2023-10-21T09:22:07.805+03:00  INFO 14648 --- [restartedMain] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder Before Bean başladı
-2023-10-21T09:22:07.805+03:00  INFO 14648 --- [restartedMain] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api Before Bean başladı
-2023-10-21T09:22:08.272+03:00  WARN 14648 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-21T09:22:08.379+03:00 DEBUG 14648 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2023-10-21T09:22:08.414+03:00  INFO 14648 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-10-21T09:22:08.467+03:00 DEBUG 14648 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
-2023-10-21T09:22:08.854+03:00 DEBUG 14648 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2023-10-21T09:22:08.864+03:00 DEBUG 14648 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2023-10-21T09:22:09.262+03:00  INFO 14648 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-10-21T09:22:09.268+03:00  INFO 14648 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
-2023-10-21T09:22:09.349+03:00  INFO 14648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 4444 (http) with context path ''
-2023-10-21T09:22:09.365+03:00  INFO 14648 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : Started FullStackDeveloper11Application in 5.362 seconds (process running for 6.249)
-2023-10-21T09:22:09.371+03:00  INFO 14648 --- [restartedMain] c.h.F.bean.BlogCommandLineRunner2        : CommandLineRunner Çalıştı Sade
-2023-10-21T09:22:09.371+03:00  INFO 14648 --- [restartedMain] c.h.F.bean.BlogCommandLineRunner         : CommandLineRunner Çalıştı
-2023-10-21T09:22:50.701+03:00  INFO 14648 --- [http-nio-4444-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-10-21T09:22:50.701+03:00  INFO 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-10-21T09:22:50.701+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2023-10-21T09:22:50.701+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2023-10-21T09:22:50.702+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2023-10-21T09:22:50.703+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@13e24a15
-2023-10-21T09:22:50.704+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@402e0c2c
-2023-10-21T09:22:50.704+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2023-10-21T09:22:50.704+03:00  INFO 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2023-10-21T09:22:50.721+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:22:50.729+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:22:50.848+03:00  INFO 14648 --- [http-nio-4444-exec-1] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:16
-2023-10-21T09:22:50.864+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:22:50.866+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:22:50.881+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:22:50.888+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:22:50.890+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:22:50.919+03:00  INFO 14648 --- [http-nio-4444-exec-5] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:16
-2023-10-21T09:22:50.920+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:22:50.922+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:22:50.924+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:24:06.587+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:24:06.588+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:24:06.603+03:00  INFO 14648 --- [http-nio-4444-exec-3] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:16
-2023-10-21T09:24:06.603+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:24:06.604+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:24:06.605+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:24:06.846+03:00 DEBUG 14648 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:24:06.847+03:00 DEBUG 14648 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:24:06.862+03:00  INFO 14648 --- [http-nio-4444-exec-9] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:16
-2023-10-21T09:24:06.863+03:00 DEBUG 14648 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:24:06.863+03:00 DEBUG 14648 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:24:06.864+03:00 DEBUG 14648 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:24:11.877+03:00 DEBUG 14648 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:24:11.878+03:00 DEBUG 14648 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:24:11.891+03:00  INFO 14648 --- [http-nio-4444-exec-6] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:16
-2023-10-21T09:24:11.891+03:00 DEBUG 14648 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:24:11.892+03:00 DEBUG 14648 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:24:11.893+03:00 DEBUG 14648 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:24:12.210+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:24:12.211+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:24:12.222+03:00  INFO 14648 --- [http-nio-4444-exec-2] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:16
-2023-10-21T09:24:12.222+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:24:12.223+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:24:12.224+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:24:31.282+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
-2023-10-21T09:24:31.286+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2023-10-21T09:24:31.289+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
-2023-10-21T09:24:31.290+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
-2023-10-21T09:24:31.293+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
-2023-10-21T09:24:31.294+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.error.CustomErrorHandleWebRequest#handleErrorMethod(WebRequest)
-2023-10-21T09:24:31.300+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
-2023-10-21T09:24:31.304+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResult(path=/favicon.ico, message=No message available, error=null, status=404, createdDate=Sat O (truncated)...]
-2023-10-21T09:24:31.310+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
-2023-10-21T09:25:52.532+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui.html", parameters={}
-2023-10-21T09:25:52.532+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc#redirectToUi(HttpServletRequest)
-2023-10-21T09:25:52.546+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
-2023-10-21T09:25:52.547+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
-2023-10-21T09:25:52.547+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
-2023-10-21T09:25:52.558+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html", parameters={}
-2023-10-21T09:25:52.559+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2023-10-21T09:25:52.563+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:25:52.575+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui.css", parameters={}
-2023-10-21T09:25:52.576+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2023-10-21T09:25:52.583+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.css", parameters={}
-2023-10-21T09:25:52.584+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}
-2023-10-21T09:25:52.584+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
-2023-10-21T09:25:52.584+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2023-10-21T09:25:52.584+03:00 DEBUG 14648 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
-2023-10-21T09:25:52.584+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:25:52.584+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2023-10-21T09:25:52.585+03:00 DEBUG 14648 --- [http-nio-4444-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2023-10-21T09:25:52.584+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2023-10-21T09:25:52.587+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:25:52.593+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:25:52.594+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:25:52.598+03:00 DEBUG 14648 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:25:52.809+03:00 DEBUG 14648 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}
-2023-10-21T09:25:52.810+03:00 DEBUG 14648 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
-2023-10-21T09:25:52.811+03:00 DEBUG 14648 --- [http-nio-4444-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
-2023-10-21T09:25:52.811+03:00 DEBUG 14648 --- [http-nio-4444-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:4444/swagger-ui/oauth2-re (truncated)...]
-2023-10-21T09:25:52.812+03:00 DEBUG 14648 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:25:52.817+03:00 DEBUG 14648 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/favicon-32x32.png", parameters={}
-2023-10-21T09:25:52.818+03:00 DEBUG 14648 --- [http-nio-4444-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2023-10-21T09:25:52.821+03:00 DEBUG 14648 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:25:52.852+03:00 DEBUG 14648 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
-2023-10-21T09:25:52.853+03:00 DEBUG 14648 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
-2023-10-21T09:25:53.020+03:00  WARN 14648 --- [http-nio-4444-exec-10] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl
-2023-10-21T09:25:53.120+03:00  WARN 14648 --- [http-nio-4444-exec-10] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hamitmizrak.FullStackDeveloper11.error.CustomErrorHandleWebRequest
-2023-10-21T09:25:53.168+03:00  INFO 14648 --- [http-nio-4444-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 303 ms
-2023-10-21T09:25:53.184+03:00 DEBUG 14648 --- [http-nio-4444-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
-2023-10-21T09:25:53.184+03:00 DEBUG 14648 --- [http-nio-4444-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing ["{"openapi":"3.0.1","info":{"title":"title bilgisi","description":"description bilgisi","termsOfServi (truncated)..."]
-2023-10-21T09:25:53.185+03:00 DEBUG 14648 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:25:57.368+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}
-2023-10-21T09:25:57.369+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2023-10-21T09:25:57.371+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:25:57.580+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}
-2023-10-21T09:25:57.580+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
-2023-10-21T09:25:57.581+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
-2023-10-21T09:25:57.581+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:4444/swagger-ui/oauth2-re (truncated)...]
-2023-10-21T09:25:57.582+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:25:57.625+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
-2023-10-21T09:25:57.626+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
-2023-10-21T09:25:57.640+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
-2023-10-21T09:25:57.640+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing ["{"openapi":"3.0.1","info":{"title":"title bilgisi","description":"description bilgisi","termsOfServi (truncated)..."]
-2023-10-21T09:25:57.641+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:26:22.186+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:26:22.187+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:26:22.202+03:00  INFO 14648 --- [http-nio-4444-exec-1] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:16
-2023-10-21T09:26:22.203+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-10-21T09:26:22.203+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:26:22.204+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:26:33.742+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/find/140", parameters={}
-2023-10-21T09:26:33.743+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiFindById(Long)
-2023-10-21T09:26:33.765+03:00  WARN 14648 --- [http-nio-4444-exec-3] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [com.hamitmizrak.FullStackDeveloper11.exception.Resource404NotFoundException: 140 nolu id yoktur]
-2023-10-21T09:26:33.766+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
-2023-10-21T09:26:33.766+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
-2023-10-21T09:26:33.766+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.error.CustomErrorHandleWebRequest#handleErrorMethod(WebRequest)
-2023-10-21T09:26:33.767+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-10-21T09:26:33.767+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResult(path=/register/api/v1.0.0/find/140, message=140 nolu id yoktur, error=null, status=404, cr (truncated)...]
-2023-10-21T09:26:33.767+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
-2023-10-21T09:26:57.006+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/find/141", parameters={}
-2023-10-21T09:26:57.006+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiFindById(Long)
-2023-10-21T09:26:57.009+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-2023-10-21T09:26:57.009+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', regi (truncated)...]
-2023-10-21T09:26:57.010+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:27:17.388+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/delete/all", parameters={}
-2023-10-21T09:27:17.389+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiDeleteAll()
-2023-10-21T09:27:17.415+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, application/json, application/*+json]
-2023-10-21T09:27:17.415+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["[]"]
-2023-10-21T09:27:17.416+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:27:17.653+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:27:17.653+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:27:17.655+03:00  INFO 14648 --- [http-nio-4444-exec-5] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:0
-2023-10-21T09:27:17.655+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:27:17.655+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
-2023-10-21T09:27:17.656+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:27:17.906+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:27:17.907+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:27:17.909+03:00  INFO 14648 --- [http-nio-4444-exec-1] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:0
-2023-10-21T09:27:17.910+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:27:17.910+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
-2023-10-21T09:27:17.912+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:27:17.920+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:27:17.920+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:27:17.922+03:00  INFO 14648 --- [http-nio-4444-exec-2] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:0
-2023-10-21T09:27:17.925+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:27:17.925+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
-2023-10-21T09:27:17.926+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:27:23.048+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/speed/data/8", parameters={}
-2023-10-21T09:27:23.049+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiSpeedData(Long)
-2023-10-21T09:27:23.687+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:27:23.688+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:27:23.688+03:00 DEBUG 14648 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:27:24.000+03:00 DEBUG 14648 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:27:24.000+03:00 DEBUG 14648 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:27:24.009+03:00  INFO 14648 --- [http-nio-4444-exec-6] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:8
-2023-10-21T09:27:24.009+03:00 DEBUG 14648 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:27:24.009+03:00 DEBUG 14648 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:27:24.010+03:00 DEBUG 14648 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:28:25.421+03:00 DEBUG 14648 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:28:25.422+03:00 DEBUG 14648 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:28:25.432+03:00  INFO 14648 --- [http-nio-4444-exec-7] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:8
-2023-10-21T09:28:25.433+03:00 DEBUG 14648 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:28:25.433+03:00 DEBUG 14648 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:28:25.434+03:00 DEBUG 14648 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:28:26.598+03:00 DEBUG 14648 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:28:26.599+03:00 DEBUG 14648 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:28:26.618+03:00  INFO 14648 --- [http-nio-4444-exec-9] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:8
-2023-10-21T09:28:26.620+03:00 DEBUG 14648 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:28:26.620+03:00 DEBUG 14648 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:28:26.621+03:00 DEBUG 14648 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:30:52.809+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:30:52.810+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:30:52.819+03:00  INFO 14648 --- [http-nio-4444-exec-4] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:8
-2023-10-21T09:30:52.819+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:30:52.819+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:30:52.820+03:00 DEBUG 14648 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:30:53.472+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:30:53.473+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:30:53.484+03:00  INFO 14648 --- [http-nio-4444-exec-8] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:8
-2023-10-21T09:30:53.485+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:30:53.485+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:30:53.486+03:00 DEBUG 14648 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:30:59.337+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:30:59.338+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:30:59.346+03:00  INFO 14648 --- [http-nio-4444-exec-5] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:8
-2023-10-21T09:30:59.347+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:30:59.347+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:30:59.347+03:00 DEBUG 14648 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:31:07.524+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:31:07.524+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:31:07.531+03:00  INFO 14648 --- [http-nio-4444-exec-1] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:8
-2023-10-21T09:31:07.531+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:31:07.532+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:31:07.532+03:00 DEBUG 14648 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2023-10-21T09:31:09.213+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
-2023-10-21T09:31:09.214+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
-2023-10-21T09:31:09.222+03:00  INFO 14648 --- [http-nio-4444-exec-2] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:8
-2023-10-21T09:31:09.223+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2023-10-21T09:31:09.223+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
-2023-10-21T09:31:09.224+03:00 DEBUG 14648 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-10-22T09:23:33.781+03:00  INFO 6856 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : Starting FullStackDeveloper11Application using Java 17.0.5 with PID 6856 (D:\spring\FullStackDeveloper11\target\classes started by 90553 in D:\spring\FullStackDeveloper11)
+2023-10-22T09:23:33.787+03:00  INFO 6856 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : The following 1 profile is active: "frontend"
+2023-10-22T09:23:33.834+03:00  INFO 6856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-22T09:23:33.834+03:00  INFO 6856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-22T09:23:34.827+03:00  INFO 6856 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-22T09:23:34.885+03:00  INFO 6856 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interfaces.
+2023-10-22T09:23:35.491+03:00  INFO 6856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 4444 (http)
+2023-10-22T09:23:35.499+03:00  INFO 6856 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-22T09:23:35.499+03:00  INFO 6856 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-22T09:23:35.549+03:00  INFO 6856 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-22T09:23:35.549+03:00  INFO 6856 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1714 ms
+2023-10-22T09:23:35.630+03:00  INFO 6856 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-22T09:23:35.854+03:00  INFO 6856 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./memory_persist/blog user=SA
+2023-10-22T09:23:35.856+03:00  INFO 6856 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-22T09:23:35.864+03:00  INFO 6856 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./memory_persist/blog'
+2023-10-22T09:23:35.918+03:00 DEBUG 6856 --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-10-22T09:23:35.918+03:00 DEBUG 6856 --- [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2023-10-22T09:23:36.286+03:00  INFO 6856 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-22T09:23:37.132+03:00  INFO 6856 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-22T09:23:37.140+03:00  INFO 6856 --- [restartedMain] c.h.F.bean.AuditorAwareBeanClass         : auditor Aware bean Before başladı
+2023-10-22T09:23:37.141+03:00  INFO 6856 --- [restartedMain] c.h.F.bean.BlogCommandLineRunner         : blog CommandLineRunner After Bean Method başladı
+2023-10-22T09:23:37.142+03:00  INFO 6856 --- [restartedMain] c.h.F.bean.Locale18NBeanClass            : swagger Open Api Before Bean başladı
+2023-10-22T09:23:37.144+03:00  INFO 6856 --- [restartedMain] c.h.F.bean.ModelMapperBeanClass          : Model mapper bean Before başladı
+2023-10-22T09:23:37.145+03:00  INFO 6856 --- [restartedMain] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder Before Bean başladı
+2023-10-22T09:23:37.145+03:00  INFO 6856 --- [restartedMain] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api Before Bean başladı
+2023-10-22T09:23:37.620+03:00  WARN 6856 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-22T09:23:37.724+03:00 DEBUG 6856 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-10-22T09:23:37.754+03:00  INFO 6856 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-22T09:23:37.811+03:00 DEBUG 6856 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 13 mappings in 'requestMappingHandlerMapping'
+2023-10-22T09:23:38.178+03:00 DEBUG 6856 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2023-10-22T09:23:38.185+03:00 DEBUG 6856 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
