@@ -1,3 +1,20 @@
+/* dark mode */
+:root{
+  --body_background:white;
+  --body_color:black;
+}
+
+/* dark mode */
+[data-theme="dark"]{
+  --body_background:black;
+  --body_color:white;
+}
+
+/* dark mode */
+*{
+  transition: all 0.3 ease-in-out;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

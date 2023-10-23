@@ -1,4 +1,3 @@
-
 ![](https://komarev.com/ghpvc/?username=hamitmizrak)
 
 ![readme](./picture/readme.png)

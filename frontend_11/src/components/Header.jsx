@@ -17,7 +17,11 @@ import WebPageUrl from './root/WebPageUrl';
 import PropTypes from 'prop-types'
 import axios from 'axios';
 import RegisterApi from '../services/RegisterApi';
-import DarkMode from './reusability/DarkMode';
+
+/////// 
+// dark mode
+import '../dark.css';
+import DarkMode from './DarkMode/DarkMode';
 
 // Header Class
 class Header extends Component {
@@ -46,24 +50,23 @@ class Header extends Component {
     // CDM
     componentDidMount() {
         RegisterApi.registerApiList()
-        .then(
-          (response) => {
-            console.log(response);
-            console.log(response.data);
-            console.log(response.status);
-            console.log(response.headers);
-            if (response.status === 200) {
-             this.setState({
-                persons:response.data
-             }) 
-            }
-          }
-        )
-        .catch((err) => {
-          console.log(err);
-        });
+            .then(
+                (response) => {
+                    console.log(response);
+                    console.log(response.data);
+                    console.log(response.status);
+                    console.log(response.headers);
+                    if (response.status === 200) {
+                        this.setState({
+                            persons: response.data
+                        })
+                    }
+                }
+            )
+            .catch((err) => {
+                console.log(err);
+            });
     }
-    
 
     //FUNCTION
     // Person Find
@@ -104,8 +107,6 @@ class Header extends Component {
         this.searchPerson(this.state.searchData);
     }
 
-
-
     // onSubmitSearch
     onSubmitSearch(e) {
         e.preventDefault();
@@ -114,13 +115,13 @@ class Header extends Component {
         this.setState({ searchData: "" })
     }
 
-// jQuery autoComplete
-//     $(function(){
-//         const searchData=["adana","balikesir","ceyhan","diyarbakır","denizli","elazığ","malatya"];
-//    $("#tags").autocomplete({
-//     source:searchData
-//    })
-//     })
+    // jQuery autoComplete
+    //     $(function(){
+    //         const searchData=["adana","balikesir","ceyhan","diyarbakır","denizli","elazığ","malatya"];
+    //    $("#tags").autocomplete({
+    //     source:searchData
+    //    })
+    //     })
 
     // RENDER
     render() {
@@ -130,7 +131,8 @@ class Header extends Component {
 
         // RETURN
         return (
-            <React.Fragment>
+          
+            <header >
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                     <div className="container">
                         {/* Absolute Path */}
@@ -217,14 +219,23 @@ class Header extends Component {
                                         <Link className="dropdown-item" to="/register/list" >{t('register_list')} </Link>
                                         <Link className="dropdown-item" to="/register/create" >{t('register_create')} </Link>
                                     </div>
+
+                                    
                                 </li>
                             </ul>
-                            <DarkMode />
+
+                            <ul className="navbar-nav me-auto mt-2 mt-lg-0">
+                                <li className="nav-item">
+                                    {/* dark mode */}
+                                    <DarkMode />
+                                </li>
+                            </ul>
+
                         </div>
                     </div>
                 </nav>
-
-            </React.Fragment>
+                </header>
+           
         ); //end return
     } //end render
 } //end class

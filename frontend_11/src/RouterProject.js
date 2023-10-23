@@ -1,5 +1,5 @@
 // React
-import React, { Component } from 'react';
+import React, { Component, createContext, useState } from 'react';
 
 // Header, Main, Footer
 import Header from './components/Header';
@@ -17,43 +17,22 @@ import RegisterView from './components/register/RegisterView';
 import RegisterUpdate from './components/register/RegisterUpdate';
 
 // Router Class
-class RouterProject extends Component {
-
+function RouterProject({ t }) {
     // Display Name
-    static displayName = "RouterProject";
+    //static displayName = "RouterProject";
 
-    // CONSTRUCTOR
-    constructor(props) {
-        super(props);
-
-        // STATE
-        this.state = {
-        }
-
-        // BIND
-    }
-
-    // CDM
-
-    //FUNCTION
-   
-
-    render() {
-        // object destructing
-        const { t } = this.props;
-        return (
-            <React.Fragment>
-
+    return (
+            <div className="App">
                 {/* HEADER */}
                 <Header logo="fa-solid fa-cloud"></Header>
-                    {/* ROUTING */}
-                    
-                    <div className='container mt-5'>
+
+                {/* ROUTING */}
+                {/* dark mode:App-header */}
+                <div className='container44 mt-5 App-header'>
                     <Routes>
                         {/* ROOT */}
                         {/* <Route exact={true} path="/" /> */}
-                        <Route path="/" element={<Main/>} />
-
+                        <Route path="/" element={<Main />} />
 
                         {/* LOGIN */}
                         <Route path={"/login"} element={<loginPage />} />
@@ -66,14 +45,11 @@ class RouterProject extends Component {
 
                         <Route path={"*"} element={<Navigate to={"/"} />} />
                     </Routes>
-                    </div>
-
+                </div>
                 {/* FOOTER */}
                 <Footer copy="&copy; Bütün haklar saklıdır"></Footer>
-
-            </React.Fragment>
-        ); //end return
-    } //end render
+            </div>
+    ); //end return
 } // end class 
 
 // Export
