@@ -16,16 +16,18 @@ function RegisterCreate() {
   const [registerPassword, setRegisterPassword] = useState('');
   const [registerIsPassive, setRegisterIsPassive] = useState(false);
 
-  // STATE ERROR, MULTIPLEREQUEST, READ
+  //  ERROR, MULTIPLEREQUEST, READ, SPINNER
   const [error, setError] = useState(undefined);
   const [multipleRequest, setMultipleRequest] = useState(false);
   const [isRead, setIsRead] = useState(false);
+  const [spinner, setSpinner] = useState(false);
 
   // USE EFFECT
   useEffect(() => {
     // başlangıçta Hatayı gösterme
     setError(undefined);
-    // setIsRead(false);
+    setIsRead(false);
+    setSpinner(false);
   }, [])
 
   // FUNCTION
@@ -108,20 +110,54 @@ function RegisterCreate() {
     // Hataları gösterme
     setError(undefined);
 
+    // Spinner Aktif et
+    setSpinner(true);
+
     // API
     try {
       const response = await RegisterApi.registerApiCreate(registerCreateObject);
       if (response.status == 200) {
+        // Spinner Pasif et
+        setSpinner(false);
         // Toast Message
         alert("Kayıt Başarılı");
         navigate('/register/list');
       }
-
     } catch (err) {
       console.error(err.response.data.validationErrors);
       setError(err.response.data.validationErrors)
+      // Spinner Pasif et
+      setSpinner(true);
     }
   }
+
+  // Spinner
+  const spinnerFunction = () => {
+    if (spinner) {
+      return (
+        <div class="spinner-border text-warning" role="status">
+          <span class="sr-only"></span>
+        </div>
+      )
+    } else {
+      return "";
+    }
+  }
+
+// Message Error
+const errorAlert=(errorName)=>{
+  if (error) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        {error.errorName}
+      </div>
+    )
+  }else{
+    return "";
+  }
+}
+
+
 
   // RETURN
   return (
@@ -149,13 +185,19 @@ function RegisterCreate() {
                 }
               }
             />
-            {
+
+              {/* ALERT ERROR */}
+              {/* {
+                errorAlert(registerNickName)
+              } */}
+
+            { 
               error ?
                 <div className="alert alert-danger" role="alert">
                   {error.registerNickName}
                 </div>
-                : ''
-            }
+                : undefined
+            } 
           </div>
 
           {/* registerName */}
@@ -251,9 +293,9 @@ function RegisterCreate() {
               className="form-check-input"
               onChange={onChangeIsRead}
               name="isRead"
-              id="isRead" /> 
-              <abbr title="Register Olurken Kayıt işlemleri" htmlFor="isRead">Okudunuz mu ?</abbr> 
-              <br />
+              id="isRead" />
+            <abbr title="Register Olurken Kayıt işlemleri" htmlFor="isRead">Okudunuz mu ?</abbr>
+            <br />
           </span>
         }
 
@@ -268,7 +310,15 @@ function RegisterCreate() {
           type='submit'
           onClick={registerCreateSubmit}
           className="btn btn-primary mt-2 me-2"
-          disabled={!localStorage.getItem("is_read")==true}>Gönder</button>
+          disabled={!localStorage.getItem("is_read") == true}>
+
+          {/* SPINNER */}
+          {
+            spinnerFunction()
+          }
+          Gönder
+
+        </button>
       </form>
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </React.Fragment>
