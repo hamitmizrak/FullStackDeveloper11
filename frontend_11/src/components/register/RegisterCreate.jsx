@@ -9,11 +9,11 @@ function RegisterCreate() {
   const navigate = useNavigate();
 
   // STATE
-  const [registerNickName, setRegisterNickName] = useState('');
-  const [registerName, setRegisterName] = useState('');
-  const [registerSurname, setRegisterSurname] = useState('');
-  const [registerEmail, setRegisterEmail] = useState('');
-  const [registerPassword, setRegisterPassword] = useState('');
+  const [registerNickName, setRegisterNickName] = useState(undefined);
+  const [registerName, setRegisterName] = useState(undefined);
+  const [registerSurname, setRegisterSurname] = useState(undefined);
+  const [registerEmail, setRegisterEmail] = useState(undefined);
+  const [registerPassword, setRegisterPassword] = useState(undefined);
   const [registerIsPassive, setRegisterIsPassive] = useState(false);
 
   //  ERROR, MULTIPLEREQUEST, READ, SPINNER
