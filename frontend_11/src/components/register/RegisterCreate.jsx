@@ -142,7 +142,7 @@ function RegisterCreate() {
   const spinnerFunction = () => {
     if (spinner) {
       return (
-        <div class="spinner-border text-warning" role="status" >
+        <div class="spinner-border  spinner-border-sm text-warning" role="status" >
         </div>
       )
     } else {

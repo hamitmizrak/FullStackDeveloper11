@@ -2,6 +2,7 @@ package com.hamitmizrak.FullStackDeveloper11.business.dto;
 
 import com.hamitmizrak.FullStackDeveloper11.annotation.AnnotationUniqueEmailAddress;
 import com.hamitmizrak.FullStackDeveloper11.audit.AuditingAwareBaseDto;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Builder;
 import lombok.Data;
@@ -33,6 +34,7 @@ public class RegisterDto extends AuditingAwareBaseDto implements Serializable {
     // Kendi annotation'ımı yazdı
     @AnnotationUniqueEmailAddress
     @NotEmpty(message = "{register.email.validation.constraints.NotNull.message}")
+    @Email(message = "{register.email.validation.constraints.regex.message}")
     private String registerEmail;
 
     @NotEmpty(message = "{register.password.validation.constraints.NotNull.message}")
