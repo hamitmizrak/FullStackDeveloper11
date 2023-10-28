@@ -30,7 +30,7 @@ function RouterProject({ t }) {
                 {/* ROUTING */}
                 {/* dark mode */}
                 {/* dark mode:App-header */}
-                <div className='container44 mt-5 App-header'>
+                <div className='container mt-5 App-header'>
                     <Routes>
                         {/* ROOT */}
                         {/* <Route exact={true} path="/" /> */}

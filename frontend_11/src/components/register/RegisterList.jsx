@@ -143,7 +143,7 @@ function RegisterList({ t, i18n, props }) {
       <Link className='btn btn-primary me-2' to="/register/create">{t('create')}</Link>
       <Link className='btn btn-secondary me-2' onClick={speedData}>{t('create_all')}</Link>
       <Link className='btn btn-danger' onClick={deleteAll}>{t('delete_all')}</Link>
-      <table className='table table-hover table-striped table-responsive'>
+      <table className='table table-striped table-responsive'>
         <thead>
           <tr>
             <th>{t('id')}</th>

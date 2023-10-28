@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import RegisterApi from '../../services/RegisterApi';
 
 function RegisterCreate() {
 
@@ -22,15 +23,12 @@ function RegisterCreate() {
 
   // USE EFFECT
   useEffect(() => {
+    // başlangıçta Hatayı gösterme
     setError(undefined);
+    // setIsRead(false);
   }, [])
 
   // FUNCTION
-
-  // onSubmitSearch
-  const onSubmitForm = (e) => {
-    e.preventDefault();
-  }
 
   // Read On Change
   const onChangeIsRead = (event) => {
@@ -52,33 +50,77 @@ function RegisterCreate() {
   // OnChange
   const registerNickNameOnChange = (event) => {
     const { name, value } = event.target;
+    console.log(name + " " + value);
     setRegisterNickName(value);
   }
 
   const registerNameOnChange = (event) => {
     const { name, value } = event.target;
+    console.log(`${name} => ${value}`);
     setRegisterName(value);
   }
 
   const registerSurnameOnChange = (event) => {
     const { name, value } = event.target;
+    console.log(name + " " + value);
     setRegisterSurname(value);
   }
 
   const registerEmailOnChange = (event) => {
     const { name, value } = event.target;
+    console.log(name + " " + value);
     setRegisterEmail(value);
   }
 
   const registerPasswordOnChange = (event) => {
     const { name, value } = event.target;
+    console.log(name + " " + value);
     setRegisterPassword(value);
+  }
+
+  // OnChange Optimize
+  const registerAllOnChange = (event) => {
+    const { name, value } = event.target;
+    console.log(name + " " + value);
+    setRegisterNickName(value);
+    setRegisterName(value);
+  }
+
+  // onSubmitSearch
+  const onSubmitForm = (e) => {
+    e.preventDefault();
   }
 
   //// SUBMIT
   // registerCreateSubmit
-  const registerCreateSubmit = (event) => {
+  const registerCreateSubmit = async (event) => {
+    // Register Object
+    const registerCreateObject = {
+      registerNickName,
+      registerName,
+      registerSurname,
+      registerEmail,
+      registerPassword,
+      registerIsPassive,
+    }
+    console.log(registerCreateObject);
 
+    // Hataları gösterme
+    setError(undefined);
+
+    // API
+    try {
+      const response = await RegisterApi.registerApiCreate(registerCreateObject);
+      if (response.status == 200) {
+        // Toast Message
+        alert("Kayıt Başarılı");
+        navigate('/register/list');
+      }
+
+    } catch (err) {
+      console.error(err.response.data.validationErrors);
+      setError(err.response.data.validationErrors)
+    }
   }
 
   // RETURN
@@ -89,7 +131,7 @@ function RegisterCreate() {
         {/* <form onSubmit="event.preventDefault()"> */}
         <div className="d-grid gap-4">
           {/* NICKNAME */}
-          <div className="form-group"><label htmlFor="">NickName</label>
+          <div className="form-group"><label htmlFor="registerNickName">NickName</label>
             <input
               type="text"
               className='form-control'
@@ -98,11 +140,26 @@ function RegisterCreate() {
               placeholder='registerNickName'
               autoFocus={true}
               required={true}
-              onChange={registerNickNameOnChange} />
+              // onChange={registerNickNameOnChange}
+              onChange={
+                (event) => {
+                  const { name, value } = event.target;
+                  console.log(`${name} => ${value}`);
+                  setRegisterNickName(event.target.value);
+                }
+              }
+            />
+            {
+              error ?
+                <div className="alert alert-danger" role="alert">
+                  {error.registerNickName}
+                </div>
+                : ''
+            }
           </div>
 
           {/* registerName */}
-          <div className="form-group"><label htmlFor="">registerName</label>
+          <div className="form-group"><label htmlFor="registerName">registerName</label>
             <input
               type="text"
               className='form-control'
@@ -111,12 +168,19 @@ function RegisterCreate() {
               placeholder='registerName'
               autoFocus={false}
               required={true}
-              onChange={registerNameOnChange} />
+              onChange={registerNameOnChange}
+            />
+            {
+              error ?
+                <div className="alert alert-danger" role="alert">
+                  {error.registerName}
+                </div>
+                : ''
+            }
           </div>
 
-
           {/* registerSurname */}
-          <div className="form-group"><label htmlFor="">registerSurname</label>
+          <div className="form-group"><label htmlFor="registerSurname">registerSurname</label>
             <input
               type="text"
               className='form-control'
@@ -125,12 +189,19 @@ function RegisterCreate() {
               placeholder='registerSurname'
               autoFocus={false}
               required={true}
-              onChange={registerSurnameOnChange} />
+              onChange={registerSurnameOnChange}
+            />
+            {
+              error ?
+                <div className="alert alert-danger" role="alert">
+                  {error.registerSurname}
+                </div>
+                : ''
+            }
           </div>
 
-
           {/* registerEmail */}
-          <div className="form-group"><label htmlFor="">registerEmail</label>
+          <div className="form-group"><label htmlFor="registerEmail">registerEmail</label>
             <input
               type="email"
               className='form-control'
@@ -139,12 +210,19 @@ function RegisterCreate() {
               placeholder='registerEmail'
               autoFocus={false}
               required={true}
-              onChange={registerEmailOnChange} />
+              onChange={registerEmailOnChange}
+            />
+            {
+              error ?
+                <div className="alert alert-danger" role="alert">
+                  {error.registerEmail}
+                </div>
+                : ''
+            }
           </div>
 
-
           {/* registerPassword */}
-          <div className="form-group"><label htmlFor="">registerPassword</label>
+          <div className="form-group"><label htmlFor="registerPassword">registerPassword</label>
             <input
               type="password"
               className='form-control'
@@ -153,7 +231,15 @@ function RegisterCreate() {
               placeholder='registerPassword'
               autoFocus={false}
               required={true}
-              onChange={registerPasswordOnChange} />
+              onChange={registerPasswordOnChange}
+            />
+            {
+              error ?
+                <div className="alert alert-danger" role="alert">
+                  {error.registerPassword}
+                </div>
+                : ''
+            }
           </div>
         </div>
 
@@ -165,7 +251,9 @@ function RegisterCreate() {
               className="form-check-input"
               onChange={onChangeIsRead}
               name="isRead"
-              id="isRead" /> <abbr title="Register Olurken Kayıt işlemleri">Okudunuz mu ?</abbr> <br />
+              id="isRead" /> 
+              <abbr title="Register Olurken Kayıt işlemleri" htmlFor="isRead">Okudunuz mu ?</abbr> 
+              <br />
           </span>
         }
 
@@ -180,7 +268,7 @@ function RegisterCreate() {
           type='submit'
           onClick={registerCreateSubmit}
           className="btn btn-primary mt-2 me-2"
-          disabled={isRead}>Gönder</button>
+          disabled={!localStorage.getItem("is_read")==true}>Gönder</button>
       </form>
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </React.Fragment>
