@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import RegisterApi from '../../services/RegisterApi';
 
-function RegisterCreate() {
+function RegisterCreate({ t, i18n, props }){
 
   // REDIRECT
   const navigate = useNavigate();

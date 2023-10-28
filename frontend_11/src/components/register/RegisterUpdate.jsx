@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import RegisterApi from '../../services/RegisterApi';
 
-function RegisterUpdate() {
+function RegisterUpdate({ t, i18n, props }) {
 
   // REDIRECT
   const navigate = useNavigate();
