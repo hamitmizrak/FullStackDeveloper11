@@ -43,6 +43,11 @@ function RegisterUpdate() {
     .then((response)=>{
       console.log(response);
       setRegisterNickName(response.data.registerNickName);
+      setRegisterName(response.data.registerName)
+      setRegisterSurname(response.data.registerSurname)
+      setRegisterEmail(response.data.registerEmail)
+      setRegisterPassword(response.data.registerPassword)
+      setRegisterIsPassive(response.data.registerIsPassive)
       // Devam edilecek
 
     })
@@ -242,6 +247,7 @@ function RegisterUpdate() {
               autoFocus={false}
               required={true}
               onChange={registerNameOnChange}
+              value={registerName}
             />
             {
               error ?
@@ -263,6 +269,7 @@ function RegisterUpdate() {
               autoFocus={false}
               required={true}
               onChange={registerSurnameOnChange}
+              value={registerSurname}
             />
             {
               error ?
@@ -284,6 +291,7 @@ function RegisterUpdate() {
               autoFocus={false}
               required={true}
               onChange={registerEmailOnChange}
+              value={registerEmail}
             />
             {
               error ?
@@ -297,7 +305,7 @@ function RegisterUpdate() {
           {/* registerPassword */}
           <div className="form-group"><label htmlFor="registerPassword">registerPassword</label>
             <input
-              type="password"
+              type="text"
               className='form-control'
               id="registerPassword"
               name="registerPassword"
@@ -305,6 +313,7 @@ function RegisterUpdate() {
               autoFocus={false}
               required={true}
               onChange={registerPasswordOnChange}
+              value={registerPassword}
             />
             {
               error ?
