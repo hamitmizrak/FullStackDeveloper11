@@ -113,12 +113,17 @@ function RegisterCreate() {
     // Spinner Aktif et
     setSpinner(true);
 
+    // MultipleRequest (Aktif)
+    setMultipleRequest(true);
+
     // API
     try {
       const response = await RegisterApi.registerApiCreate(registerCreateObject);
       if (response.status == 200) {
         // Spinner Pasif et
         setSpinner(false);
+        // MultipleRequest (Aktif)
+        setMultipleRequest(false);
         // Toast Message
         alert("Kayıt Başarılı");
         navigate('/register/list');
@@ -128,6 +133,8 @@ function RegisterCreate() {
       setError(err.response.data.validationErrors)
       // Spinner Pasif et
       setSpinner(true);
+      // MultipleRequest (Aktif)
+      setMultipleRequest(false);
     }
   }
 
@@ -135,8 +142,7 @@ function RegisterCreate() {
   const spinnerFunction = () => {
     if (spinner) {
       return (
-        <div class="spinner-border text-warning" role="status">
-          <span class="sr-only"></span>
+        <div class="spinner-border text-warning" role="status" >
         </div>
       )
     } else {
@@ -144,20 +150,18 @@ function RegisterCreate() {
     }
   }
 
-// Message Error
-const errorAlert=(errorName)=>{
-  if (error) {
-    return (
-      <div className="alert alert-danger" role="alert">
-        {error.errorName}
-      </div>
-    )
-  }else{
-    return "";
+  // Message Error
+  const errorAlert = (errorName) => {
+    if (error) {
+      return (
+        <div className="alert alert-danger" role="alert">
+          {error.errorName}
+        </div>
+      )
+    } else {
+      return "";
+    }
   }
-}
-
-
 
   // RETURN
   return (
@@ -186,18 +190,18 @@ const errorAlert=(errorName)=>{
               }
             />
 
-              {/* ALERT ERROR */}
-              {/* {
+            {/* ALERT ERROR */}
+            {/* {
                 errorAlert(registerNickName)
               } */}
 
-            { 
+            {
               error ?
-                <div className="alert alert-danger" role="alert">
+                <div className="alert alert-danger">
                   {error.registerNickName}
                 </div>
-                : undefined
-            } 
+                : ""
+            }
           </div>
 
           {/* registerName */}
@@ -214,7 +218,7 @@ const errorAlert=(errorName)=>{
             />
             {
               error ?
-                <div className="alert alert-danger" role="alert">
+                <div className="alert alert-danger">
                   {error.registerName}
                 </div>
                 : ''
@@ -310,7 +314,7 @@ const errorAlert=(errorName)=>{
           type='submit'
           onClick={registerCreateSubmit}
           className="btn btn-primary mt-2 me-2"
-          disabled={!localStorage.getItem("is_read") == true}>
+          disabled={ (!localStorage.getItem("is_read") == true) || (multipleRequest)}>
 
           {/* SPINNER */}
           {
