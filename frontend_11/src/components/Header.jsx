@@ -131,7 +131,7 @@ class Header extends Component {
 
         // RETURN
         return (
-          
+
             <header >
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                     <div className="container">
@@ -219,11 +219,10 @@ class Header extends Component {
                                         <Link className="dropdown-item" to="/register/list" >{t('register_list')} </Link>
                                         <Link className="dropdown-item" to="/register/create" >{t('register_create')} </Link>
                                     </div>
-
-                                    
                                 </li>
                             </ul>
 
+                            {/* Dark Mode */}
                             <ul className="navbar-nav me-auto mt-2 mt-lg-0">
                                 <li className="nav-item">
                                     {/* dark mode */}
@@ -234,8 +233,7 @@ class Header extends Component {
                         </div>
                     </div>
                 </nav>
-                </header>
-           
+            </header>
         ); //end return
     } //end render
 } //end class

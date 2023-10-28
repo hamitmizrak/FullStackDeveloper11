@@ -34,7 +34,7 @@ class Footer extends Component {
         const {t}=this.props;
         return (
             <React.Fragment>
-                <footer className='bg-dark text-center text-white fixed-bottom'>
+                <footer className=' bg-dark App-header44 text-center text-white fixed-bottom'>
                     <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
                         ©2021- {this.newDate()} - <a className='text-white' href=''>{t('all_rights_reserved')}</a>
                     </div>

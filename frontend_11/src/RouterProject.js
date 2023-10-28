@@ -19,14 +19,16 @@ import RegisterUpdate from './components/register/RegisterUpdate';
 // Router Class
 function RouterProject({ t }) {
     // Display Name
-    //static displayName = "RouterProject";
+    // static displayName = "RouterProject";
 
+    // RETURN
     return (
             <div className="App">
                 {/* HEADER */}
                 <Header logo="fa-solid fa-cloud"></Header>
 
                 {/* ROUTING */}
+                {/* dark mode */}
                 {/* dark mode:App-header */}
                 <div className='container44 mt-5 App-header'>
                     <Routes>
@@ -47,7 +49,7 @@ function RouterProject({ t }) {
                     </Routes>
                 </div>
                 {/* FOOTER */}
-                <Footer copy="&copy; Bütün haklar saklıdır"></Footer>
+                <Footer  copy="&copy; Bütün haklar saklıdır"></Footer>
             </div>
     ); //end return
 } // end class 
