@@ -26,7 +26,8 @@ function RegisterList({ t, i18n, props }) {
           console.log(response.headers);
           if (response.status === 200) {
             setRegisterApiListData(response.data)
-          }
+          }else 
+          Promise.reject();
         }
       )
       .catch((err) => {

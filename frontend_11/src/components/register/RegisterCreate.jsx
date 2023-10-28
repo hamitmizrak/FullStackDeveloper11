@@ -16,6 +16,16 @@ function RegisterCreate() {
   const [registerPassword, setRegisterPassword] = useState(undefined);
   const [registerIsPassive, setRegisterIsPassive] = useState(false);
 
+  // STATE FORM
+  const [createRegisterForm,setCreateRegisterForm]=useState({
+    registerNickName:undefined,
+    registerName:undefined,
+    registerSurname:undefined,
+    registerEmail:undefined,
+    registerPassword:undefined,
+    registerIsPassive:false,
+  })
+
   //  ERROR, MULTIPLEREQUEST, READ, SPINNER
   const [error, setError] = useState(undefined);
   const [multipleRequest, setMultipleRequest] = useState(false);
@@ -107,6 +117,15 @@ function RegisterCreate() {
     }
     console.log(registerCreateObject);
 
+    // setCreateRegisterForm({
+    //   registerNickName,
+    //   registerName,
+    //   registerSurname,
+    //   registerEmail,
+    //   registerPassword,
+    //   registerIsPassive,
+    // })
+
     // Hataları gösterme
     setError(undefined);
 
@@ -127,7 +146,8 @@ function RegisterCreate() {
         // Toast Message
         alert("Kayıt Başarılı");
         navigate('/register/list');
-      }
+      } else
+        Promise.reject();
     } catch (err) {
       console.error(err.response.data.validationErrors);
       setError(err.response.data.validationErrors)
@@ -314,7 +334,7 @@ function RegisterCreate() {
           type='submit'
           onClick={registerCreateSubmit}
           className="btn btn-primary mt-2 me-2"
-          disabled={ (!localStorage.getItem("is_read") == true) || (multipleRequest)}>
+          disabled={(!localStorage.getItem("is_read") == true) || (multipleRequest)}>
 
           {/* SPINNER */}
           {
