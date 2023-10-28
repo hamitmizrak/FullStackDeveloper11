@@ -4,3 +4,6 @@
   color:var(--body_color);
 }
 
+.App-header > .table{
+  color:var(--body_color);
+}

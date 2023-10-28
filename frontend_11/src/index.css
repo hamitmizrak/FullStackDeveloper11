@@ -1,13 +1,13 @@
 /* dark mode */
 :root{
-  --body_background:white;
-  --body_color:black;
+  --body_background:white!important;
+  --body_color:black!important;
 }
 
 /* dark mode */
 [data-theme="dark"]{
-  --body_background:black;
-  --body_color:white;
+  --body_background:black!important;
+  --body_color:white!important;
 }
 
 /* dark mode */
