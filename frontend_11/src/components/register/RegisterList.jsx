@@ -17,23 +17,38 @@ function RegisterList({ t, i18n, props }) {
 
   // EFFECT
   useEffect(() => {
-    RegisterApi.registerApiList()
-      .then(
-        (response) => {
-          console.log(response);
-          console.log(response.data);
-          console.log(response.status);
-          console.log(response.headers);
-          if (response.status === 200) {
-            setRegisterApiListData(response.data)
-          }else 
-          Promise.reject();
-        }
-      )
-      .catch((err) => {
-        console.log(err);
-      });
+    //1 .YOL
+    // RegisterApi.registerApiList()
+    //   .then(
+    //     (response) => {
+    //       console.log(response);
+    //       console.log(response.data);
+    //       console.log(response.status);
+    //       console.log(response.headers);
+    //       if (response.status === 200) {
+    //         setRegisterApiListData(response.data)
+    //       }else 
+    //       Promise.reject();
+    //     }
+    //   )
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+
+      //2.YOL
+      fetchRegisterList();
   }, []) //end useEffect
+
+  // Fetch users from API
+  const fetchRegisterList = async () => {
+    try {
+      const response = await   RegisterApi.registerApiList()  //fetch('https://api.example.com/users');
+      setRegisterApiListData(response.data)
+    } catch (error) {
+      console.error('Error fetching users:', error);
+    }
+  };
+
 
   // FUNCTION
 
@@ -144,7 +159,7 @@ function RegisterList({ t, i18n, props }) {
       <Link className='btn btn-primary me-2' to="/register/create">{t('create')}</Link>
       <Link className='btn btn-secondary me-2' onClick={speedData}>{t('create_all')}</Link>
       <Link className='btn btn-danger' onClick={deleteAll}>{t('delete_all')}</Link>
-      <table className='table table-striped table-responsive'>
+      <table className='table table-striped table-responsive mb-5'>
         <thead>
           <tr>
             <th>{t('id')}</th>
@@ -155,7 +170,6 @@ function RegisterList({ t, i18n, props }) {
             <th>{t('user_password')}</th>
             <th>{t('user_is_passive')}</th>
             <th>{t('system_date')}</th>
-
             <th>{t('update')}</th>
             <th>{t('show')}</th>
             <th>{t('delete')}</th>
@@ -170,7 +184,7 @@ function RegisterList({ t, i18n, props }) {
                 <td>{data.registerName}</td>
                 <td>{data.registerSurname}</td>
                 <td>{data.registerEmail}</td>
-                <td>{data.registerPassword}</td>
+                <td>{(data.registerPassword)}</td>
                 <td>{data.registerIsPassive ?"Kullanıcı Aktif":"Kullanıcı Pasif"}</td>
                 <td>{data.systemDate}</td>
                 <td>
@@ -193,11 +207,9 @@ function RegisterList({ t, i18n, props }) {
           }
         </tbody>
       </table>
-
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </React.Fragment>
   ) //end return
 } //end class
 
 // i18n
-export default withTranslation()(RegisterList) 
+export default withTranslation()(RegisterList)

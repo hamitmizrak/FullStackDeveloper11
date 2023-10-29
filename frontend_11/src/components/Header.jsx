@@ -165,7 +165,25 @@ class Header extends Component {
                             {/* Register / Login */}
                             <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
                                 {/* i18n Language */}
-                                <OtherLanguageReusability />
+
+
+                                <li className="nav-item dropdown">
+                                    <a
+                                        className="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="dropdownId"
+                                        data-bs-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
+                                    >
+                                        {t('registers')}
+                                    </a>
+
+                                    <div className="dropdown-menu" aria-labelledby="dropdownId">
+                                        <Link className="dropdown-item" to="/register/list" >{t('register_list')} </Link>
+                                        <Link className="dropdown-item" to="/register/create" >{t('register_create')} </Link>
+                                    </div>
+                                </li>
 
                                 {/* Search Form */}
                                 <form onSubmit={this.onSubmitSearch} className="d-flex my-2 my-lg-0 ">
@@ -185,6 +203,33 @@ class Header extends Component {
                                     </button>
                                 </form>
 
+                            </ul>
+
+                            {/* Dark Mode */}
+                            <ul className="navbar-nav me-auto mt-2 mt-lg-0">
+                                <li className="nav-item">
+                                    {/* dark mode */}
+                                    <DarkMode />
+                                </li>
+
+
+                                <li className="nav-item dropdown">
+                                    <a
+                                        className="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="dropdownId"
+                                        data-bs-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
+                                    >
+                                        {t('language')}
+                                    </a>
+
+                                    <div className="dropdown-menu" aria-labelledby="dropdownId">
+                                        <OtherLanguageReusability />
+                                    </div>
+                                </li>
+
                                 <li className="nav-item dropdown">
                                     <a
                                         className="nav-link dropdown-toggle"
@@ -203,36 +248,12 @@ class Header extends Component {
                                     </div>
                                 </li>
 
-                                <li className="nav-item dropdown">
-                                    <a
-                                        className="nav-link dropdown-toggle"
-                                        href="#"
-                                        id="dropdownId"
-                                        data-bs-toggle="dropdown"
-                                        aria-haspopup="true"
-                                        aria-expanded="false"
-                                    >
-                                        {t('registers')}
-                                    </a>
-
-                                    <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                        <Link className="dropdown-item" to="/register/list" >{t('register_list')} </Link>
-                                        <Link className="dropdown-item" to="/register/create" >{t('register_create')} </Link>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            {/* Dark Mode */}
-                            <ul className="navbar-nav me-auto mt-2 mt-lg-0">
-                                <li className="nav-item">
-                                    {/* dark mode */}
-                                    <DarkMode />
-                                </li>
                             </ul>
 
                         </div>
                     </div>
                 </nav>
+                <span style={{ marginBottom: "2rem" }}>.</span>
             </header>
         ); //end return
     } //end render

@@ -18,6 +18,8 @@ i18n.use(initReactI18next).init({
                     'create': 'Create',
                     'delete': 'Delete',
                     'update': 'Update',
+                    'cleaner': 'Cleaner',
+                    'submit': 'Submit',
                     'system_date':"System Date",
                     'show': 'Show',
                     'login': 'Login',
@@ -30,7 +32,9 @@ i18n.use(initReactI18next).init({
                     'user_surname':"User Surname",
                     'user_password':"User Password",
                     'user_email':"User Email",
-                    'user_is_passive':"User Passive"
+                    'user_is_passive':"User Passive",
+                    'is_read': 'Is Read ?',
+                    'language':'Language'
                 }
             },
         tr:
@@ -48,6 +52,8 @@ i18n.use(initReactI18next).init({
                     'create': 'Ekle',
                     'delete': 'Sil',
                     'update': 'Güncelle',
+                    'cleaner': 'Temizle',
+                    'submit': 'Gönder',
                     'system_date':"Ekleme Tarihi",
                     'show': 'Göster',
                     'login': 'Giriş',
@@ -61,6 +67,8 @@ i18n.use(initReactI18next).init({
                     'user_password':"Şifreniz",
                     'user_email':"Emailiniz",
                     'user_is_passive':"Aktif mi ?",
+                    'is_read': 'Okudunuz mu ?',
+                    'language':'Diller'
                 }
             }
     },

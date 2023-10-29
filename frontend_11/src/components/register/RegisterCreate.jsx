@@ -2,29 +2,20 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import RegisterApi from '../../services/RegisterApi';
+import { withTranslation } from 'react-i18next';
 
-function RegisterCreate({ t, i18n, props }){
+function RegisterCreate({ t, i18n, props }) {
 
   // REDIRECT
   const navigate = useNavigate();
 
   // STATE
-  const [registerNickName, setRegisterNickName] = useState(undefined);
-  const [registerName, setRegisterName] = useState(undefined);
-  const [registerSurname, setRegisterSurname] = useState(undefined);
-  const [registerEmail, setRegisterEmail] = useState(undefined);
-  const [registerPassword, setRegisterPassword] = useState(undefined);
+  const [registerNickName, setRegisterNickName] = useState(null);
+  const [registerName, setRegisterName] = useState(null);
+  const [registerSurname, setRegisterSurname] = useState(null);
+  const [registerEmail, setRegisterEmail] = useState(null);
+  const [registerPassword, setRegisterPassword] = useState(null);
   const [registerIsPassive, setRegisterIsPassive] = useState(false);
-
-  // STATE FORM
-  const [createRegisterForm,setCreateRegisterForm]=useState({
-    registerNickName:undefined,
-    registerName:undefined,
-    registerSurname:undefined,
-    registerEmail:undefined,
-    registerPassword:undefined,
-    registerIsPassive:false,
-  })
 
   //  ERROR, MULTIPLEREQUEST, READ, SPINNER
   const [error, setError] = useState(undefined);
@@ -33,18 +24,18 @@ function RegisterCreate({ t, i18n, props }){
   const [spinner, setSpinner] = useState(false);
 
   // USE EFFECT
-  useEffect(() => {
-    // başlangıçta Hatayı gösterme
-    setError(undefined);
-    setIsRead(false);
-    setSpinner(false);
-  }, [])
+  // useEffect(() => {
+  //   // başlangıçta Hatayı gösterme
+  //   setError(undefined);
+  //   setIsRead(false);
+  //   setSpinner(false);
+  // }, [])
 
   // FUNCTION
 
   // Read On Change
   const onChangeIsRead = (event) => {
-    console.log(event.target.checked);
+    //console.log(event.target.checked);
     setIsRead(event.target.checked);
     // 1 kere okudutan sonra daha görünmesin
     localStorage.setItem("is_read", "true")
@@ -62,41 +53,35 @@ function RegisterCreate({ t, i18n, props }){
   // OnChange
   const registerNickNameOnChange = (event) => {
     const { name, value } = event.target;
-    console.log(name + " " + value);
+    //console.log(name + " " + value);
     setRegisterNickName(value);
   }
 
   const registerNameOnChange = (event) => {
     const { name, value } = event.target;
-    console.log(`${name} => ${value}`);
+    //console.log(`${name} => ${value}`);
     setRegisterName(value);
-  }
+   
+   }
 
   const registerSurnameOnChange = (event) => {
     const { name, value } = event.target;
-    console.log(name + " " + value);
+    //console.log(name + " " + value);
     setRegisterSurname(value);
   }
 
   const registerEmailOnChange = (event) => {
     const { name, value } = event.target;
-    console.log(name + " " + value);
+    //console.log(name + " " + value);
     setRegisterEmail(value);
   }
 
   const registerPasswordOnChange = (event) => {
     const { name, value } = event.target;
-    console.log(name + " " + value);
+    //console.log(name + " " + value);
     setRegisterPassword(value);
   }
 
-  // OnChange Optimize
-  const registerAllOnChange = (event) => {
-    const { name, value } = event.target;
-    console.log(name + " " + value);
-    setRegisterNickName(value);
-    setRegisterName(value);
-  }
 
   // onSubmitSearch
   const onSubmitForm = (e) => {
@@ -115,19 +100,10 @@ function RegisterCreate({ t, i18n, props }){
       registerPassword,
       registerIsPassive,
     }
-    console.log(registerCreateObject);
-
-    // setCreateRegisterForm({
-    //   registerNickName,
-    //   registerName,
-    //   registerSurname,
-    //   registerEmail,
-    //   registerPassword,
-    //   registerIsPassive,
-    // })
+    //console.log(registerCreateObject);
 
     // Hataları gösterme
-    setError(undefined);
+    setError(null);
 
     // Spinner Aktif et
     setSpinner(true);
@@ -146,10 +122,9 @@ function RegisterCreate({ t, i18n, props }){
         // Toast Message
         alert("Kayıt Başarılı");
         navigate('/register/list');
-      } else
-        Promise.reject();
+      }
     } catch (err) {
-      console.error(err.response.data.validationErrors);
+      //console.error(err.response.data.validationErrors);
       setError(err.response.data.validationErrors)
       // Spinner Pasif et
       setSpinner(true);
@@ -162,7 +137,7 @@ function RegisterCreate({ t, i18n, props }){
   const spinnerFunction = () => {
     if (spinner) {
       return (
-        <div class="spinner-border  spinner-border-sm text-warning" role="status" >
+        <div className="spinner-border  spinner-border-sm text-warning me-2" role="status" >
         </div>
       )
     } else {
@@ -170,31 +145,24 @@ function RegisterCreate({ t, i18n, props }){
     }
   }
 
-  // Message Error
-  const errorAlert = (errorName) => {
-    if (error) {
-      return (
-        <div className="alert alert-danger" role="alert">
-          {error.errorName}
-        </div>
-      )
-    } else {
-      return "";
-    }
-  }
+  //Error
+  const classNameData ={error}  ? "is-invalid form-control mb-3" : "form-control mb-3";
+  //console.log(error);
+  //console.log(registerSurname);
+  //console.log(classNameData);
 
   // RETURN
   return (
     <React.Fragment>
-      <h1>Register Create</h1>
+      <h1 className="mt-5">{t('register_create')}</h1>
       <form onSubmit={onSubmitForm}>
         {/* <form onSubmit="event.preventDefault()"> */}
         <div className="d-grid gap-4">
           {/* NICKNAME */}
-          <div className="form-group"><label htmlFor="registerNickName">NickName</label>
+          <div className="form-group"><label htmlFor="registerNickName"> {t('user_nickname')}</label>
             <input
               type="text"
-              className='form-control'
+              className={classNameData}
               id="registerNickName"
               name="registerNickName"
               placeholder='registerNickName'
@@ -204,7 +172,7 @@ function RegisterCreate({ t, i18n, props }){
               onChange={
                 (event) => {
                   const { name, value } = event.target;
-                  console.log(`${name} => ${value}`);
+                  //console.log(`${name} => ${value}`);
                   setRegisterNickName(event.target.value);
                 }
               }
@@ -217,18 +185,17 @@ function RegisterCreate({ t, i18n, props }){
 
             {
               error ?
-                <div className="alert alert-danger">
-                  {error.registerNickName}
-                </div>
+                  <div className="invalid-feedback">{error.registerNickName}</div>
                 : ""
-            }
+            } 
           </div>
+        
 
           {/* registerName */}
-          <div className="form-group"><label htmlFor="registerName">registerName</label>
+          <div className="form-group"><label htmlFor="registerName">{t('user_name')}</label>
             <input
               type="text"
-              className='form-control'
+              className={classNameData}
               id="registerName"
               name="registerName"
               placeholder='registerName'
@@ -238,18 +205,16 @@ function RegisterCreate({ t, i18n, props }){
             />
             {
               error ?
-                <div className="alert alert-danger">
-                  {error.registerName}
-                </div>
+              <div className="invalid-feedback">{error.registerName}</div>
                 : ''
             }
           </div>
 
           {/* registerSurname */}
-          <div className="form-group"><label htmlFor="registerSurname">registerSurname</label>
+          <div className="form-group"><label htmlFor="registerSurname">{t('user_surname')}</label>
             <input
               type="text"
-              className='form-control'
+              className={classNameData}
               id="registerSurname"
               name="registerSurname"
               placeholder='registerSurname'
@@ -259,18 +224,16 @@ function RegisterCreate({ t, i18n, props }){
             />
             {
               error ?
-                <div className="alert alert-danger" role="alert">
-                  {error.registerSurname}
-                </div>
+              <div className="invalid-feedback">{error.registerSurname}</div>
                 : ''
             }
           </div>
 
           {/* registerEmail */}
-          <div className="form-group"><label htmlFor="registerEmail">registerEmail</label>
+          <div className="form-group"><label htmlFor="registerEmail">{t('user_email')}</label>
             <input
               type="email"
-              className='form-control'
+              className={classNameData}
               id="registerEmail"
               name="registerEmail"
               placeholder='registerEmail'
@@ -280,18 +243,16 @@ function RegisterCreate({ t, i18n, props }){
             />
             {
               error ?
-                <div className="alert alert-danger" role="alert">
-                  {error.registerEmail}
-                </div>
+              <div className="invalid-feedback">{error.registerEmail}</div>
                 : ''
             }
           </div>
 
           {/* registerPassword */}
-          <div className="form-group"><label htmlFor="registerPassword">registerPassword</label>
+          <div className="form-group"><label htmlFor="registerPassword">{t('user_password')}</label>
             <input
               type="password"
-              className='form-control'
+              className={classNameData}
               id="registerPassword"
               name="registerPassword"
               placeholder='registerPassword'
@@ -301,9 +262,7 @@ function RegisterCreate({ t, i18n, props }){
             />
             {
               error ?
-                <div className="alert alert-danger" role="alert">
-                  {error.registerPassword}
-                </div>
+              <div className="invalid-feedback">{error.registerPassword}</div>
                 : ''
             }
           </div>
@@ -318,7 +277,7 @@ function RegisterCreate({ t, i18n, props }){
               onChange={onChangeIsRead}
               name="isRead"
               id="isRead" />
-            <abbr title="Register Olurken Kayıt işlemleri" htmlFor="isRead">Okudunuz mu ?</abbr>
+            <abbr title="Register Olurken Kayıt işlemleri" htmlFor="isRead">{t('is_read')}</abbr>
             <br />
           </span>
         }
@@ -327,20 +286,20 @@ function RegisterCreate({ t, i18n, props }){
         <button
           type='reset'
           onClick={inputListClear}
-          className="btn btn-danger mt-2 me-2">Temizle</button>
+          className="btn btn-danger mt-2 me-2">{t('cleaner')}</button>
 
         {/* SUBMIT   */}
         <button
           type='submit'
           onClick={registerCreateSubmit}
           className="btn btn-primary mt-2 me-2"
-          disabled={(!localStorage.getItem("is_read") == true) || (multipleRequest)}>
+          disabled={ (!localStorage.getItem("is_read") == true) || (multipleRequest)}>
 
           {/* SPINNER */}
           {
             spinnerFunction()
           }
-          Gönder
+          {t('submit')}
 
         </button>
       </form>
@@ -349,4 +308,6 @@ function RegisterCreate({ t, i18n, props }){
   )
 }
 
-export default RegisterCreate
+
+// Export i18n Wrapper
+export default withTranslation()(RegisterCreate) 

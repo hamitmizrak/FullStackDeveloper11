@@ -1,9 +1,9 @@
 // RegisterUpdate
 
-
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import RegisterApi from '../../services/RegisterApi';
+import { withTranslation } from 'react-i18next';
 
 function RegisterUpdate({ t, i18n, props }) {
 
@@ -11,18 +11,18 @@ function RegisterUpdate({ t, i18n, props }) {
   const navigate = useNavigate();
 
   // STATE
-  const [registerNickName, setRegisterNickName] = useState(undefined);
-  const [registerName, setRegisterName] = useState(undefined);
-  const [registerSurname, setRegisterSurname] = useState(undefined);
-  const [registerEmail, setRegisterEmail] = useState(undefined);
-  const [registerPassword, setRegisterPassword] = useState(undefined);
+  const [registerNickName, setRegisterNickName] = useState(null);
+  const [registerName, setRegisterName] = useState(null);
+  const [registerSurname, setRegisterSurname] = useState(null);
+  const [registerEmail, setRegisterEmail] = useState(null);
+  const [registerPassword, setRegisterPassword] = useState(null);
   const [registerIsPassive, setRegisterIsPassive] = useState(false);
 
   // STATE ID
   const [registerId, setRegisterId] = useState(null);
 
   // PARAMS
-  const updateParamsRegisterId=useParams();
+  const updateParamsRegisterId = useParams();
 
   //  ERROR, MULTIPLEREQUEST, READ, SPINNER
   const [error, setError] = useState(undefined);
@@ -32,28 +32,25 @@ function RegisterUpdate({ t, i18n, props }) {
 
   // USE EFFECT
   useEffect(() => {
-
     // Params ID
     setRegisterId(updateParamsRegisterId.id);
-
-
-
     // FIND
     RegisterApi.registerApiFindById(updateParamsRegisterId.id)
-    .then((response)=>{
-      console.log(response);
-      setRegisterNickName(response.data.registerNickName);
-      setRegisterName(response.data.registerName)
-      setRegisterSurname(response.data.registerSurname)
-      setRegisterEmail(response.data.registerEmail)
-      setRegisterPassword(response.data.registerPassword)
-      setRegisterIsPassive(response.data.registerIsPassive)
-      // Devam edilecek
-
-    })
-    .catch((err)=>{
-      console.error(err)
-    })
+      .then((response) => {
+        if (response.status === 200) {
+          console.log(response);
+          setRegisterNickName(response.data.registerNickName);
+          setRegisterName(response.data.registerName)
+          setRegisterSurname(response.data.registerSurname)
+          setRegisterEmail(response.data.registerEmail)
+          setRegisterPassword(response.data.registerPassword)
+          setRegisterIsPassive(response.data.registerIsPassive)
+        } else
+          Promise.reject()
+      })
+      .catch((err) => {
+        console.error(err)
+      })
 
     // başlangıçta Hatayı gösterme
     setError(undefined);
@@ -62,10 +59,9 @@ function RegisterUpdate({ t, i18n, props }) {
   }, [])
 
   // FUNCTION
-
   // Read On Change
   const onChangeIsRead = (event) => {
-    console.log(event.target.checked);
+    //console.log(event.target.checked);
     setIsRead(event.target.checked);
     // 1 kere okudutan sonra daha görünmesin
     localStorage.setItem("is_read", "true")
@@ -83,41 +79,35 @@ function RegisterUpdate({ t, i18n, props }) {
   // OnChange
   const registerNickNameOnChange = (event) => {
     const { name, value } = event.target;
-    console.log(name + " " + value);
+    //console.log(name + " " + value);
     setRegisterNickName(value);
   }
 
   const registerNameOnChange = (event) => {
     const { name, value } = event.target;
-    console.log(`${name} => ${value}`);
+    //console.log(`${name} => ${value}`);
     setRegisterName(value);
+
   }
 
   const registerSurnameOnChange = (event) => {
     const { name, value } = event.target;
-    console.log(name + " " + value);
+    //console.log(name + " " + value);
     setRegisterSurname(value);
   }
 
   const registerEmailOnChange = (event) => {
     const { name, value } = event.target;
-    console.log(name + " " + value);
+    //console.log(name + " " + value);
     setRegisterEmail(value);
   }
 
   const registerPasswordOnChange = (event) => {
     const { name, value } = event.target;
-    console.log(name + " " + value);
+    //console.log(name + " " + value);
     setRegisterPassword(value);
   }
 
-  // OnChange Optimize
-  const registerAllOnChange = (event) => {
-    const { name, value } = event.target;
-    console.log(name + " " + value);
-    setRegisterNickName(value);
-    setRegisterName(value);
-  }
 
   // onSubmitSearch
   const onSubmitForm = (e) => {
@@ -125,8 +115,8 @@ function RegisterUpdate({ t, i18n, props }) {
   }
 
   //// SUBMIT
-  // registerCreateSubmit
-  const registerCreateSubmit = async (event) => {
+  // registerUpdateSubmit
+  const registerUpdateSubmit = async (event) => {
     // Register Object
     const registerCreateObject = {
       registerNickName,
@@ -136,10 +126,10 @@ function RegisterUpdate({ t, i18n, props }) {
       registerPassword,
       registerIsPassive,
     }
-    console.log(registerCreateObject);
+    //console.log(registerCreateObject);
 
     // Hataları gösterme
-    setError(undefined);
+    setError(null);
 
     // Spinner Aktif et
     setSpinner(true);
@@ -160,7 +150,7 @@ function RegisterUpdate({ t, i18n, props }) {
         navigate('/register/list');
       }
     } catch (err) {
-      console.error(err.response.data.validationErrors);
+      //console.error(err.response.data.validationErrors);
       setError(err.response.data.validationErrors)
       // Spinner Pasif et
       setSpinner(true);
@@ -173,7 +163,7 @@ function RegisterUpdate({ t, i18n, props }) {
   const spinnerFunction = () => {
     if (spinner) {
       return (
-        <div class="spinner-border  spinner-border-sm text-warning" role="status" >
+        <div class="spinner-border  spinner-border-sm text-warning me-2" role="status" >
         </div>
       )
     } else {
@@ -181,28 +171,21 @@ function RegisterUpdate({ t, i18n, props }) {
     }
   }
 
-  // Message Error
-  const errorAlert = (errorName) => {
-    if (error) {
-      return (
-        <div className="alert alert-danger" role="alert">
-          {error.errorName}
-        </div>
-      )
-    } else {
-      return "";
-    }
-  }
+  //Error
+  const classNameData = { error } ? "is-invalid form-control mb-3" : "form-control mb-3";
+  //console.log(error);
+  //console.log(registerSurname);
+  //console.log(classNameData);
 
   // RETURN
   return (
     <React.Fragment>
-      <h1>Register Update</h1>
+      <h1>{t('register_update')}</h1>
       <form onSubmit={onSubmitForm}>
         {/* <form onSubmit="event.preventDefault()"> */}
         <div className="d-grid gap-4">
           {/* NICKNAME */}
-          <div className="form-group"><label htmlFor="registerNickName">NickName</label>
+          <div className="form-group"><label htmlFor="registerNickName">{t('user_nickname')}</label>
             <input
               type="text"
               className='form-control'
@@ -237,7 +220,7 @@ function RegisterUpdate({ t, i18n, props }) {
           </div>
 
           {/* registerName */}
-          <div className="form-group"><label htmlFor="registerName">registerName</label>
+          <div className="form-group"><label htmlFor="registerName">{t('user_name')}</label>
             <input
               type="text"
               className='form-control'
@@ -259,7 +242,7 @@ function RegisterUpdate({ t, i18n, props }) {
           </div>
 
           {/* registerSurname */}
-          <div className="form-group"><label htmlFor="registerSurname">registerSurname</label>
+          <div className="form-group"><label htmlFor="registerSurname">{t('user_surname')}</label>
             <input
               type="text"
               className='form-control'
@@ -281,7 +264,7 @@ function RegisterUpdate({ t, i18n, props }) {
           </div>
 
           {/* registerEmail */}
-          <div className="form-group"><label htmlFor="registerEmail">registerEmail</label>
+          <div className="form-group"><label htmlFor="registerEmail">{t('user_email')}</label>
             <input
               type="email"
               className='form-control'
@@ -303,7 +286,7 @@ function RegisterUpdate({ t, i18n, props }) {
           </div>
 
           {/* registerPassword */}
-          <div className="form-group"><label htmlFor="registerPassword">registerPassword</label>
+          <div className="form-group"><label htmlFor="registerPassword">{t('user_password')}</label>
             <input
               type="text"
               className='form-control'
@@ -334,7 +317,7 @@ function RegisterUpdate({ t, i18n, props }) {
               onChange={onChangeIsRead}
               name="isRead"
               id="isRead" />
-            <abbr title="Register Olurken Kayıt işlemleri" htmlFor="isRead">Okudunuz mu ?</abbr>
+            <abbr title="Register Olurken Kayıt işlemleri" htmlFor="isRead">{t('is_read')}</abbr>
             <br />
           </span>
         }
@@ -343,26 +326,24 @@ function RegisterUpdate({ t, i18n, props }) {
         <button
           type='reset'
           onClick={inputListClear}
-          className="btn btn-danger mt-2 me-2">Temizle</button>
+          className="btn btn-danger mt-2 me-2">{t('cleaner')}</button>
 
         {/* SUBMIT   */}
         <button
           type='submit'
-          onClick={registerCreateSubmit}
+          onClick={registerUpdateSubmit}
           className="btn btn-primary mt-2 me-2"
-          disabled={ (!localStorage.getItem("is_read") == true) || (multipleRequest)}>
-
+          disabled={(!localStorage.getItem("is_read") == true) || (multipleRequest)}>
           {/* SPINNER */}
           {
             spinnerFunction()
           }
-          Gönder
-
+          {t('submit')}
         </button>
       </form>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </React.Fragment>
   )
 }
 
-export default RegisterUpdate
+// Export i18n Wrapper
+export default withTranslation()(RegisterUpdate) 
