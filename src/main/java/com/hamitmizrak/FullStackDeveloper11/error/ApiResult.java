@@ -40,4 +40,4 @@ public class ApiResult {
         this.error = error;
         this.status = status;
     }
-}
+} //end class

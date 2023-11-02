@@ -17,8 +17,9 @@ import java.util.List;
 import java.util.Map;
 
 // LOMBOK
-@Log4j2
-@RequiredArgsConstructor
+// LOMBOK
+@Log4j2 // Loglama
+@RequiredArgsConstructor //Injection (Autowired)
 
 // ErrorController
 // ErrorAttributes

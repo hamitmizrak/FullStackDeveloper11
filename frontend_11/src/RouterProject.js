@@ -16,6 +16,9 @@ import RegisterCreate from './components/register/RegisterCreate';
 import RegisterView from './components/register/RegisterView';
 import RegisterUpdate from './components/register/RegisterUpdate';
 
+
+import Basic from './components/admin/src/layouts/authentication/sign-in/index';
+
 // Router Class
 function RouterProject({ t }) {
     // Display Name
@@ -37,7 +40,7 @@ function RouterProject({ t }) {
                         <Route path="/" element={<Main />} />
 
                         {/* LOGIN */}
-                        <Route path={"/login"} element={<loginPage />} />
+                        <Route path={"/login"} element={<Basic />} />
 
                         {/* REGISTER */}
                         <Route path={"/register/list"} element={<RegisterList name="register List" />} />
