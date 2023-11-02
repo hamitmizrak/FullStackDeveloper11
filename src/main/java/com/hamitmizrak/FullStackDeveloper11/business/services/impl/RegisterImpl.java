@@ -32,7 +32,8 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
 
     private final PasswordEncoderBeanClass passwordEncoderBeanClass;
 
-    // Model Mapper
+    ////////////////////////////////////////////////////////////
+    // MODEL MAPPER
     @Override
     public RegisterDto entityToDto(RegisterEntity registerEntity) {
         return modelMapperBeanClass.modelMapperMethod().map(registerEntity, RegisterDto.class);
