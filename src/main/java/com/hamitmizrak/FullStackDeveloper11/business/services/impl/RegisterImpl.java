@@ -98,6 +98,7 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
     // C R U D
     // CREATE
     // org.springframework.transaction.annotation.Transactional
+    // Transaction: Create, Delete, Update
     @Override
     @Transactional // create , delete, update
     public RegisterDto registerServiceCreate(RegisterDto registerDto) {
@@ -105,12 +106,15 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
             RegisterEntity registerEntity = dtoToEntity(registerDto);
             // Password Encoder Bean
             //passwordEncoderBeanClass.passwordEncoderMethod().encode(registerDto.getRegisterPassword());
+            // PasswordEncoder
+            registerEntity.setRegisterPassword(passwordEncoderBeanClass.passwordEncoderMethod().encode(registerDto.getRegisterPassword()));
             iRegisterRepository.save(registerEntity);
             // Dto Set(id ve date)
             registerDto.setId(registerEntity.getId());
             registerDto.setSystemDate(registerEntity.getSystemDate());
+            return registerDto;
         }
-        return registerDto;
+        return null;
     }
 
     // LIST
@@ -154,6 +158,7 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
     }
 
     // UPDATE
+    // Transaction: Create, Delete, Update
     @Override
     @Transactional // create , delete, update
     public RegisterDto registerServiceUpdate(Long id, RegisterDto registerDto) {
@@ -176,6 +181,7 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
     }
 
     // DELETE BY ID
+    // Transaction: Create, Delete, Update
     @Override
     @Transactional // create , delete, update
     public RegisterDto registerServiceDeleteById(Long id) {
