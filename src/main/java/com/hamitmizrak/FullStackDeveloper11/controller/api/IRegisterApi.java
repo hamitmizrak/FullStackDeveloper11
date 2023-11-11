@@ -1,5 +1,6 @@
 package com.hamitmizrak.FullStackDeveloper11.controller.api;
 
+import com.hamitmizrak.FullStackDeveloper11.business.dto.RegisterDto;
 import org.springframework.http.ResponseEntity;
 import java.util.List;
 
@@ -14,13 +15,7 @@ public interface IRegisterApi<D> {
     // ALL DELETE
     public ResponseEntity<?> registerApiDeleteAll();
 
-
     /////////////////////////////////////////////////////////////
-    // LOGIN
-    // FIND SURNAME
-    public ResponseEntity<?> loginApiFindBySurname(String surname);
-
-    ////////////////////////////////////////////////////////////
 
     // C R U D
     // CREATE
@@ -38,5 +33,8 @@ public interface IRegisterApi<D> {
     // DELETE
     public ResponseEntity<?> registerApiDeleteById(Long id);
 
+    /////////////////////////////////////////////////////////////////
+    // EMAIL CONFIRMATION
+    public ResponseEntity<String> emailTokenConfirmation(String token);
 } //end interface
 

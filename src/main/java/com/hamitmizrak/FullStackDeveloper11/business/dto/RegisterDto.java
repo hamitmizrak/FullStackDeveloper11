@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.extern.log4j.Log4j2;
@@ -14,6 +15,7 @@ import java.io.Serializable;
 // LOMBOK
 @Data
 @Log4j2
+@AllArgsConstructor
 @Builder
 
 // Dikkat: message sonunda boşluk olmasın
@@ -50,22 +52,17 @@ public class RegisterDto extends AuditingAwareBaseDto implements Serializable {
     @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).*$", message = "{register.password.pattern.validation.constraints.NotNull.message}")
     private String registerPassword;
 
-    // ACTIVE INACTIVE
-    @Builder.Default //default olarak kullanıcı pasif olsun admin bunu aktif yapsın
-    private Boolean registerIsPassive=false;
-
     //parametresiz constructor
     public RegisterDto() {
     }
 
     //parametreli constructor
-    public RegisterDto(String registerNickName, String registerName, String registerSurname, String registerEmail, String registerPassword, Boolean registerIsPassive) {
+    public RegisterDto(String registerNickName, String registerName, String registerSurname, String registerEmail, String registerPassword) {
         this.registerNickName = registerNickName;
         this.registerName = registerName;
         this.registerSurname = registerSurname;
         this.registerEmail = registerEmail;
         this.registerPassword = registerPassword;
-        this.registerIsPassive = registerIsPassive;
     }
 
     // toString
@@ -78,7 +75,6 @@ public class RegisterDto extends AuditingAwareBaseDto implements Serializable {
                 ", registerSurname='" + registerSurname + '\'' +
                 ", registerEmail='" + registerEmail + '\'' +
                 ", registerPassword='" + registerPassword + '\'' +
-                ", registerIsPassive='" + registerIsPassive + '\'' +
                 ", systemDate=" + systemDate +
                 ", createdUser='" + createdUser + '\'' +
                 ", createdDate=" + createdDate +
@@ -86,5 +82,24 @@ public class RegisterDto extends AuditingAwareBaseDto implements Serializable {
                 ", lastDate=" + lastDate +
                 '}';
     } //end toString
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Mail Göndererek Kullanıcıyı aktif edebilmek
+    // USER DETAILS
+    // Kullanıcı başlangıçta kilitli yani sisteme giremezsin(Mail ile aktif etsin)
+    @Builder.Default
+    private Boolean isAccountNonLocked;
+
+    // Kullanıcını Hesap süresi Doldu mu ?
+    @Builder.Default
+    private Boolean isAccountNonExpired;
+
+    // Kulllanıcının Bilgi Süresi Doldu mu?
+    @Builder.Default
+    private Boolean isCredentialsNonExpired;
+
+    // Kullanıcı Aktif mi ? pasif mi
+    @Builder.Default
+    private Boolean isEnabled;
 
 } //end class

@@ -82,7 +82,7 @@ public class LoginApiImpl implements ILoginApi {
         if (findRegisterEntity.isPresent() == false) { // Kullanıcı yoksa
             ApiResult apiResult = new ApiResult("/login/api/v1.0.0./authentication", "Kullanıcı bulunamadı", 404);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(apiResult);
-        } else if (findRegisterEntity.isPresent() == true && findRegisterEntity.get().getRegisterIsPassive() == false) { // Kullanıcı Kilitli mi ?
+        } else if (findRegisterEntity.isPresent() == true && findRegisterEntity.get().getUserDetailsEmbeddable().getIsAccountNonLocked() == false) { // Kullanıcı Kilitli mi ?
             ApiResult apiResult = new ApiResult("/login/api/v1.0.0./authentication", "Kullanıcı kilitli", 401);
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(apiResult);
         }

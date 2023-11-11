@@ -1,4 +1,4 @@
-package com.hamitmizrak.FullStackDeveloper11.bean;
+package com.hamitmizrak.FullStackDeveloper11.audit;
 
 import com.hamitmizrak.FullStackDeveloper11.audit.AuditorAwareImpl;
 import lombok.extern.log4j.Log4j2;

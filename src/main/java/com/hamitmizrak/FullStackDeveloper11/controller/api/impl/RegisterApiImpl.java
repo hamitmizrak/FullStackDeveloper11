@@ -3,6 +3,7 @@ package com.hamitmizrak.FullStackDeveloper11.controller.api.impl;
 import com.hamitmizrak.FullStackDeveloper11.business.dto.RegisterDto;
 import com.hamitmizrak.FullStackDeveloper11.business.services.IRegisterServices;
 import com.hamitmizrak.FullStackDeveloper11.controller.api.IRegisterApi;
+import com.hamitmizrak.FullStackDeveloper11.data.entity.TokenConfirmationEntity;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -12,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 // LOMBOK
 @RequiredArgsConstructor
@@ -45,16 +47,6 @@ public class RegisterApiImpl implements IRegisterApi<RegisterDto> {
     @GetMapping("/delete/all")
     public ResponseEntity<?> registerApiDeleteAll() {
         return ResponseEntity.ok(iRegisterServices.registerServiceDeleteAll());
-    }
-
-    /////////////////////////////////////////////////////////////////
-    // SEARCH
-    // LOGIN
-    // http://localhost:4444/register/api/v1.0.0/search?surname=mizrak
-    @Override
-    @GetMapping("/search")
-    public ResponseEntity<?> loginApiFindBySurname(@RequestParam String surname) {
-        return ResponseEntity.ok(iRegisterServices.loginServiceFindBySurname(surname));
     }
 
     ///////////////////////////////////////////////////////////////////////////
@@ -100,5 +92,16 @@ public class RegisterApiImpl implements IRegisterApi<RegisterDto> {
         return ResponseEntity.ok(iRegisterServices.registerServiceDeleteById(id));
     }
 
+
+    /////////////////////////////////////////////////////////
+    // EMAIL CONFIRMATION
+    //http://localhost:4444/user/api/v1/confirm?token=ca478481-5f7a-406b-aaa4-2012ebe1afb4
+    @Override
+    @GetMapping("/confirm")
+    public ResponseEntity<String> emailTokenConfirmation(@RequestParam("token") String token) {
+        Optional<TokenConfirmationEntity> tokenConfirmationEntity = iRegisterServices.findTokenConfirmation(token);
+        tokenConfirmationEntity.ifPresent(iRegisterServices::emailTokenConfirmation);
+        return ResponseEntity.ok("Üyeliğiniz Aktif olunmuştur. Ana sayfa için tıklayınız http://localhost:4444");
+    }
 
 } //end class

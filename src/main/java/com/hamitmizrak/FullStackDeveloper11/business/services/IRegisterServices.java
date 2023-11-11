@@ -1,6 +1,9 @@
 package com.hamitmizrak.FullStackDeveloper11.business.services;
 
+import com.hamitmizrak.FullStackDeveloper11.data.entity.TokenConfirmationEntity;
+
 import java.util.List;
+import java.util.Optional;
 
 // D: Dto
 // E: Entity
@@ -19,13 +22,9 @@ public interface IRegisterServices <D,E>{
 
     // ALL DELETE
     public String registerServiceDeleteAll();
-    /////////////////////////////////////////////////////////////
-    // LOGIN
-    // FIND SURNAME
-    public D loginServiceFindBySurname(String surname);
 
     ////////////////////////////////////////////////////////////
-    //  REGISTER C R U D
+    // REGISTER C R U D
     // CREATE
     public D registerServiceCreate(D d);
 
@@ -41,5 +40,12 @@ public interface IRegisterServices <D,E>{
     // DELETE
     public D registerServiceDeleteById(Long id);
 
+    ////////////////////////////////////////////////////////////
+    // EMAIL CONFIRMATION
+    // EMAIL TOKEN CONFIRMATION
+    public void emailTokenConfirmation(TokenConfirmationEntity tokenConfirmationEntity);
+
+    // EMAIL TOKEN FIND
+    public Optional<TokenConfirmationEntity> findTokenConfirmation(String token);
 
 } //end interface

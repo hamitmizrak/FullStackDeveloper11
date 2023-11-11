@@ -27,19 +27,19 @@ abstract public class AuditingAwareBaseDto implements Serializable {
     //////////////////////////////////////////////////////////////////
     // AUDITING
     // Kim ekledi
-    @JsonIgnore // Backte giden veride bunu göstermek
+    // @JsonIgnore // Backte giden veride bunu göstermek
     protected String createdUser;
 
     // Kim ne zaman ekledi
-    @JsonIgnore
+    // @JsonIgnore
     protected Date createdDate;
 
     // Kim güncelledi
-    @JsonIgnore
+    // @JsonIgnore
     protected String lastUser;
 
     // Kim ne zaman güncelledi
-    @JsonIgnore
+    // @JsonIgnore
     protected Date lastDate;
 
 } //end class

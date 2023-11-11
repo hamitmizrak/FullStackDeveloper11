@@ -4,18 +4,23 @@ import com.hamitmizrak.FullStackDeveloper11.bean.ModelMapperBeanClass;
 import com.hamitmizrak.FullStackDeveloper11.bean.PasswordEncoderBeanClass;
 import com.hamitmizrak.FullStackDeveloper11.business.dto.RegisterDto;
 import com.hamitmizrak.FullStackDeveloper11.business.services.IRegisterServices;
+import com.hamitmizrak.FullStackDeveloper11.business.services.ITokenServices;
 import com.hamitmizrak.FullStackDeveloper11.data.entity.RegisterEntity;
+import com.hamitmizrak.FullStackDeveloper11.data.entity.TokenConfirmationEntity;
 import com.hamitmizrak.FullStackDeveloper11.data.repository.IRegisterRepository;
+import com.hamitmizrak.FullStackDeveloper11.data.repository.ITokenRepository;
 import com.hamitmizrak.FullStackDeveloper11.exception.HamitMizrakException;
 import com.hamitmizrak.FullStackDeveloper11.exception.Resource404NotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+
+import java.util.*;
 
 // LOMBOK
 @RequiredArgsConstructor
@@ -26,11 +31,17 @@ import java.util.UUID;
 @Service
 public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEntity> {
 
-    // Injection
+    // INJECTION
     private final IRegisterRepository iRegisterRepository;
     private final ModelMapperBeanClass modelMapperBeanClass;
-
     private final PasswordEncoderBeanClass passwordEncoderBeanClass;
+
+    @Autowired
+    private JavaMailSender mailSender; // Mail oluşturma
+    @Value("${spring.mail.username}")
+    private String serverMailAddress;
+    private final ITokenServices tokenServices; // Email Token confirmation
+    private final ITokenRepository iTokenRepository; // Token oluşturma
 
     ////////////////////////////////////////////////////////////
     // MODEL MAPPER
@@ -59,11 +70,17 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
                         //.registerPassword(passwordEncoderBeanClass.passwordEncoderMethod().encode(UUID.randomUUID().toString()))
                         .registerPassword(passwordEncoderBeanClass.passwordEncoderMethod().encode("root"))
                         .registerEmail("hamitmizrak"+UUID.randomUUID().toString()+"@gmail.com")
-                        .registerIsPassive(true)
+                        .isAccountNonLocked(false) //mail ile aktifleştirelim
+                        .isEnabled(true)
+                        .isAccountNonExpired(true)
+                        .isCredentialsNonExpired(true)
                         .build();
+                // Model Mapper
                 RegisterEntity registerEntity = dtoToEntity(registerDto);
+                // Save
                 iRegisterRepository.save(registerEntity);
-                registerDto.setId(registerEntity.getId());
+                // Set
+                registerDto.setId(registerEntity.getRegisterId());
                 registerDto.setSystemDate(registerEntity.getSystemDate());
                 registerDtoList.add(registerDto);
             }
@@ -71,6 +88,13 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
         registerDtoList.stream().forEach((temp)->
                 System.out.println(temp)
         );
+         /*
+         Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+            if(authentication!=null && authentication.isAuthenticated()){
+                System.out.println(authentication.getName());
+                System.out.println(authentication.getPrincipal());
+            }
+            */
         return registerDtoList;
     }
 
@@ -80,19 +104,6 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
         iRegisterRepository.deleteAll();
         System.out.println(iRegisterRepository.findAll().toString());
         return iRegisterRepository.findAll().toString();
-    }
-
-    /////////////////////////////////////////////////////////////////
-    // LOGIN
-    @Override
-    public RegisterDto loginServiceFindBySurname(String surname) {
-        Optional<RegisterEntity> loginFindBySurname=iRegisterRepository.findByRegisterSurname(surname);
-        RegisterDto registerDto=entityToDto(loginFindBySurname.get());
-        if(loginFindBySurname.isPresent()){
-            return registerDto;
-        }
-        // Eğer kullanıcı yoksa null döndersin
-        return null;
     }
 
     /////////////////////////////////////////////////////////////////
@@ -111,8 +122,25 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
             registerEntity.setRegisterPassword(passwordEncoderBeanClass.passwordEncoderMethod().encode(registerDto.getRegisterPassword()));
             iRegisterRepository.save(registerEntity);
             // Dto Set(id ve date)
-            registerDto.setId(registerEntity.getId());
+            registerDto.setId(registerEntity.getRegisterId());
             registerDto.setSystemDate(registerEntity.getSystemDate());
+
+            //MAIL GONDER VE TOKEN OLUŞTUR
+            // TOKEN OLUŞTUR
+            TokenConfirmationEntity tokenConfirmationEntity = new TokenConfirmationEntity(registerEntity);
+            String token = tokenServices.createToken(tokenConfirmationEntity);
+            SimpleMailMessage message = new SimpleMailMessage();
+            System.out.println("APP 44 ==> "+serverMailAddress);
+            message.setFrom(this.serverMailAddress);
+            message.setTo(registerDto.getRegisterEmail());
+            message.setSentDate(new Date(System.currentTimeMillis()));
+            message.setSubject("Üyeliğiniz Aktif olmasına son bir adım kaldı");
+            //message.setBcc(this.serverMailAddress);
+            //message.setCc(this.serverMailAddress);
+            String mailContent = "Üyeliğinizi aktifleşmesine son bir adım lütfen linke tıklayınız. " + "http://localhost:4444/register/api/v1.0.0/confirm?token=" + token;
+            message.setText(mailContent);
+            mailSender.send(message);
+
             return registerDto;
         }
         return null;
@@ -169,13 +197,12 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
         RegisterEntity registerEntity = null;
         if(registerFindDto!=null){
             registerEntity=dtoToEntity(registerDto);
-            registerEntity.setId(registerDto.getId());
+            registerEntity.setRegisterId(registerDto.getId());
             registerEntity.setRegisterNickName(registerDto.getRegisterNickName());
             registerEntity.setRegisterName(registerDto.getRegisterName());
             registerEntity.setRegisterSurname(registerDto.getRegisterSurname());
             registerEntity.setRegisterEmail(registerDto.getRegisterEmail());
             registerEntity.setRegisterPassword(registerDto.getRegisterPassword());
-            registerEntity.setRegisterIsPassive(registerDto.getRegisterIsPassive());
             iRegisterRepository.save(registerEntity);
         }
         return entityToDto(registerEntity);
@@ -192,6 +219,28 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
             iRegisterRepository.deleteById(id);
         }
         return registerFindDto;
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // EMAIL TOKEN CONFIRMATION
+    @Transactional // Create, delete, update için kullanmalısın
+    @Override
+    public void emailTokenConfirmation(TokenConfirmationEntity tokenConfirmationEntity) {
+        // @OneToOne(1-1) ilişkideki veriyi almak
+        // TokenConfirmationEntity'den UserEntity almak
+        final RegisterEntity userEntity = tokenConfirmationEntity.getUserEntity();
+        // üyeliği aktif et
+        // Embeddable eklediğim
+        userEntity.getUserDetailsEmbeddable().setIsAccountNonLocked(Boolean.TRUE);
+        iRegisterRepository.save(userEntity);
+        // Mail onaylanması sonrasında database Tokenı sil
+        tokenServices.deleteToken(tokenConfirmationEntity.getId());
+    }
+
+    // TOKEN FIND
+    @Override
+    public Optional<TokenConfirmationEntity> findTokenConfirmation(String token) {
+        return iTokenRepository.findTokenConfirmationEntityByToken(token);
     }
 
 } //end class

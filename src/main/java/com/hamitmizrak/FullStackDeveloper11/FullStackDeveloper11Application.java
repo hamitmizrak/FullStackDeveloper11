@@ -4,6 +4,7 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+
 import java.util.TimeZone;
 
 // Mongo aktif etmek ici
@@ -27,25 +28,25 @@ import java.util.TimeZone;
 
 // Spring Security: Şimdilik dahil etme ancak Spring security için gerekli kütüphaneleri dahil
 @SpringBootApplication(exclude = {
-		//SecurityAutoConfiguration.class,
-		org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class,
-		org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration.class
-}
+        //SecurityAutoConfiguration.class,
+        org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class,
+        org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration.class
+   }
 )
 
 // @SpringBootApplication
 public class FullStackDeveloper11Application {
 
-	@PostConstruct
-	public void init(){
-		TimeZone.setDefault(TimeZone.getTimeZone("IST"));
-	}
+    @PostConstruct
+    public void init() {
+        TimeZone.setDefault(TimeZone.getTimeZone("IST"));
+    }
 
-	public static void main(String[] args) {
-		// devtools active isActive
-		// System.setProperty("spring.devtools.restart.enabled","true");
+    public static void main(String[] args) {
+        // devtools active isActive
+        // System.setProperty("spring.devtools.restart.enabled","true");
 
-		// PORT Ayarlamak
+        // PORT Ayarlamak
         /*
         SpringApplication app = new SpringApplication(TurgutUniversitySpringAllInOneApplication.class);
         app.setDefaultProperties(Collections
@@ -53,11 +54,11 @@ public class FullStackDeveloper11Application {
         app.run(args);
          */
 
-		// JOptional pane aktif etmek
-		System.setProperty("java.awt.headless","false");
+        // JOptional pane aktif etmek
+        System.setProperty("java.awt.headless", "false");
 
-		// Main
-		SpringApplication.run(FullStackDeveloper11Application.class, args);
-	} //end PSVM
+        // Main
+        SpringApplication.run(FullStackDeveloper11Application.class, args);
+    } //end PSVM
 
 } //end class
