@@ -74,4 +74,5 @@ class RegisterApi {
 
 } //end class
 
+// NEW
 export default new  RegisterApi()

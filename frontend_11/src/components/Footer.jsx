@@ -41,7 +41,8 @@ class Footer extends Component {
                 </footer>
             </React.Fragment>
         );
-    }
-}
+    }// end render
+}// end class
 
+// EXPORT
 export default withTranslation()(Footer) ;

@@ -74,6 +74,5 @@ function RegisterView({ props, t, i18n }) {
   )// end return
 } //end RegisterView
 
-
 // EXPORT
 export default withTranslation()(RegisterView)

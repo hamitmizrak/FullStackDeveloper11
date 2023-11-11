@@ -18,9 +18,6 @@ import RegisterUpdate from './components/register/RegisterUpdate';
 import UserPage from './components/user/UserPage';
 import Login from './components/login/Login';
 
-
-
-
 // Router Class
 function RouterProject({ t }) {
     // Display Name

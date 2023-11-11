@@ -15,7 +15,8 @@ class LoginApi {
             LOGIN_URL,
             { headers: { "Accept": "application/json", "Content-Type": "application/json" } }  ,
             { auth: loginObject })
-    }
-}
+    } //end login
+} //end LoginApi
 
+// EXPORT
 export default new LoginApi;

@@ -1,7 +1,13 @@
-
+// REACT
 import React, { useEffect, useState } from 'react'
+
+// NAVIGATE
 import { useNavigate } from 'react-router-dom'
+
+// REGISTER
 import RegisterApi from '../../services/RegisterApi';
+
+// I18N
 import { withTranslation } from 'react-i18next';
 
 // FUNcTION REGISTER
@@ -83,7 +89,6 @@ function RegisterCreate({ t, i18n, props }) {
     setRegisterPassword(value);
   }
 
-
   // onSubmitSearch
   const onSubmitForm = (e) => {
     e.preventDefault();
@@ -151,7 +156,6 @@ function RegisterCreate({ t, i18n, props }) {
   //console.log(error);
   //console.log(registerSurname);
   //console.log(classNameData);
-
 
   // RETURN
   return (
@@ -307,8 +311,8 @@ function RegisterCreate({ t, i18n, props }) {
       </form>
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </React.Fragment>
-  )
-}
+  ) // end return
+}// end functıon
 
 
 // Export i18n Wrapper

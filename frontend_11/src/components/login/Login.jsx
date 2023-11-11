@@ -1,10 +1,18 @@
 // React
+// AXIOS
 import axios from 'axios';
-import React, { Component } from 'react';
-import LoginReusability from './LoginReusability';
-import { withTranslation } from 'react-i18next';
-import LoginApi from '../../services/LoginApi';
 
+// REACT
+import React, { Component } from 'react';
+
+// LOGIN REUSABILITY
+import LoginReusability from './LoginReusability';
+
+// I18N
+import { withTranslation } from 'react-i18next';
+
+// LOGIN API
+import LoginApi from '../../services/LoginApi';
 
 // React Life Cycle
 //  constructor
@@ -44,14 +52,14 @@ class Login extends Component {
     componentDidMount() {
         // Request
         this.requestInterceptors = axios.interceptors.request.use((request) => {
-            console.log("Request Interceptors");
+            //console.log("Request Interceptors");
             this.setState({ spinnerData: true })
             return request;
         }) //end request
 
         // Response
         this.responseInterceptors = axios.interceptors.request.use((response) => {
-            console.log("Response Interceptors");
+            //console.log("Response Interceptors");
             this.setState({ spinnerData: false })
             return response;
         }, (error) => {
@@ -60,7 +68,6 @@ class Login extends Component {
             throw error;
 
         }) //end response
-
     }
 
     // CDU

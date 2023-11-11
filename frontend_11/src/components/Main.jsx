@@ -25,7 +25,6 @@ class Main extends Component {
         // BIND
     }
 
-
     //FUNCTION
     render() {
         return (
@@ -41,8 +40,8 @@ class Main extends Component {
            <br /><br /><br /><br /><br />
            </div>
             </React.Fragment>
-        );
-    }
-}
+        ); // end return
+    } //end render
+} //end class
 
 export default Main;

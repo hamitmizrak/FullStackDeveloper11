@@ -1,10 +1,17 @@
 // RegisterUpdate
-
+// REACT
 import React, { useEffect, useState } from 'react'
+
+//NAVIGATE
 import { useNavigate, useParams } from 'react-router-dom'
+
+//REGISTER API
 import RegisterApi from '../../services/RegisterApi';
+
+// I18N
 import { withTranslation } from 'react-i18next';
 
+// UPDATE
 function RegisterUpdate({ t, i18n, props }) {
 
   // REDIRECT
@@ -107,7 +114,6 @@ function RegisterUpdate({ t, i18n, props }) {
     //console.log(name + " " + value);
     setRegisterPassword(value);
   }
-
 
   // onSubmitSearch
   const onSubmitForm = (e) => {
@@ -342,8 +348,8 @@ function RegisterUpdate({ t, i18n, props }) {
         </button>
       </form>
     </React.Fragment>
-  )
-}
+  )// end return
+}// end function
 
 // Export i18n Wrapper
 export default withTranslation()(RegisterUpdate) 

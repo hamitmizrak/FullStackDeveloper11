@@ -36,8 +36,8 @@ function OtherLanguageReusability(props) {
                 <img src={en} style={{ height: "1rem" }} alt="EN" /> EN
             </Link>
         </React.Fragment>
-    );
-}
+    ); //end return
+} //end function
 
 // export default UserRegister
 // Higher Order Component: monad componenti başka bir componentin içine  ekleyip oradanda yeni sonuclar elde etmek

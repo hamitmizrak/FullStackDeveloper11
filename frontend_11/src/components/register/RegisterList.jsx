@@ -1,10 +1,16 @@
 // rfce
+// REACT
 import React, { useEffect, useState } from 'react'
+
+// LINK
 import { Link, useNavigate } from 'react-router-dom'
+
+// REGISTER API
 import RegisterApi from '../../services/RegisterApi';
+
+// I18N
 import { withTranslation } from 'react-i18next';
 import axios from 'axios';
-
 
 // FUNCTION
 function RegisterList({ t, i18n, props }) {
@@ -49,9 +55,7 @@ function RegisterList({ t, i18n, props }) {
     }
   };
 
-
   // FUNCTION
-
   // LIST AFTER LOADING
   const listManipulationAfter = () => {
     RegisterApi.registerApiList()
@@ -150,7 +154,6 @@ function RegisterList({ t, i18n, props }) {
     // axios.delete(" http://localhost:4444/register/api/v1.0.0/delete/"+id).then().catch();
   }
 
-
   // RETURN
   return (
     <React.Fragment>
@@ -209,7 +212,7 @@ function RegisterList({ t, i18n, props }) {
       </table>
     </React.Fragment>
   ) //end return
-} //end class
+} //end function
 
 // i18n
 export default withTranslation()(RegisterList)
