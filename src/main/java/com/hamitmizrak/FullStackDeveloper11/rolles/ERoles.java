@@ -1,4 +1,4 @@
-package com.hamitmizrak.FullStackDeveloper11.utils;
+package com.hamitmizrak.FullStackDeveloper11.rolles;
 
 // final verirsem;
 // 1-) Değişkende: sabit değer

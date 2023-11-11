@@ -159,7 +159,7 @@ class Login extends Component {
         // State
         const { username, password, errorData, spinnerData } = this.state;
         const loginObjectisNull = username && password;
-        //, , , , icon, error, , 
+
         // RETURN
         return (
             <React.Fragment>

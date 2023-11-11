@@ -1,4 +1,4 @@
-package com.hamitmizrak.FullStackDeveloper11.data;
+package com.hamitmizrak.FullStackDeveloper11.data.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;

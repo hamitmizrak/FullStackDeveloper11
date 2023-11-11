@@ -1,6 +1,5 @@
 package com.hamitmizrak.FullStackDeveloper11.data.entity;
 
-import com.hamitmizrak.FullStackDeveloper11.data.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

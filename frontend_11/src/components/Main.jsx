@@ -33,7 +33,7 @@ class Main extends Component {
             <div id="light">
                 <img src={sunRise} alt="" width="100%" />
 
-                <p>Lorem ipsatem libero, tempora adipisci! Nam explicabo excepturi voluptas at sapiente! Voluptate porro explicabo magnam odio cum expedita voluptatum impedit vel ab.
+                <p>lorem*40 Lorem ipsatem libero, tempora adipisci! Nam explicabo excepturi voluptas at sapiente! Voluptate porro explicabo magnam odio cum expedita voluptatum impedit vel ab.
             </p>
             <br />
             <Link to="/register/list" className='btn btn-primary'>Register List</Link>
