@@ -4,9 +4,7 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
-
 import java.util.TimeZone;
-
 
 // Mongo aktif etmek ici
 // @EnableMongoRepositories
@@ -44,12 +42,22 @@ public class FullStackDeveloper11Application {
 	}
 
 	public static void main(String[] args) {
+		// devtools active isActive
+		// System.setProperty("spring.devtools.restart.enabled","true");
+
+		// PORT Ayarlamak
+        /*
+        SpringApplication app = new SpringApplication(TurgutUniversitySpringAllInOneApplication.class);
+        app.setDefaultProperties(Collections
+                .singletonMap("server.port", "8083"));
+        app.run(args);
+         */
 
 		// JOptional pane aktif etmek
 		System.setProperty("java.awt.headless","false");
 
 		// Main
 		SpringApplication.run(FullStackDeveloper11Application.class, args);
-	}
+	} //end PSVM
 
 } //end class

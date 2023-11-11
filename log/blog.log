@@ -327,3 +327,15 @@
 2023-11-11T09:46:39.945+03:00 DEBUG 14388 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
 2023-11-11T09:46:39.945+03:00 DEBUG 14388 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
 2023-11-11T09:46:39.946+03:00 DEBUG 14388 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-11T10:00:12.156+03:00 DEBUG 14388 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-11T10:00:12.158+03:00 DEBUG 14388 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-11T10:00:12.170+03:00  INFO 14388 --- [http-nio-4444-exec-6] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:6
+2023-11-11T10:00:12.171+03:00 DEBUG 14388 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-11T10:00:12.171+03:00 DEBUG 14388 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
+2023-11-11T10:00:12.172+03:00 DEBUG 14388 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-11T10:00:14.514+03:00 DEBUG 14388 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-11T10:00:14.515+03:00 DEBUG 14388 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-11T10:00:14.528+03:00  INFO 14388 --- [http-nio-4444-exec-8] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:6
+2023-11-11T10:00:14.529+03:00 DEBUG 14388 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-11T10:00:14.529+03:00 DEBUG 14388 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
+2023-11-11T10:00:14.530+03:00 DEBUG 14388 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
