@@ -56,9 +56,10 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
                         .registerNickName("nick name "+i)
                         .registerName("name "+i)
                         .registerSurname("surname "+i)
-                        .registerPassword(passwordEncoderBeanClass.passwordEncoderMethod().encode(UUID.randomUUID().toString()))
+                        //.registerPassword(passwordEncoderBeanClass.passwordEncoderMethod().encode(UUID.randomUUID().toString()))
+                        .registerPassword(passwordEncoderBeanClass.passwordEncoderMethod().encode("root"))
                         .registerEmail("hamitmizrak"+UUID.randomUUID().toString()+"@gmail.com")
-                        .registerIsPassive(false)
+                        .registerIsPassive(true)
                         .build();
                 RegisterEntity registerEntity = dtoToEntity(registerDto);
                 iRegisterRepository.save(registerEntity);

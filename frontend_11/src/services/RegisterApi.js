@@ -3,7 +3,7 @@
 import axios from "axios";
 
 // Persist Data Url
-const PERSIST_URL="/register/api/v1.0.0";
+const REGISTER_URL="/register/api/v1.0.0";
 
 class RegisterApi {
 
@@ -11,14 +11,14 @@ class RegisterApi {
     // http://localhost:4444/register/api/v1.0.0/speed/data/10
     // @GetMapping("/speed/data/{id}")
    registerApiSpeedData(id) {
-    return axios.get(`${PERSIST_URL}/speed/data/${id}`)
+    return axios.get(`${REGISTER_URL}/speed/data/${id}`)
     }
 
     // DELETE ALL
     // http://localhost:4444/register/api/v1.0.0/delete/all
     // target@GetMapping("/delete/all")
      registerApiDeleteAll() {
-        return axios.get(PERSIST_URL+"/delete/all")
+        return axios.get(REGISTER_URL+"/delete/all")
     }
     ///////////////////////////////////////////////////////////////////////////
 
@@ -27,7 +27,7 @@ class RegisterApi {
     // http://localhost:4444/register/api/v1.0.0/search?surname=mizrak
     //@GetMapping("/search")
     loginApiFindBySurname( surname) {
-        return axios.get((`${PERSIST_URL}/search?${surname}`));
+        return axios.get((`${REGISTER_URL}/search?${surname}`));
     }
 
     ///////////////////////////////////////////////////////////////////////////
@@ -35,7 +35,7 @@ class RegisterApi {
     // http://localhost:4444/register/api/v1.0.0/create
     // @PostMapping("/create")
     registerApiCreate(registerDto) {
-        return axios.post(`${PERSIST_URL}/create`,  registerDto,{
+        return axios.post(`${REGISTER_URL}/create`,  registerDto,{
             method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -48,28 +48,28 @@ class RegisterApi {
     // http://localhost:4444/register/api/v1.0.0/list
     // @GetMapping("/list")
      registerApiList() {
-        return axios.get(`${PERSIST_URL}/list`)
+        return axios.get(`${REGISTER_URL}/list`)
     }
 
     // FIND BY ID
     // http://localhost:4444/register/api/v1.0.0/find/1
     // @GetMapping("/find/{id}")
     registerApiFindById(id) {
-        return axios.get(`${PERSIST_URL}/find/${id}`)
+        return axios.get(`${REGISTER_URL}/find/${id}`)
     }
 
     // UPDATE
     // http://localhost:4444/register/api/v1.0.0/update/1
     // @PutMapping(value = "/update/{id}")
     registerApiUpdate(  id, registerDto) {
-        return axios.put(`${PERSIST_URL}/update/${id}`,registerDto)
+        return axios.put(`${REGISTER_URL}/update/${id}`,registerDto)
     }
 
     // DELETE BY ID
     // http://localhost:4444/register/api/v1.0.0/delete/1
     // @DeleteMapping("/delete/{id}")
      registerApiDeleteById(id) {
-        return axios.delete(`${PERSIST_URL}/delete/${id}`)
+        return axios.delete(`${REGISTER_URL}/delete/${id}`)
     }
 
 } //end class

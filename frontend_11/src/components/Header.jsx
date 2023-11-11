@@ -52,10 +52,10 @@ class Header extends Component {
         RegisterApi.registerApiList()
             .then(
                 (response) => {
-                    console.log(response);
-                    console.log(response.data);
-                    console.log(response.status);
-                    console.log(response.headers);
+                    //console.log(response);
+                    //console.log(response.data);
+                    //console.log(response.status);
+                    //console.log(response.headers);
                     if (response.status === 200) {
                         this.setState({
                             persons: response.data
@@ -79,8 +79,8 @@ class Header extends Component {
         setTimeout(() => {
             axios(`http://localhost:4444/register/api/v1.0.0/search?surname=${search}`)
                 .then((response) => {
-                    console.log(response);
-                    console.log(response.data);
+                    //console.log(response);
+                    //console.log(response.data);
                     this.setState({
                         persons: response.data.items,
                         loading: false
@@ -100,7 +100,7 @@ class Header extends Component {
     // onChangeSearch
     // input içine bir şeyler yazdımızda almak için
     onChangeSearch(e) {
-        console.log(e.target.value);
+        //console.log(e.target.value);
         this.setState({
             searchData: e.target.value
         })
@@ -270,7 +270,8 @@ Header.defaultProps = {
 // Default Validation
 Header.propTypes = {
     url: PropTypes.string.isRequired,
-    colorObject: PropTypes.number.isRequired
+   // colorObject: PropTypes.number.isRequired
+    colorObject: PropTypes.string.isRequired
 }
 
 // Wrapper High Order (i18n)

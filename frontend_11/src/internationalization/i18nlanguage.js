@@ -1,5 +1,6 @@
 import i18n from 'i18next';
 import {initReactI18next} from 'react-i18next';
+import {useState} from "react";
 
 i18n.use(initReactI18next).init({
     resources: {
@@ -13,6 +14,13 @@ i18n.use(initReactI18next).init({
                     'register_delete': 'Register Delete',
                     'register_update': 'Register Update',
                     'register_show': 'Register Show',
+                    'register_nick_name':'register nick name',
+                    'register_name':'register name',
+                    'register_surname':'register surname',
+                    'register_email':'register email',
+                    'register_password':'register password',
+                    'register_is_passive':'register is passive',
+                    'is_read': 'Is Read ?',
                     'create_all': 'Create All',
                     'delete_all': 'Delete All',
                     'create': 'Create',
@@ -27,14 +35,7 @@ i18n.use(initReactI18next).init({
                     'search': "search",
                     'all_rights_reserved':"All Rights Reserved",
                     'id':"ID",
-                    'user_nickname':"Nick name",
-                    'user_name':"User Name",
-                    'user_surname':"User Surname",
-                    'user_password':"User Password",
-                    'user_email':"User Email",
-                    'user_is_passive':"User Passive",
-                    'is_read': 'Is Read ?',
-                    'language':'Language'
+                    'language':'Language',
                 }
             },
         tr:
@@ -47,6 +48,12 @@ i18n.use(initReactI18next).init({
                     'register_delete': 'Üye Sil',
                     'register_update': 'Üye Güncelle',
                     'register_show': 'Üye Göster',
+                    'register_nick_name':'Takma Adı',
+                    'register_name':'Adınız',
+                    'register_surname':'Soyadınız',
+                    'register_email':'Emailinz',
+                    'register_password':'Şifreniz',
+                    'is_read': 'Okudunuz mu ?',
                     'create_all': 'Veri Ekle',
                     'delete_all': 'Bütün Verileri Sil',
                     'create': 'Ekle',
@@ -61,13 +68,6 @@ i18n.use(initReactI18next).init({
                     'search': "Arama",
                     'all_rights_reserved':"Bütün Haklar Saklıdır",
                     'id':"ID",
-                    'user_nickname':"Takma Adı",
-                    'user_name':"Adınız",
-                    'user_surname':"soyadınız",
-                    'user_password':"Şifreniz",
-                    'user_email':"Emailiniz",
-                    'user_is_passive':"Aktif mi ?",
-                    'is_read': 'Okudunuz mu ?',
                     'language':'Diller'
                 }
             }

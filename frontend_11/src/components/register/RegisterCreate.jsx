@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import RegisterApi from '../../services/RegisterApi';
 import { withTranslation } from 'react-i18next';
 
+// FUNcTION REGISTER
 function RegisterCreate({ t, i18n, props }) {
 
   // REDIRECT
@@ -121,7 +122,7 @@ function RegisterCreate({ t, i18n, props }) {
         setMultipleRequest(false);
         // Toast Message
         alert("Kayıt Başarılı");
-        navigate('/register/list');
+        navigate('/login');
       }
     } catch (err) {
       //console.error(err.response.data.validationErrors);
@@ -151,6 +152,7 @@ function RegisterCreate({ t, i18n, props }) {
   //console.log(registerSurname);
   //console.log(classNameData);
 
+
   // RETURN
   return (
     <React.Fragment>
@@ -159,13 +161,13 @@ function RegisterCreate({ t, i18n, props }) {
         {/* <form onSubmit="event.preventDefault()"> */}
         <div className="d-grid gap-4">
           {/* NICKNAME */}
-          <div className="form-group"><label htmlFor="registerNickName"> {t('user_nickname')}</label>
+          <div className="form-group"><label htmlFor="registerNickName"> {t('register_nick_name')}</label>
             <input
               type="text"
               className={classNameData}
               id="registerNickName"
               name="registerNickName"
-              placeholder='registerNickName'
+              placeholder={t('register_nick_name')}
               autoFocus={true}
               required={true}
               // onChange={registerNickNameOnChange}
@@ -192,13 +194,13 @@ function RegisterCreate({ t, i18n, props }) {
         
 
           {/* registerName */}
-          <div className="form-group"><label htmlFor="registerName">{t('user_name')}</label>
+          <div className="form-group"><label htmlFor="registerName">{t('register_name')}</label>
             <input
               type="text"
               className={classNameData}
               id="registerName"
               name="registerName"
-              placeholder='registerName'
+              placeholder={t('register_name')}
               autoFocus={false}
               required={true}
               onChange={registerNameOnChange}
@@ -217,7 +219,7 @@ function RegisterCreate({ t, i18n, props }) {
               className={classNameData}
               id="registerSurname"
               name="registerSurname"
-              placeholder='registerSurname'
+              placeholder={t('register_surname')}
               autoFocus={false}
               required={true}
               onChange={registerSurnameOnChange}
@@ -230,13 +232,13 @@ function RegisterCreate({ t, i18n, props }) {
           </div>
 
           {/* registerEmail */}
-          <div className="form-group"><label htmlFor="registerEmail">{t('user_email')}</label>
+          <div className="form-group"><label htmlFor="registerEmail">{t('register_email')}</label>
             <input
               type="email"
               className={classNameData}
               id="registerEmail"
               name="registerEmail"
-              placeholder='registerEmail'
+              placeholder={t('register_email')}
               autoFocus={false}
               required={true}
               onChange={registerEmailOnChange}
@@ -249,13 +251,13 @@ function RegisterCreate({ t, i18n, props }) {
           </div>
 
           {/* registerPassword */}
-          <div className="form-group"><label htmlFor="registerPassword">{t('user_password')}</label>
+          <div className="form-group"><label htmlFor="registerPassword">{t('register_password')}</label>
             <input
               type="password"
               className={classNameData}
               id="registerPassword"
               name="registerPassword"
-              placeholder='registerPassword'
+              placeholder={t('register_password')}
               autoFocus={false}
               required={true}
               onChange={registerPasswordOnChange}

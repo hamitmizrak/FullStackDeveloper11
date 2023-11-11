@@ -1,5 +1,6 @@
 package com.hamitmizrak.FullStackDeveloper11.bean;
 
+import com.hamitmizrak.FullStackDeveloper11.runner.BlogCommandLineRunner;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

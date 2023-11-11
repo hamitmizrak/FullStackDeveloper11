@@ -2,7 +2,7 @@
 
 ![readme](./picture/readme.png)
 
-[Full Stack 11](https://github.com/hamitmizrak/FullStackDeveloper11.git)
+[Full Stack 11](https://github.com/hamitmizrak/xxx)
 
 ---
 
@@ -38,7 +38,7 @@ IRegisterRepository
 
 ---
 #  Java Full Stack Developer -11 (12 Ağustos  2023)
-* [GitHub](https://github.com/hamitmizrak/FullStackDeveloper11.git)
+* [GitHub](https://github.com/hamitmizrak/xxx)
 *
 ### Gereksinimler
 Java 19
@@ -205,7 +205,7 @@ git commit -a -m "add yapmadan commit"
 
 
 
-
+---------------------------------------------------------------------------------
 
 # Getting Started with Create React App
 

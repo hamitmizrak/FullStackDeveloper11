@@ -1,4 +1,4 @@
-package com.hamitmizrak.FullStackDeveloper11.bean;
+package com.hamitmizrak.FullStackDeveloper11.runner;
 
 import com.hamitmizrak.FullStackDeveloper11.business.services.IRegisterServices;
 import lombok.RequiredArgsConstructor;

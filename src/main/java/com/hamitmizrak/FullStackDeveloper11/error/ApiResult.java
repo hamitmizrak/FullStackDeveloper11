@@ -1,6 +1,8 @@
 package com.hamitmizrak.FullStackDeveloper11.error;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 import java.util.Date;
@@ -8,6 +10,9 @@ import java.util.Map;
 
 // LOMBOK
 @Data
+@Builder
+@AllArgsConstructor
+
 // spring Frameworkta gelen Error'ları kendimize göre yakalamak
 // (Jackson: objeyi json'a çevirir)
 // Eğer sistemde null değer varsa backentte gönderme
