@@ -339,3 +339,76 @@
 2023-11-11T10:00:14.529+03:00 DEBUG 14388 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
 2023-11-11T10:00:14.529+03:00 DEBUG 14388 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
 2023-11-11T10:00:14.530+03:00 DEBUG 14388 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-11T10:05:28.674+03:00 DEBUG 14388 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/login/api/v1.0.0/authentication", parameters={}
+2023-11-11T10:05:28.675+03:00 DEBUG 14388 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.LoginApiImpl#handleAuthenticationData(String)
+2023-11-11T10:05:28.676+03:00  INFO 14388 --- [http-nio-4444-exec-9] c.h.F.controller.api.impl.LoginApiImpl   : Basic aGFtaXRtaXpyYWtAZ21haWwuY29tOnJvb3Q=
+2023-11-11T10:05:28.754+03:00 DEBUG 14388 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-11T10:05:28.754+03:00 DEBUG 14388 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{password=$2a$10$MpwNimfBDmRRBJ/I4AHwkeu/.1sDj5Bfg8sb4G4ow4IO2zlL/tWgG, surname=surname 5, systemDat (truncated)...]
+2023-11-11T10:05:28.755+03:00 DEBUG 14388 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-11T10:05:45.435+03:00 DEBUG 14388 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-11T10:05:45.436+03:00 DEBUG 14388 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-11T10:05:45.447+03:00  INFO 14388 --- [http-nio-4444-exec-10] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:6
+2023-11-11T10:05:45.448+03:00 DEBUG 14388 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-11T10:05:45.449+03:00 DEBUG 14388 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
+2023-11-11T10:05:45.450+03:00 DEBUG 14388 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-11T10:05:47.463+03:00 DEBUG 14388 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-11T10:05:47.464+03:00 DEBUG 14388 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-11T10:05:47.472+03:00  INFO 14388 --- [http-nio-4444-exec-1] c.h.F.b.services.impl.RegisterImpl       : Register Liste Sayısı:6
+2023-11-11T10:05:47.472+03:00 DEBUG 14388 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-11T10:05:47.472+03:00 DEBUG 14388 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{registerNickName='nick name 1', registerName='name 1', registerSurname='surname 1', reg (truncated)...]
+2023-11-11T10:05:47.473+03:00 DEBUG 14388 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-11T11:01:32.243+03:00  INFO 14388 --- [SpringApplicationShutdownHook] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api After Bean bitti
+2023-11-11T11:01:32.243+03:00  INFO 14388 --- [SpringApplicationShutdownHook] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder After Bean bitti
+2023-11-11T11:01:32.243+03:00  INFO 14388 --- [SpringApplicationShutdownHook] c.h.F.bean.ModelMapperBeanClass          : Model mapper After bean bitti
+2023-11-11T11:01:32.243+03:00  INFO 14388 --- [SpringApplicationShutdownHook] c.h.F.bean.Locale18NBeanClass            : locale 18N After Bean Method bitti
+2023-11-11T11:01:32.244+03:00  INFO 14388 --- [SpringApplicationShutdownHook] c.h.F.bean.BlogCommandLineRunner         : blog CommandLineRunner Before Bean Method bitti
+2023-11-11T11:01:32.244+03:00  INFO 14388 --- [SpringApplicationShutdownHook] c.h.F.bean.AuditorAwareBeanClass         : auditor Aware After bean bitti
+2023-11-11T11:01:32.244+03:00  INFO 14388 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-11T11:01:32.267+03:00  INFO 14388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-11T11:01:32.271+03:00  INFO 14388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-11T11:01:39.507+03:00  INFO 9088 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : Starting FullStackDeveloper11Application using Java 17.0.5 with PID 9088 (D:\spring\FullStackDeveloper11\target\classes started by 90553 in D:\spring\FullStackDeveloper11)
+2023-11-11T11:01:39.509+03:00  INFO 9088 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : The following 1 profile is active: "frontend"
+2023-11-11T11:01:39.557+03:00  INFO 9088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-11T11:01:39.557+03:00  INFO 9088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-11T11:01:40.571+03:00  INFO 9088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-11T11:01:40.622+03:00  INFO 9088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interfaces.
+2023-11-11T11:01:41.195+03:00  INFO 9088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 4444 (http)
+2023-11-11T11:01:41.204+03:00  INFO 9088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-11T11:01:41.204+03:00  INFO 9088 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-11-11T11:01:41.258+03:00  INFO 9088 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-11T11:01:41.259+03:00  INFO 9088 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1702 ms
+2023-11-11T11:01:41.344+03:00  INFO 9088 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-11T11:01:41.491+03:00  INFO 9088 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5cc948e7
+2023-11-11T11:01:41.493+03:00  INFO 9088 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-11T11:01:41.501+03:00  INFO 9088 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/blog?createDatabaseIfNotExist=true&autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false'
+2023-11-11T11:01:41.559+03:00 DEBUG 9088 --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-11-11T11:01:41.559+03:00 DEBUG 9088 --- [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2023-11-11T11:01:41.973+03:00  INFO 9088 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-11T11:01:42.929+03:00  INFO 9088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-11T11:01:42.939+03:00  INFO 9088 --- [restartedMain] c.h.F.bean.AuditorAwareBeanClass         : auditor Aware bean Before başladı
+2023-11-11T11:01:42.941+03:00  INFO 9088 --- [restartedMain] c.h.F.bean.Locale18NBeanClass            : swagger Open Api Before Bean başladı
+2023-11-11T11:01:42.941+03:00  INFO 9088 --- [restartedMain] c.h.F.bean.ModelMapperBeanClass          : Model mapper bean Before başladı
+2023-11-11T11:01:42.942+03:00  INFO 9088 --- [restartedMain] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder Before Bean başladı
+2023-11-11T11:01:42.943+03:00  INFO 9088 --- [restartedMain] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api Before Bean başladı
+2023-11-11T11:01:43.319+03:00  INFO 9088 --- [restartedMain] c.h.F.runner.BlogCommandLineRunner       : blog CommandLineRunner After Bean Method başladı
+2023-11-11T11:01:43.483+03:00  WARN 9088 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-11T11:01:43.591+03:00 DEBUG 9088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-11-11T11:01:43.625+03:00  INFO 9088 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-11-11T11:01:43.682+03:00 DEBUG 9088 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 15 mappings in 'requestMappingHandlerMapping'
+2023-11-11T11:01:44.066+03:00 DEBUG 9088 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2023-11-11T11:01:44.077+03:00 DEBUG 9088 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-11-11T11:01:44.483+03:00  INFO 9088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-11T11:01:44.489+03:00  INFO 9088 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-11-11T11:01:44.569+03:00  INFO 9088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 4444 (http) with context path ''
+2023-11-11T11:01:44.584+03:00  INFO 9088 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : Started FullStackDeveloper11Application in 5.512 seconds (process running for 6.272)
+2023-11-11T11:01:44.590+03:00  INFO 9088 --- [restartedMain] c.h.F.runner.BlogCommandLineRunner2      : CommandLineRunner Çalıştı Sade
+2023-11-11T11:01:44.591+03:00  INFO 9088 --- [restartedMain] c.h.F.runner.BlogCommandLineRunner       : CommandLineRunner Çalıştı
+2023-11-11T11:02:28.116+03:00  INFO 9088 --- [SpringApplicationShutdownHook] c.h.F.runner.BlogCommandLineRunner       : blog CommandLineRunner Before Bean Method bitti
+2023-11-11T11:02:28.117+03:00  INFO 9088 --- [SpringApplicationShutdownHook] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api After Bean bitti
+2023-11-11T11:02:28.117+03:00  INFO 9088 --- [SpringApplicationShutdownHook] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder After Bean bitti
+2023-11-11T11:02:28.117+03:00  INFO 9088 --- [SpringApplicationShutdownHook] c.h.F.bean.ModelMapperBeanClass          : Model mapper After bean bitti
+2023-11-11T11:02:28.117+03:00  INFO 9088 --- [SpringApplicationShutdownHook] c.h.F.bean.Locale18NBeanClass            : locale 18N After Bean Method bitti
+2023-11-11T11:02:28.117+03:00  INFO 9088 --- [SpringApplicationShutdownHook] c.h.F.bean.AuditorAwareBeanClass         : auditor Aware After bean bitti
+2023-11-11T11:02:28.118+03:00  INFO 9088 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-11T11:02:28.130+03:00  INFO 9088 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-11T11:02:28.137+03:00  INFO 9088 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

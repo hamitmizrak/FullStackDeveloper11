@@ -43,6 +43,7 @@ public class RegisterDto extends AuditingAwareBaseDto implements Serializable {
     private String registerEmail;
 
     // PASSWORD
+    // Hm123456@.
     // @JsonIgnore // backentte giden veriyi saklar
     @NotEmpty(message = "{register.password.validation.constraints.NotNull.message}")
     @Size(min = 7, max = 15, message = "{register.password.validation.constraints.MinMax.NotNull.message}")

@@ -51,7 +51,7 @@ i18n.use(initReactI18next).init({
                     'register_nick_name':'Takma Adı',
                     'register_name':'Adınız',
                     'register_surname':'Soyadınız',
-                    'register_email':'Emailinz',
+                    'register_email':'Emailiniz',
                     'register_password':'Şifreniz',
                     'is_read': 'Okudunuz mu ?',
                     'create_all': 'Veri Ekle',

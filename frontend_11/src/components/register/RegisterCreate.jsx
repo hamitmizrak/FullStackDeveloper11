@@ -217,7 +217,7 @@ function RegisterCreate({ t, i18n, props }) {
           </div>
 
           {/* registerSurname */}
-          <div className="form-group"><label htmlFor="registerSurname">{t('user_surname')}</label>
+          <div className="form-group"><label htmlFor="registerSurname">{t('register_surname')}</label>
             <input
               type="text"
               className={classNameData}
