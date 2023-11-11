@@ -140,7 +140,6 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
             String mailContent = "Üyeliğinizi aktifleşmesine son bir adım lütfen linke tıklayınız. " + "http://localhost:4444/register/api/v1.0.0/confirm?token=" + token;
             message.setText(mailContent);
             mailSender.send(message);
-
             return registerDto;
         }
         return null;
