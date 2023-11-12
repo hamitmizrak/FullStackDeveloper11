@@ -158,14 +158,11 @@ function RolesList({t, i18n, props}) {
                 }
                 </tbody>
             </table>
-
             {
                 error ?
                     <div className="invalid-feedback44">data {error}</div>
                     : ""
-
             }
-
         </React.Fragment>
     ) //end return
 } //end function
