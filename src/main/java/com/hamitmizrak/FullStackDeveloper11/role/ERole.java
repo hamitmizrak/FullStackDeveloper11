@@ -1,4 +1,4 @@
-package com.hamitmizrak.FullStackDeveloper11.rolles;
+package com.hamitmizrak.FullStackDeveloper11.role;
 
 // final verirsem;
 // 1-) Değişkende: sabit değer
@@ -9,7 +9,7 @@ package com.hamitmizrak.FullStackDeveloper11.rolles;
 // 1-a_) Değeri sabit yapar.
 // 2-a_) Sadece Get metodunu eklemeye yarar
 // 3-a_) Bizi Constructur yazmamıza zorlar
-public enum ERoles {
+public enum ERole {
     SUPER_ADMIN(1L,"super_admin") , ADMIN(2L,"admin") , ACCOUNTING(3L,"accounting") , WRITER(4L,"writer") , USER(5L,"user");
 
     // variable
@@ -19,7 +19,7 @@ public enum ERoles {
     // Constructor (Parametreli constructor)
     // Constructor'a private verirsek;
     // Bu Enum'ın instance(new) oluşturulmasına izin vermiyor.
-    private ERoles(Long key, String value) {
+    private ERole(Long key, String value) {
         this.key = key;
         this.value = value;
     }

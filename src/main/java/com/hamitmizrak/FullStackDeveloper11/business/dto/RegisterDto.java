@@ -69,7 +69,7 @@ public class RegisterDto extends AuditingAwareBaseDto implements Serializable {
     @Override
     public String toString() {
         return "RegisterDto{" +
-                ", id=" + id +
+                " id=" + id +
                 "registerNickName='" + registerNickName + '\'' +
                 ", registerName='" + registerName + '\'' +
                 ", registerSurname='" + registerSurname + '\'' +

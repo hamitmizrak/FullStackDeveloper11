@@ -1,6 +1,6 @@
 package com.hamitmizrak.FullStackDeveloper11.business.services;
 
-import com.hamitmizrak.FullStackDeveloper11.data.entity.TokenConfirmationEntity;
+import com.hamitmizrak.FullStackDeveloper11.data.entity.ForRegisterTokenEmailConfirmationEntity;
 
 import java.util.List;
 import java.util.Optional;
@@ -25,8 +25,8 @@ public interface IRegisterServices <D,E>{
 
     ////////////////////////////////////////////////////////////
     // REGISTER C R U D
-    // CREATE
-    public D registerServiceCreate(D d);
+    // CREATE ( Rolles and Object )
+    public D registerServiceCreate(Long rolesId, D d);
 
     // LIST
     public List<D> registerServiceList();
@@ -43,9 +43,11 @@ public interface IRegisterServices <D,E>{
     ////////////////////////////////////////////////////////////
     // EMAIL CONFIRMATION
     // EMAIL TOKEN CONFIRMATION
-    public void emailTokenConfirmation(TokenConfirmationEntity tokenConfirmationEntity);
+    public void emailTokenConfirmation(ForRegisterTokenEmailConfirmationEntity tokenConfirmationEntity);
 
     // EMAIL TOKEN FIND
-    public Optional<TokenConfirmationEntity> findTokenConfirmation(String token);
+    public Optional<ForRegisterTokenEmailConfirmationEntity> findTokenConfirmation(String token);
+
+
 
 } //end interface

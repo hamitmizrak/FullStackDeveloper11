@@ -166,7 +166,24 @@ class Header extends Component {
                             <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
                                 {/* i18n Language */}
 
+                                <li className="nav-item dropdown">
+                                    <a
+                                        className="nav-link dropdown-toggle"
+                                        href="#"
+                                        id="dropdownId"
+                                        data-bs-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"
+                                    >
+                                        {t('role')}
+                                    </a>
 
+                                    <div className="dropdown-menu" aria-labelledby="dropdownId">
+                                        <Link className="dropdown-item" to="/role/list" >{t('role_list')} </Link>
+                                        <Link className="dropdown-item" to="/role/create" >{t('role_create')} </Link>
+                                    </div>
+                                </li>
+                             
                                 <li className="nav-item dropdown">
                                     <a
                                         className="nav-link dropdown-toggle"

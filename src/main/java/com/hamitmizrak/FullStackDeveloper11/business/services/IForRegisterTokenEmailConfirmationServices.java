@@ -1,7 +1,7 @@
 package com.hamitmizrak.FullStackDeveloper11.business.services;
 
 // Generics
-public interface ITokenServices<T> {
+public interface IForRegisterTokenEmailConfirmationServices<T> {
 
     // CREATE
     public String createToken(T t);

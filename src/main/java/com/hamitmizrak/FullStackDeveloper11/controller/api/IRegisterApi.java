@@ -18,8 +18,8 @@ public interface IRegisterApi<D> {
     /////////////////////////////////////////////////////////////
 
     // C R U D
-    // CREATE
-    public ResponseEntity<?> registerApiCreate(D d);
+    // CREATE (ROL ve Object)
+    public ResponseEntity<?> registerApiCreate(Long rolesId,D d);
 
     // LIST
     public ResponseEntity<List<D>> registerApiList();
@@ -36,5 +36,7 @@ public interface IRegisterApi<D> {
     /////////////////////////////////////////////////////////////////
     // EMAIL CONFIRMATION
     public ResponseEntity<String> emailTokenConfirmation(String token);
+
+
 } //end interface
 

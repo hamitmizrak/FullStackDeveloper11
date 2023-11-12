@@ -3,12 +3,11 @@ package com.hamitmizrak.FullStackDeveloper11.controller.api.impl;
 import com.hamitmizrak.FullStackDeveloper11.business.dto.RegisterDto;
 import com.hamitmizrak.FullStackDeveloper11.business.services.IRegisterServices;
 import com.hamitmizrak.FullStackDeveloper11.controller.api.IRegisterApi;
-import com.hamitmizrak.FullStackDeveloper11.data.entity.TokenConfirmationEntity;
+import com.hamitmizrak.FullStackDeveloper11.data.entity.ForRegisterTokenEmailConfirmationEntity;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -51,11 +50,12 @@ public class RegisterApiImpl implements IRegisterApi<RegisterDto> {
 
     ///////////////////////////////////////////////////////////////////////////
     // CREATE
-    // http://localhost:4444/register/api/v1.0.0/create
+    // http://localhost:4444/register/api/v1.0.0/create/1
     @Override
-    @PostMapping("/create")
-    public ResponseEntity<?> registerApiCreate(@Valid @RequestBody RegisterDto registerDto) {
-        return ResponseEntity.ok(iRegisterServices.registerServiceCreate(registerDto)) ;
+    //@PostMapping({"/create","/create/{roles_id}"})
+    @PostMapping("/create/{roles_id}")
+    public ResponseEntity<?> registerApiCreate(@PathVariable(name="roles_id") Long rolesId,@Valid @RequestBody RegisterDto registerDto) {
+        return ResponseEntity.ok(iRegisterServices.registerServiceCreate(rolesId,registerDto)) ;
     }
 
     // LIST
@@ -99,9 +99,30 @@ public class RegisterApiImpl implements IRegisterApi<RegisterDto> {
     @Override
     @GetMapping("/confirm")
     public ResponseEntity<String> emailTokenConfirmation(@RequestParam("token") String token) {
-        Optional<TokenConfirmationEntity> tokenConfirmationEntity = iRegisterServices.findTokenConfirmation(token);
+        Optional<ForRegisterTokenEmailConfirmationEntity> tokenConfirmationEntity = iRegisterServices.findTokenConfirmation(token);
         tokenConfirmationEntity.ifPresent(iRegisterServices::emailTokenConfirmation);
-        return ResponseEntity.ok("Üyeliğiniz Aktif olunmuştur. Ana sayfa için tıklayınız http://localhost:4444");
+        String html="<!doctype html>\n" +
+                "<html lang=\"en\">\n" +
+                "\n" +
+                "<head>\n" +
+                "  <title>Register</title>\n" +
+                "  <meta charset=\"utf-8\">\n" +
+                "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n" +
+                "  <style>\n" +
+                "    body{\n" +
+                "        background-color: black;\n" +
+                "        color:white;\n" +
+                "    }\n" +
+                "  </style>\n" +
+                "</head>\n" +
+                "\n" +
+                "<body>\n" +
+                "\n" +
+                "    <p style='padding:4rem;'>Üyeliğiniz Aktif olunmuştur.  <a href='http://localhost:3000'>Ana sayfa için tıklayınız </a></p>\n" +
+                "  \n" +
+                "</body>\n" +
+                "</html>";
+        return ResponseEntity.ok(html);
     }
 
 } //end class

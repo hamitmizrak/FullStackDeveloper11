@@ -18,16 +18,16 @@ import java.util.UUID;
 @Entity
 @Table(name="confirmation_token")
 // 1(TokenCEntity) - 1(UserEntity)
-public class TokenConfirmationEntity extends BaseEntity {
+public class ForRegisterTokenEmailConfirmationEntity extends BaseEntity {
 
     // TOKEN
     private String token;
 
     // CONSTRUCTOR PARAMETRESIZ
-    public TokenConfirmationEntity() {}
+    public ForRegisterTokenEmailConfirmationEntity() {}
 
     // CONSTRUCTOR PARAMETRELI  (1-1) için UserEntity eklemelisinnnnnn.
-    public TokenConfirmationEntity(RegisterEntity registerEntity) {
+    public ForRegisterTokenEmailConfirmationEntity(RegisterEntity registerEntity) {
         this.userEntity = registerEntity;// Null Pointer Exception almamak için
         this.token= UUID.randomUUID().toString(); //benzersiz bir unique oluştur.
     }

@@ -36,6 +36,12 @@ i18n.use(initReactI18next).init({
                     'all_rights_reserved':"All Rights Reserved",
                     'id':"ID",
                     'language':'Language',
+                    'role': 'Role',
+                    'role_name': 'Rol Name',
+                    'role_list': 'Role List',
+                    'role_create': 'Role Create',
+                    'role_delete': 'Role Delete',
+                    'role_update': 'Role Update',
                 }
             },
         tr:
@@ -68,7 +74,13 @@ i18n.use(initReactI18next).init({
                     'search': "Arama",
                     'all_rights_reserved':"Bütün Haklar Saklıdır",
                     'id':"ID",
-                    'language':'Diller'
+                    'language':'Diller',
+                    'role': 'Rol Atama',
+                    'role_name': 'Rol Adı',
+                    'role_list': 'Rol Listesi',
+                    'role_create': 'Rol Oluştur',
+                    'role_delete': 'Rol Sil',
+                    'role_update': 'Rol Güncelle',
                 }
             }
     },

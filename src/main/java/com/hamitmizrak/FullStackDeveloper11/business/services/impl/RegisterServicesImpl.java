@@ -4,11 +4,13 @@ import com.hamitmizrak.FullStackDeveloper11.bean.ModelMapperBeanClass;
 import com.hamitmizrak.FullStackDeveloper11.bean.PasswordEncoderBeanClass;
 import com.hamitmizrak.FullStackDeveloper11.business.dto.RegisterDto;
 import com.hamitmizrak.FullStackDeveloper11.business.services.IRegisterServices;
-import com.hamitmizrak.FullStackDeveloper11.business.services.ITokenServices;
+import com.hamitmizrak.FullStackDeveloper11.business.services.IForRegisterTokenEmailConfirmationServices;
+import com.hamitmizrak.FullStackDeveloper11.data.entity.ForRegisterTokenEmailConfirmationEntity;
 import com.hamitmizrak.FullStackDeveloper11.data.entity.RegisterEntity;
-import com.hamitmizrak.FullStackDeveloper11.data.entity.TokenConfirmationEntity;
+import com.hamitmizrak.FullStackDeveloper11.data.entity.RoleEntity;
 import com.hamitmizrak.FullStackDeveloper11.data.repository.IRegisterRepository;
-import com.hamitmizrak.FullStackDeveloper11.data.repository.ITokenRepository;
+import com.hamitmizrak.FullStackDeveloper11.data.repository.IRoleRepository;
+import com.hamitmizrak.FullStackDeveloper11.data.repository.IForRegisterTokenEmailConfirmationEntity;
 import com.hamitmizrak.FullStackDeveloper11.exception.HamitMizrakException;
 import com.hamitmizrak.FullStackDeveloper11.exception.Resource404NotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -29,19 +31,22 @@ import java.util.*;
 // SERVICE
 // Asıl is Yükünü yapan yer
 @Service
-public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEntity> {
+public class RegisterServicesImpl implements IRegisterServices<RegisterDto, RegisterEntity> {
 
     // INJECTION
     private final IRegisterRepository iRegisterRepository;
     private final ModelMapperBeanClass modelMapperBeanClass;
     private final PasswordEncoderBeanClass passwordEncoderBeanClass;
+    private final IRoleRepository iRoleRepository;
 
     @Autowired
     private JavaMailSender mailSender; // Mail oluşturma
-    @Value("${spring.mail.username}")
+
+    @Value("${spring.mail.username}") //application.properties
     private String serverMailAddress;
-    private final ITokenServices tokenServices; // Email Token confirmation
-    private final ITokenRepository iTokenRepository; // Token oluşturma
+
+    private final IForRegisterTokenEmailConfirmationServices tokenServices; // Email Token confirmation
+    private final IForRegisterTokenEmailConfirmationEntity iTokenRepository; // Token oluşturma
 
     ////////////////////////////////////////////////////////////
     // MODEL MAPPER
@@ -113,32 +118,44 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
     // Transaction: Create, Delete, Update
     @Override
     @Transactional // create , delete, update
-    public RegisterDto registerServiceCreate(RegisterDto registerDto) {
+    public RegisterDto registerServiceCreate(Long rolesId, RegisterDto registerDto) {
         if (registerDto != null) {
+            // Model Mapper
             RegisterEntity registerEntity = dtoToEntity(registerDto);
-            // Password Encoder Bean
-            //passwordEncoderBeanClass.passwordEncoderMethod().encode(registerDto.getRegisterPassword());
+
             // PasswordEncoder
             registerEntity.setRegisterPassword(passwordEncoderBeanClass.passwordEncoderMethod().encode(registerDto.getRegisterPassword()));
+
+            // for Rolles
+            int dataInt=Integer.valueOf(Math.toIntExact(rolesId));
+            RoleEntity roleEntity=iRoleRepository.findAll().get(dataInt-1 );
+            Set<RoleEntity> rolList=new HashSet<>();
+            rolList.add(roleEntity);
+            registerEntity.setRoles(rolList);
+
+            // SAVE
             iRegisterRepository.save(registerEntity);
+
             // Dto Set(id ve date)
             registerDto.setId(registerEntity.getRegisterId());
             registerDto.setSystemDate(registerEntity.getSystemDate());
 
-            //MAIL GONDER VE TOKEN OLUŞTUR
+            // MAIL GONDER VE TOKEN OLUŞTUR
             // TOKEN OLUŞTUR
-            TokenConfirmationEntity tokenConfirmationEntity = new TokenConfirmationEntity(registerEntity);
+            ForRegisterTokenEmailConfirmationEntity tokenConfirmationEntity = new ForRegisterTokenEmailConfirmationEntity(registerEntity);
             String token = tokenServices.createToken(tokenConfirmationEntity);
             SimpleMailMessage message = new SimpleMailMessage();
-            System.out.println("APP 44 ==> "+serverMailAddress);
+            System.out.println("Mail Send Success ==> "+serverMailAddress);
+            // Set Mail
             message.setFrom(this.serverMailAddress);
             message.setTo(registerDto.getRegisterEmail());
             message.setSentDate(new Date(System.currentTimeMillis()));
-            message.setSubject("Üyeliğiniz Aktif olmasına son bir adım kaldı");
+            message.setSubject("Harika Üyeliğinizin aktif olmasına son bir adım kaldı");
             //message.setBcc(this.serverMailAddress);
             //message.setCc(this.serverMailAddress);
-            String mailContent = "Üyeliğinizi aktifleşmesine son bir adım lütfen linke tıklayınız. " + "http://localhost:4444/register/api/v1.0.0/confirm?token=" + token;
+            String mailContent = "<mark>Üyeliğinizi aktifleşmesine son bir adım lütfen linke tıklayınız.</mark>" + "http://localhost:4444/register/api/v1.0.0/confirm?token=" + token;
             message.setText(mailContent);
+            // Send Mail
             mailSender.send(message);
             return registerDto;
         }
@@ -224,7 +241,7 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
     // EMAIL TOKEN CONFIRMATION
     @Transactional // Create, delete, update için kullanmalısın
     @Override
-    public void emailTokenConfirmation(TokenConfirmationEntity tokenConfirmationEntity) {
+    public void emailTokenConfirmation(com.hamitmizrak.FullStackDeveloper11.data.entity.ForRegisterTokenEmailConfirmationEntity tokenConfirmationEntity) {
         // @OneToOne(1-1) ilişkideki veriyi almak
         // TokenConfirmationEntity'den UserEntity almak
         final RegisterEntity userEntity = tokenConfirmationEntity.getUserEntity();
@@ -238,8 +255,9 @@ public class RegisterImpl implements IRegisterServices<RegisterDto, RegisterEnti
 
     // TOKEN FIND
     @Override
-    public Optional<TokenConfirmationEntity> findTokenConfirmation(String token) {
+    public Optional<com.hamitmizrak.FullStackDeveloper11.data.entity.ForRegisterTokenEmailConfirmationEntity> findTokenConfirmation(String token) {
         return iTokenRepository.findTokenConfirmationEntityByToken(token);
     }
+
 
 } //end class

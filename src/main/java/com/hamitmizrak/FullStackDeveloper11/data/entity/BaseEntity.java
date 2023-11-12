@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -29,6 +30,7 @@ abstract public class BaseEntity implements Serializable {
 
     // DATE
     @Builder.Default // Lombok Default
+    @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     protected Date systemDate;
 

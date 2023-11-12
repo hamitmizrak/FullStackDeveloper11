@@ -15,8 +15,17 @@ import RegisterList from './components/register/RegisterList';
 import RegisterCreate from './components/register/RegisterCreate';
 import RegisterView from './components/register/RegisterView';
 import RegisterUpdate from './components/register/RegisterUpdate';
+
+// User
 import UserPage from './components/user/UserPage';
+
+// Login
 import Login from './components/login/Login';
+
+// Roles
+import RolesList from "./components/roles/RolesList";
+import RolesCreate from "./components/roles/RolesCreate";
+import RolesUpdate from "./components/roles/RolesUpdate";
 
 // Router Class
 function RouterProject({ t }) {
@@ -51,6 +60,12 @@ function RouterProject({ t }) {
                         <Route path={"/register/view/:id"} element={<RegisterView name="register view" />} />
                         <Route path={"/register/update/:id"} element={<RegisterUpdate name="register update" />} />
 
+                        {/* ROLES */}
+                        <Route path="/role/list" element={<RolesList/>}></Route>
+                        <Route path="/role/create" element={<RolesCreate/>}></Route>
+                        <Route path="/role/update/:id" element={<RolesUpdate/>}></Route>
+
+                        {/*OTHER PATH*/}
                         <Route path={"*"} element={<Navigate to={"/"} />} />
                     </Routes>
                 </div>

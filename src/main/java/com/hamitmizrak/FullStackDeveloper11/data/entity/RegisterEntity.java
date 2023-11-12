@@ -3,7 +3,6 @@ package com.hamitmizrak.FullStackDeveloper11.data.entity;
 import com.hamitmizrak.FullStackDeveloper11.audit.AuditingAwareBaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -11,6 +10,8 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 // LOMBOK
 @Data
@@ -19,7 +20,7 @@ import java.util.Date;
 @NoArgsConstructor
 
 // ENTITY
-@Entity
+@Entity(name= "Registers") // Sql JOIN için yazdım
 @Table(name = "registers")
 public class RegisterEntity extends AuditingAwareBaseEntity implements Serializable {
 
@@ -63,5 +64,26 @@ public class RegisterEntity extends AuditingAwareBaseEntity implements Serializa
     private UserDetailsEmbeddable userDetailsEmbeddable=new UserDetailsEmbeddable();
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // ROLES
+    // ROLE ENTITIY
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "users_roles",
+            joinColumns = @JoinColumn(name = "register_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private Set<RoleEntity> roles = new HashSet<>();
+    //2.YOL
+	/*
+	@ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+	@JoinTable(name = "user_role",
+	joinColumns = {
+	            @JoinColumn(name = "user_id",referencedColumnName = "user_id")},
+	            inverseJoinColumns = {
+	                            @JoinColumn(name = "roles_id",referencedColumnName = "roles_id")
+	                            }
+	             )
+	 private List<RoleEntity> roles;
+	   */
+
 
 } //end class

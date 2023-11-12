@@ -32,10 +32,12 @@ class RegisterApi {
 
     ///////////////////////////////////////////////////////////////////////////
     // CREATE
-    // http://localhost:4444/register/api/v1.0.0/create
+    // http://localhost:4444/register/api/v1.0.0/create/roleId
+    // http://localhost:4444/register/api/v1.0.0/create/1
     // @PostMapping("/create")
     registerApiCreate(registerDto) {
-        return axios.post(`${REGISTER_URL}/create`,  registerDto,{
+        // 
+        return axios.post(`${REGISTER_URL}/create/4`,  registerDto,{
             method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -43,6 +45,19 @@ class RegisterApi {
         body: JSON.stringify(registerDto),
         })
     }
+
+    // CREATE ADMIN
+    registerAdminApiCreate(role_id,registerDto) {
+        // 
+        return axios.post(`${REGISTER_URL}/create/${role_id}`,  registerDto,{
+            method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(registerDto),
+        })
+    }
+
 
     // LIST
     // http://localhost:4444/register/api/v1.0.0/list
