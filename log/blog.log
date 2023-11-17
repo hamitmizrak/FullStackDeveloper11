@@ -6469,3 +6469,738 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot add or upda
 2023-11-12T12:56:51.706+03:00  INFO 23136 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-11-12T12:56:51.758+03:00  INFO 23136 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-11-12T12:56:51.764+03:00  INFO 23136 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-12T12:57:10.531+03:00  INFO 1448 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : Starting FullStackDeveloper11Application using Java 17.0.5 with PID 1448 (D:\spring\FullStackDeveloper11\target\classes started by 90553 in D:\spring\FullStackDeveloper11)
+2023-11-12T12:57:10.533+03:00  INFO 1448 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : The following 1 profile is active: "frontend"
+2023-11-12T12:57:10.572+03:00  INFO 1448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-12T12:57:10.572+03:00  INFO 1448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-12T12:57:11.532+03:00  INFO 1448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-12T12:57:11.591+03:00  INFO 1448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 4 JPA repository interfaces.
+2023-11-12T12:57:12.100+03:00  INFO 1448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 4444 (http)
+2023-11-12T12:57:12.107+03:00  INFO 1448 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-12T12:57:12.107+03:00  INFO 1448 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-11-12T12:57:12.152+03:00  INFO 1448 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-12T12:57:12.152+03:00  INFO 1448 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1580 ms
+2023-11-12T12:57:12.222+03:00  INFO 1448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-12T12:57:12.363+03:00  INFO 1448 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45b9bcd
+2023-11-12T12:57:12.365+03:00  INFO 1448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-12T12:57:12.372+03:00  INFO 1448 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/blog?createDatabaseIfNotExist=true&autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false'
+2023-11-12T12:57:12.423+03:00 DEBUG 1448 --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2023-11-12T12:57:12.423+03:00 DEBUG 1448 --- [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2023-11-12T12:57:12.721+03:00  INFO 1448 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-12T12:57:13.641+03:00  INFO 1448 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-12T12:57:13.647+03:00  INFO 1448 --- [restartedMain] c.h.F.audit.AuditorAwareBeanClass        : auditor Aware bean Before başladı
+2023-11-12T12:57:13.649+03:00  INFO 1448 --- [restartedMain] c.h.F.bean.Locale18NBeanClass            : swagger Open Api Before Bean başladı
+2023-11-12T12:57:13.649+03:00  INFO 1448 --- [restartedMain] c.h.F.bean.ModelMapperBeanClass          : Model mapper bean Before başladı
+2023-11-12T12:57:13.650+03:00  INFO 1448 --- [restartedMain] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder Before Bean başladı
+2023-11-12T12:57:13.650+03:00  INFO 1448 --- [restartedMain] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api Before Bean başladı
+2023-11-12T12:57:13.952+03:00  INFO 1448 --- [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-11-12T12:57:14.217+03:00  INFO 1448 --- [restartedMain] c.h.F.runner.BlogCommandLineRunner       : blog CommandLineRunner After Bean Method başladı
+2023-11-12T12:57:14.329+03:00  WARN 1448 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-12T12:57:14.413+03:00 DEBUG 1448 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-11-12T12:57:14.439+03:00  INFO 1448 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-11-12T12:57:14.491+03:00 DEBUG 1448 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 23 mappings in 'requestMappingHandlerMapping'
+2023-11-12T12:57:14.849+03:00 DEBUG 1448 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2023-11-12T12:57:14.856+03:00 DEBUG 1448 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-11-12T12:57:15.148+03:00  INFO 1448 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-12T12:57:15.152+03:00  INFO 1448 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-11-12T12:57:15.216+03:00  INFO 1448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 4444 (http) with context path ''
+2023-11-12T12:57:15.230+03:00  INFO 1448 --- [restartedMain] c.h.F.FullStackDeveloper11Application    : Started FullStackDeveloper11Application in 5.197 seconds (process running for 5.83)
+2023-11-12T12:57:15.234+03:00  INFO 1448 --- [restartedMain] c.h.F.runner.BlogCommandLineRunner2      : CommandLineRunner Çalıştı Sade
+2023-11-12T12:57:19.739+03:00  INFO 1448 --- [http-nio-4444-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-12T12:57:19.739+03:00  INFO 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-12T12:57:19.740+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2023-11-12T12:57:19.740+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2023-11-12T12:57:19.741+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2023-11-12T12:57:19.744+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@281f4f2f
+2023-11-12T12:57:19.746+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@66f21ec8
+2023-11-12T12:57:19.747+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-11-12T12:57:19.748+03:00  INFO 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-11-12T12:57:19.785+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T12:57:19.786+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T12:57:19.797+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T12:57:19.797+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T12:57:19.826+03:00  INFO 1448 --- [http-nio-4444-exec-1] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:0
+2023-11-12T12:57:19.848+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:57:19.848+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:57:19.852+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2023-11-12T12:57:19.852+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T12:57:19.867+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:57:19.873+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T12:57:19.875+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T12:57:19.881+03:00  INFO 1448 --- [http-nio-4444-exec-3] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:0
+2023-11-12T12:57:19.881+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:57:19.882+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[]]
+2023-11-12T12:57:19.883+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:57:19.912+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:57:20.221+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T12:57:20.222+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T12:57:20.230+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:57:20.230+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T12:57:20.231+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:57:29.187+03:00  INFO 1448 --- [restartedMain] c.h.F.runner.BlogCommandLineRunner       : CommandLineRunner Çalıştı
+2023-11-12T12:57:32.030+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T12:57:32.031+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T12:57:32.092+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:57:32.096+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T12:57:32.098+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T12:57:46.991+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/2", parameters={}
+2023-11-12T12:57:46.992+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T12:57:47.002+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:57:47.002+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T12:57:47.003+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T12:58:36.446+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T12:58:36.447+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T12:58:36.486+03:00  INFO 1448 --- [http-nio-4444-exec-7] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T12:58:36.487+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:58:36.487+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T12:58:36.504+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:58:36.546+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T12:58:36.547+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T12:58:36.563+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:58:36.564+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T12:58:36.566+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:58:36.826+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T12:58:36.827+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T12:58:36.830+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T12:58:36.831+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T12:58:36.839+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:58:36.840+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T12:58:36.841+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:58:36.848+03:00  INFO 1448 --- [http-nio-4444-exec-9] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T12:58:36.848+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:58:36.848+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T12:58:36.849+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:58:41.448+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/1", parameters={}
+2023-11-12T12:58:41.448+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T12:58:41.464+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:58:41.464+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T12:58:41.465+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T12:59:15.090+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T12:59:15.091+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T12:59:15.099+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:59:15.099+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T12:59:15.100+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:59:22.890+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T12:59:22.890+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T12:59:22.902+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:59:22.902+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T12:59:22.903+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T12:59:43.827+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T12:59:43.828+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T12:59:43.834+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:59:43.835+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T12:59:43.835+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T12:59:52.940+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T12:59:52.941+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T12:59:52.952+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:59:52.952+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T12:59:52.953+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:59:54.389+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T12:59:54.390+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T12:59:54.403+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:59:54.404+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T12:59:54.405+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:59:59.385+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T12:59:59.387+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T12:59:59.416+03:00  INFO 1448 --- [http-nio-4444-exec-7] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T12:59:59.418+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:59:59.418+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T12:59:59.422+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:59:59.450+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T12:59:59.451+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T12:59:59.457+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T12:59:59.458+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T12:59:59.464+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:59:59.464+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T12:59:59.466+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:59:59.489+03:00  INFO 1448 --- [http-nio-4444-exec-10] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T12:59:59.490+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:59:59.491+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T12:59:59.493+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T12:59:59.778+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T12:59:59.778+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T12:59:59.786+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T12:59:59.786+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T12:59:59.787+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:00:02.461+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:00:02.462+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:00:02.472+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:00:02.472+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:00:02.473+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:00:36.943+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:00:36.944+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:00:36.952+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:00:36.952+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:00:36.953+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:00.711+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:00.712+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:01:00.742+03:00  INFO 1448 --- [http-nio-4444-exec-2] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:01:00.743+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:00.743+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:01:00.744+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:00.803+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:00.804+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:01:00.814+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:00.815+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:01:00.816+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:01.113+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:01.114+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:01:01.118+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:01.118+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:01:01.125+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:01.126+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:01:01.127+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:01.139+03:00  INFO 1448 --- [http-nio-4444-exec-5] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:01:01.139+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:01.140+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:01:01.141+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:02.952+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:02.952+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:01:02.978+03:00  INFO 1448 --- [http-nio-4444-exec-7] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:01:02.979+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:02.980+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:01:02.982+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:03.031+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:03.032+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:01:03.043+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:03.043+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:01:03.044+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:03.338+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:03.339+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:01:03.353+03:00  INFO 1448 --- [http-nio-4444-exec-10] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:01:03.353+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:03.353+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:03.353+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:01:03.354+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:01:03.354+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:03.362+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:03.363+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:01:03.364+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:05.263+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:01:05.264+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:01:05.275+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:05.276+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:01:05.276+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:01:30.870+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:30.871+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:01:30.882+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:30.882+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:01:30.883+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:35.486+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:35.486+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:01:35.509+03:00  INFO 1448 --- [http-nio-4444-exec-2] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:01:35.509+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:35.510+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:01:35.511+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:35.528+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:35.528+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:35.529+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:01:35.529+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:01:35.537+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:35.537+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:01:35.538+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:35.552+03:00  INFO 1448 --- [http-nio-4444-exec-6] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:01:35.553+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:35.553+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:01:35.554+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:35.848+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:35.848+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:01:35.853+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:35.853+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:01:35.854+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:38.390+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:01:38.390+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:01:38.399+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:38.400+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:01:38.400+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:01:46.031+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:01:46.031+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:01:46.037+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:46.038+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:01:46.038+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:01:52.139+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:01:52.139+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:01:52.145+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:01:52.145+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:01:52.146+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:02:16.372+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:02:16.373+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:02:16.390+03:00  INFO 1448 --- [http-nio-4444-exec-9] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:02:16.391+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:02:16.391+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:02:16.392+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:02:16.414+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:02:16.415+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:02:16.422+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:02:16.423+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:02:16.424+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:02:16.732+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:02:16.732+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:02:16.732+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:02:16.732+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:02:16.739+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:02:16.740+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:02:16.741+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:02:16.750+03:00  INFO 1448 --- [http-nio-4444-exec-3] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:02:16.750+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:02:16.750+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:02:16.751+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:02:21.128+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:02:21.129+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:02:21.138+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:02:21.138+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:02:21.138+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:03:02.558+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/1", parameters={}
+2023-11-12T13:03:02.559+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:03:02.566+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:03:02.567+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:03:02.567+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:03:16.075+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:03:16.075+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:03:16.081+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:03:16.081+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:03:16.081+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:05:50.105+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:05:50.105+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:05:50.112+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:05:50.112+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:05:50.113+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:05:56.624+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:05:56.624+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:05:56.644+03:00  INFO 1448 --- [http-nio-4444-exec-8] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:05:56.644+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:05:56.645+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:05:56.645+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:05:56.665+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:05:56.666+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:05:56.672+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:05:56.672+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:05:56.673+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:05:56.970+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:05:56.970+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:05:56.985+03:00  INFO 1448 --- [http-nio-4444-exec-9] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:05:56.985+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:05:56.986+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:05:56.986+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:05:56.986+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:05:56.987+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:05:56.993+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:05:56.993+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:05:56.994+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:06:04.476+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:06:04.476+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:06:04.486+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:06:04.486+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:06:04.487+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:06:49.751+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:06:49.752+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:06:49.757+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:06:49.757+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:06:49.758+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:06:51.907+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:06:51.907+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:06:51.922+03:00  INFO 1448 --- [http-nio-4444-exec-4] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:06:51.922+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:06:51.922+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:06:51.923+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:06:51.960+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:06:51.961+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:06:51.967+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:06:51.968+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:06:51.969+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:06:52.265+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:06:52.265+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:06:52.266+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:06:52.266+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:06:52.272+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:06:52.272+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:06:52.272+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:06:52.280+03:00  INFO 1448 --- [http-nio-4444-exec-5] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:06:52.280+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:06:52.281+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:06:52.281+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:06:57.626+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:06:57.627+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:06:57.636+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:06:57.636+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:06:57.637+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:07:48.622+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:07:48.622+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:07:48.628+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:07:48.628+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:07:48.629+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:07:55.714+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:07:55.714+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:07:55.744+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:07:55.745+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:07:55.746+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:08:01.304+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:08:01.304+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:08:01.323+03:00  INFO 1448 --- [http-nio-4444-exec-1] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:08:01.324+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:08:01.324+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:08:01.326+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:08:01.344+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:08:01.345+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:08:01.353+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:08:01.354+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:08:01.354+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:08:01.649+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:08:01.649+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:08:01.649+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:08:01.649+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:08:01.654+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:08:01.654+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:08:01.654+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:08:01.663+03:00  INFO 1448 --- [http-nio-4444-exec-3] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:08:01.663+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:08:01.664+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:08:01.665+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:08:05.075+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:08:05.075+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:08:05.084+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:08:05.084+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:08:05.085+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:08:26.498+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:08:26.498+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:08:26.524+03:00  INFO 1448 --- [http-nio-4444-exec-7] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:08:26.525+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:08:26.525+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:08:26.530+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:08:26.620+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:08:26.621+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:08:26.629+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:08:26.630+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:08:26.630+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:08:26.657+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:08:26.658+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:08:26.685+03:00  INFO 1448 --- [http-nio-4444-exec-8] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:08:26.685+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:08:26.686+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:08:26.686+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:08:26.962+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:08:26.962+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:08:26.968+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:08:26.968+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:08:26.969+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:08:35.122+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:08:35.122+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:08:35.135+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:08:35.135+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:08:35.137+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:09:09.413+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:09:09.414+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:09:09.431+03:00  INFO 1448 --- [http-nio-4444-exec-1] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:09:09.432+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:09:09.432+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:09:09.433+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:09:09.457+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:09:09.457+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:09:09.457+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:09:09.457+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:09:09.461+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:09:09.462+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:09:09.463+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:09:09.472+03:00  INFO 1448 --- [http-nio-4444-exec-4] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:09:09.473+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:09:09.473+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:09:09.474+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:09:09.775+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:09:09.775+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:09:09.779+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:09:09.779+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:09:09.780+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:09:11.784+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/1", parameters={}
+2023-11-12T13:09:11.785+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:09:11.794+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:09:11.794+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:09:11.795+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:09:23.931+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:09:23.931+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:09:23.951+03:00  INFO 1448 --- [http-nio-4444-exec-7] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:09:23.951+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:09:23.951+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:09:23.952+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:09:23.988+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:09:23.988+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:09:23.988+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:09:23.988+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:09:23.997+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:09:23.997+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:09:23.997+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:09:24.012+03:00  INFO 1448 --- [http-nio-4444-exec-8] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:09:24.012+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:09:24.012+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:09:24.013+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:09:24.317+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:09:24.317+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:09:24.324+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:09:24.325+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:09:24.325+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:09:27.419+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/1", parameters={}
+2023-11-12T13:09:27.419+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:09:27.431+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:09:27.431+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:09:27.432+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:10:18.327+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:10:18.328+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:10:18.335+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:10:18.335+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:10:18.336+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:10:22.541+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:10:22.541+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:10:22.561+03:00  INFO 1448 --- [http-nio-4444-exec-2] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:10:22.562+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:10:22.562+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:10:22.563+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:10:22.600+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:10:22.601+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:10:22.608+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:10:22.609+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:10:22.610+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:10:22.908+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:10:22.908+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:10:22.908+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:10:22.908+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:10:22.911+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:10:22.911+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:10:22.912+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:10:22.917+03:00  INFO 1448 --- [http-nio-4444-exec-3] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:10:22.918+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:10:22.918+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:10:22.918+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:10:24.792+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/3", parameters={}
+2023-11-12T13:10:24.793+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:10:24.802+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:10:24.802+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:10:24.803+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:10:41.630+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:10:41.630+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:10:41.635+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:10:41.635+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:10:41.636+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:10:54.694+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:10:54.695+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:10:54.702+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:10:54.702+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:10:54.703+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:10:59.116+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:10:59.117+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:10:59.138+03:00  INFO 1448 --- [http-nio-4444-exec-10] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:10:59.139+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:10:59.139+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:10:59.141+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:10:59.176+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:10:59.176+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:10:59.182+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:10:59.182+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:10:59.183+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:10:59.480+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:10:59.480+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:10:59.481+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:10:59.481+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:10:59.486+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:10:59.486+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:10:59.486+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:10:59.497+03:00  INFO 1448 --- [http-nio-4444-exec-1] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:10:59.497+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:10:59.497+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:10:59.498+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:11:08.065+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:11:08.065+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:11:08.069+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:11:08.069+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:11:08.069+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:11:12.856+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:11:12.856+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:11:12.863+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:11:12.863+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:11:12.864+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:11:27.079+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:11:27.080+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:11:27.088+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:11:27.088+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:11:27.089+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:11:33.556+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:11:33.558+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:11:33.570+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:11:33.571+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:11:33.572+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:11:50.647+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:11:50.648+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:11:50.655+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:11:50.655+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:11:50.656+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:01.118+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:01.119+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:12:01.124+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:01.124+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:12:01.125+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:05.284+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:05.284+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:12:05.298+03:00  INFO 1448 --- [http-nio-4444-exec-10] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:12:05.299+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:05.299+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:12:05.300+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:05.329+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:05.330+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:12:05.336+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:05.336+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:12:05.337+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:05.338+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:12:05.338+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:05.359+03:00  INFO 1448 --- [http-nio-4444-exec-2] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:12:05.360+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:05.361+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:12:05.362+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:05.637+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:05.637+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:12:05.641+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:05.641+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:12:05.642+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:08.070+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:12:08.070+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:12:08.079+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:08.079+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:12:08.080+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:12:27.668+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:27.669+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:12:27.674+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:27.674+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:12:27.674+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:32.394+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:32.395+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:12:32.412+03:00  INFO 1448 --- [http-nio-4444-exec-3] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:12:32.412+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:32.413+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:12:32.414+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:32.478+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:32.479+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:12:32.487+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:32.487+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:12:32.488+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:32.500+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:32.501+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:12:32.523+03:00  INFO 1448 --- [http-nio-4444-exec-5] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:12:32.524+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:32.524+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:12:32.524+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:32.785+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:32.786+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:12:32.790+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:32.790+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:12:32.791+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:37.041+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/4", parameters={}
+2023-11-12T13:12:37.042+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:12:37.050+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:37.051+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:12:37.051+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:12:52.271+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:52.271+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:12:52.276+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:52.276+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:12:52.276+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:58.808+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:58.809+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:12:58.826+03:00  INFO 1448 --- [http-nio-4444-exec-2] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:12:58.827+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:58.827+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:12:58.828+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:58.864+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:58.865+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:12:58.871+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:58.871+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:12:58.872+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:59.172+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:59.172+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:12:59.172+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:12:59.172+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:12:59.178+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:59.178+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:12:59.178+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:12:59.188+03:00  INFO 1448 --- [http-nio-4444-exec-4] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:12:59.188+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:12:59.188+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:12:59.189+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:13:04.975+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : DELETE "/role/api/v1.0.0/delete/3", parameters={}
+2023-11-12T13:13:04.975+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleDelete(Long)
+2023-11-12T13:13:04.982+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:13:04.983+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResult(path=localhost:4444/roles/api/v1.0.0/delete, message=Bu Rolü silemezsiniz.Öncelikle Kullan (truncated)...]
+2023-11-12T13:13:04.983+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2023-11-12T13:13:42.190+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:13:42.190+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:13:42.200+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:13:42.202+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:13:42.203+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:13:54.746+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/role/api/v1.0.0/list", parameters={}
+2023-11-12T13:13:54.746+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RoleRegisterApiImpl#roleList()
+2023-11-12T13:13:54.751+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:13:54.752+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RoleDto(roleId=1, roleName=SUPER_ADMIN), RoleDto(roleId=2, roleName=ADMIN), RoleDto(roleId=3, roleN (truncated)...]
+2023-11-12T13:13:54.752+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:14:34.158+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:14:34.158+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:14:34.173+03:00  INFO 1448 --- [http-nio-4444-exec-8] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:14:34.173+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:14:34.173+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:14:34.174+03:00 DEBUG 1448 --- [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:14:34.486+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:14:34.487+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:14:34.499+03:00  INFO 1448 --- [http-nio-4444-exec-10] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:14:34.499+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:14:34.499+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:14:34.500+03:00 DEBUG 1448 --- [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:14:41.796+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/find/4", parameters={}
+2023-11-12T13:14:41.796+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiFindById(Long)
+2023-11-12T13:14:41.805+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:14:41.805+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [RegisterDto{ id=4registerNickName='computer4', registerName='Hamit4', registerSurname='Mızrak4', reg (truncated)...]
+2023-11-12T13:14:41.806+03:00 DEBUG 1448 --- [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:14:42.108+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/find/4", parameters={}
+2023-11-12T13:14:42.109+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiFindById(Long)
+2023-11-12T13:14:42.113+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:14:42.114+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [RegisterDto{ id=4registerNickName='computer4', registerName='Hamit4', registerSurname='Mızrak4', reg (truncated)...]
+2023-11-12T13:14:42.114+03:00 DEBUG 1448 --- [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:14:55.333+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:14:55.333+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:14:55.348+03:00  INFO 1448 --- [http-nio-4444-exec-1] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:14:55.349+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:14:55.349+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:14:55.349+03:00 DEBUG 1448 --- [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:14:55.372+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:14:55.372+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:14:55.387+03:00  INFO 1448 --- [http-nio-4444-exec-6] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:14:55.388+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:14:55.388+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:14:55.388+03:00 DEBUG 1448 --- [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:14:56.890+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:14:56.890+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:14:56.905+03:00  INFO 1448 --- [http-nio-4444-exec-4] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:14:56.905+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:14:56.905+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:14:56.906+03:00 DEBUG 1448 --- [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:14:57.219+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:14:57.219+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:14:57.228+03:00  INFO 1448 --- [http-nio-4444-exec-3] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:14:57.228+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:14:57.228+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:14:57.229+03:00 DEBUG 1448 --- [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:15:00.160+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:15:00.161+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:15:00.181+03:00  INFO 1448 --- [http-nio-4444-exec-7] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:15:00.182+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:15:00.182+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:15:00.182+03:00 DEBUG 1448 --- [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T13:15:00.346+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/register/api/v1.0.0/list", parameters={}
+2023-11-12T13:15:00.347+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.FullStackDeveloper11.controller.api.impl.RegisterApiImpl#registerApiList()
+2023-11-12T13:15:00.357+03:00  INFO 1448 --- [http-nio-4444-exec-5] c.h.F.b.s.impl.RegisterServicesImpl      : Register Liste Sayısı:4
+2023-11-12T13:15:00.357+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2023-11-12T13:15:00.357+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[RegisterDto{ id=1registerNickName='computer1', registerName='Hamit1', registerSurname='Mızrak1', re (truncated)...]
+2023-11-12T13:15:00.358+03:00 DEBUG 1448 --- [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2023-11-12T16:09:15.497+03:00  INFO 1448 --- [SpringApplicationShutdownHook] c.h.F.runner.BlogCommandLineRunner       : blog CommandLineRunner Before Bean Method bitti
+2023-11-12T16:09:15.511+03:00  INFO 1448 --- [SpringApplicationShutdownHook] c.h.F.bean.SwaggerOpenApiBeanClass       : swagger Open Api After Bean bitti
+2023-11-12T16:09:15.511+03:00  INFO 1448 --- [SpringApplicationShutdownHook] c.h.F.bean.PasswordEncoderBeanClass      : password Encoder After Bean bitti
+2023-11-12T16:09:15.511+03:00  INFO 1448 --- [SpringApplicationShutdownHook] c.h.F.bean.ModelMapperBeanClass          : Model mapper After bean bitti
+2023-11-12T16:09:15.511+03:00  INFO 1448 --- [SpringApplicationShutdownHook] c.h.F.bean.Locale18NBeanClass            : locale 18N After Bean Method bitti
+2023-11-12T16:09:15.511+03:00  INFO 1448 --- [SpringApplicationShutdownHook] c.h.F.audit.AuditorAwareBeanClass        : auditor Aware After bean bitti
+2023-11-12T16:09:15.512+03:00  INFO 1448 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-12T16:09:15.691+03:00  INFO 1448 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-12T16:09:15.698+03:00  INFO 1448 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

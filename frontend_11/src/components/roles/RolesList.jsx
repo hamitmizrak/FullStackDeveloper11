@@ -114,7 +114,6 @@ function RolesList({t, i18n, props}) {
         // axios.delete(" http://localhost:4444/role/api/v1.0.0/delete/"+id).then().catch();
     }
 
-
     //Error
     const classNameData ={error}  ? "is-invalid form-control mb-3" : "form-control mb-3";
 
